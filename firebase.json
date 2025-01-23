@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"pulse-diagnosis","appId":"1:321183967840:android:2cc1ac6f483d9a990d3105","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"pulse-diagnosis","configurations":{"android":"1:321183967840:android:2cc1ac6f483d9a990d3105","ios":"1:321183967840:ios:41651c18aaf4705c0d3105"}}}}}}
