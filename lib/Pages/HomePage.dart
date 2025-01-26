@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pulse_diagnosis/Pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 // import 'package:mobile_scanner/mobile_scanner.dart';
-// import 'package:pulse_diagnosis/Pages/Qr_Code_Scanner.dart';
-import 'package:pulse_diagnosis/Pages/Qr_Code_Scanner_Copy.dart';
+import 'package:pulse_diagnosis/Pages/Qr_Code_Scanner.dart';
+// import 'package:pulse_diagnosis/Pages/Qr_Code_Scanner_Copy.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -19,8 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   signOut() async {
     await auth.signOut();
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const LoginPage()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage()));
   }
 
   // final MobileScannerController controller = MobileScannerController();
@@ -41,8 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Padding(
                 padding: const EdgeInsets.only(bottom: 16.0),
-                child: Image.network(
-                    'https://geographical.co.uk/wp-content/uploads/somalaya-mountain-range-title.jpg')),
+                child: Image.network('https://geographical.co.uk/wp-content/uploads/somalaya-mountain-range-title.jpg')),
             Padding(
                 padding: const EdgeInsets.all(16),
                 child: Row(
@@ -53,8 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: const [
                         Text(
                           'オエシネン湖キャンプ場',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                         ),
                         SizedBox(
                           height: 10,
@@ -68,10 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Row(
-                          children: [
-                            Icon(Icons.star, color: Colors.red[500]),
-                            const Text('41')
-                          ],
+                          children: [Icon(Icons.star, color: Colors.red[500]), const Text('41')],
                         ))
                   ],
                 )),
