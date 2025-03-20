@@ -24,6 +24,10 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access to scan QR codes</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs photos access to get QR code from photo library</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>googlegmail</string>
