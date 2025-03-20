@@ -1,0 +1,12 @@
+脈象詳細 ：parts      
+ 测量结果---cunResult/guanResult/chiResult
+体質辨識：physiqueList
+八綱辨証：principleList
+健康評価：healthAssessments
+経絡解析：jingluoListV2
+理療保健（刮痧）：physiotherapyCareListV2
+理療保健（按摩）：acupointList
+養生アドバイス：wellnessListV2
+养生方案：physiquePlanList
+飲食アドバイス：dietSummary
+運動アドバイス：exercisesummary
