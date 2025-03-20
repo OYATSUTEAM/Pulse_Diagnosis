@@ -1,6 +1,8 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '13.0'
 
+# pod 'cloud_firestore', '5.6.1' # Adjusted version if necessary  
+# pod 'mobile_scanner', '5.2.3'
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
