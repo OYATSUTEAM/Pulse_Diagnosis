@@ -43,11 +43,10 @@ class _EightPrincipleState extends State<EightPrinciple> {
           TitleWidget(title: widget.title),
           SizedBox(
               height: MediaQuery.of(context).size.height - 150,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
+                child: 
+                    
                     ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: AlwaysScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: principleList.length,
                         itemBuilder: (context, index) {
@@ -101,9 +100,11 @@ class _EightPrincipleState extends State<EightPrinciple> {
                                 ],
                               ));
                         })
-                  ],
-                ),
-              ))
+                //   ],
+                // ),
+              )
+              
+              // )
         ],
       ),
     );

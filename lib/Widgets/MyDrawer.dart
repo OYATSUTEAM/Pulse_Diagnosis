@@ -44,8 +44,8 @@ class _MydrawerState extends State<Mydrawer> {
       try {
         signOut();
       } catch (e) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('${"log out is failed".tr()}: $e')));
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('${"log out is failed".tr()}: $e')));
       }
     }
   }
@@ -61,24 +61,33 @@ class _MydrawerState extends State<Mydrawer> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              TextButton(
+              ElevatedButton(
                   onPressed: () async {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => QrcodeGetNewData()));
                   },
-                  child: Text('fetch new data'.tr(), style: TextStyle(fontSize: 24),textAlign: TextAlign.center,)),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-
-              TextButton(
-                  onPressed: () {
-                    logOutConfirmationDialogue(context);
-                  },
-                  child: Text('logout'.tr(), style: TextStyle(fontSize: 20),)),
-                  Icon(Icons.logout)
-              ],
-             )
+                  child: Text(
+                    'fetch new data'.tr(),
+                    style: TextStyle(fontSize: 24),
+                    textAlign: TextAlign.center,
+                  )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        logOutConfirmationDialogue(context);
+                      },
+                      child: Row(
+                        children: [
+                          Text('logout'.tr(),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.red)),
+                          Icon(Icons.logout, color: Colors.red)
+                        ],
+                      ))
+                ],
+              )
             ],
           ))),
     );
