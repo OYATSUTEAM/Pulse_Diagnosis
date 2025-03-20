@@ -5,7 +5,7 @@ import 'package:pulse_diagnosis/Services/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pulse_diagnosis/Pages/HomePage.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pulse_diagnosis/Services/otp_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
@@ -143,21 +143,21 @@ class _Login_Page extends State<Login_Page> {
   // =========================================================  Login Using Google function ==============================================
 
   signInWithGoogle() async {
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    // final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+    // final GoogleSignInAuthentication? googleAuth =
+    //     await googleUser?.authentication;
 
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
+    // final credential = GoogleAuthProvider.credential(
+    //   accessToken: googleAuth?.accessToken,
+    //   idToken: googleAuth?.idToken,
+    // );
 
-    await FirebaseAuth.instance.signInWithCredential(credential).then(
-          (value) => {
-            if (value.user != null) {firstLogin()},
-          },
-        );
+  //   await FirebaseAuth.instance.signInWithCredential(credential).then(
+  //         (value) => {
+  //           if (value.user != null) {firstLogin()},
+  //         },
+  //       );
   }
 
   // =========================================================  Checking if email is verified =======================================
