@@ -60,6 +60,7 @@ class _PulseresultpageState extends State<Pulseresultpage>
     return SafeArea(
         child: Scaffold(
       floatingActionButton: FloatingActionButton(
+        mini: true,
         onPressed: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => MyHomePage()));
