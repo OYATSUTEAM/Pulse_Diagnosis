@@ -23,7 +23,7 @@ void main() async {
       ],
       saveLocale:false,
       path: 'assets/translations',
-      fallbackLocale: Locale('ja', 'JP'),
+      // fallbackLocale: Locale('ja', 'JP'),
       startLocale: const Locale('ja', 'JP'),
       child: const MyApp(),
     ),

@@ -1,20 +1,7 @@
 name: pulse_diagnosis
 description: "A new Flutter project."
 
-
 publish_to: 'none' 
-
-
-
-
-
-
-
-
-
-
-
-
 
 version: 1.0.0+1
 
@@ -39,8 +26,8 @@ dependencies:
   http: ^1.3.0
   path_provider: ^2.1.5
   open_mail: ^0.0.7
-  mobile_scanner: ^6.0.0
-  # mobile_scanner: ^5.1.1
+  shared_preferences: ^2.5.2
+  mobile_scanner: ^6.0.7
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
+import 'package:pulse_diagnosis/globaldata.dart';
 import 'Login_Page.dart';
 import 'package:open_mail/open_mail.dart';
 
@@ -25,6 +26,7 @@ class _SignUp_Page extends State<SignUp_Page> {
       TextEditingController();
   final TextEditingController dateController = TextEditingController();
   final TextEditingController adressController = TextEditingController();
+    final _formKey = GlobalKey<FormState>();
 
   DateTime? _selectedDate = DateTime(1990, 1, 1);
   Future<void> _selectDate(BuildContext context) async {
@@ -135,6 +137,7 @@ class _SignUp_Page extends State<SignUp_Page> {
       selectedLanguage = value!;
     });
     Locale newLocale;
+    await globalData.updateCurrentLocal(value!);
     if (value == 'en') {
       newLocale = const Locale('en', 'US');
     } else if (value == 'ja') {
@@ -156,7 +159,6 @@ class _SignUp_Page extends State<SignUp_Page> {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
     return Scaffold(
         backgroundColor: Colors.white,
         // resizeToAvoidBottomInset: false,
@@ -205,11 +207,11 @@ class _SignUp_Page extends State<SignUp_Page> {
                                   },
                                   items: [
                                     DropdownMenuItem<String>(
-                                        value: "ch", child: Text("中文")),
+                                        value: "ja", child: Text("日本語")),
                                     DropdownMenuItem<String>(
                                         value: "en", child: Text("English")),
                                     DropdownMenuItem<String>(
-                                        value: "ja", child: Text("日本語")),
+                                        value: "ch", child: Text("中文")),
                                   ],
                                 ),
                               ),
@@ -273,24 +275,14 @@ class _SignUp_Page extends State<SignUp_Page> {
                                   ),
                                 ),
 
-                                TextFormField(
-                                  decoration: InputDecoration(
-                                    icon: const Icon(
-                                      Icons.smartphone,
-                                      color: Colors.grey,
-                                    ),
-                                    labelText: "phone number".tr(),
-                                  ),
-                                  controller: phoneController,
-                                ),
-
 // =========================================================  Password  =====================================================
                                 TextFormField(
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
                                       return "Password cannot be empty".tr();
                                     } else if (value.length <= 5) {
-                                      return "Password must be more than 6 characters".tr();
+                                      return "Password must be more than 6 characters"
+                                          .tr();
                                     }
                                     return null; // Validation passed
                                   },
@@ -337,6 +329,7 @@ class _SignUp_Page extends State<SignUp_Page> {
                                   controller: passwordConfirmController,
                                 ),
 
+// =========================================================  Date Picker  =====================================================
                                 TextFormField(
                                   controller: dateController,
                                   decoration: InputDecoration(
@@ -349,37 +342,11 @@ class _SignUp_Page extends State<SignUp_Page> {
                                   onTap: () => _selectDate(
                                       context), // Show date picker on tap
                                 ),
-                                TextFormField(
-                                  decoration: InputDecoration(
-                                    icon: const Icon(Icons.home_outlined,
-                                        color: Colors.grey),
-                                    labelText: "address".tr(),
-                                  ),
-                                  controller: adressController,
-                                ),
                               ],
                             )),
 
                         const SizedBox(height: 13),
-// =============================================  By signing up, you agree to our Terms & conditions and Privacy Policy ===========================================
 
-                        // Padding(
-                        //   padding: EdgeInsets.symmetric(vertical: 20.0),
-                        //   child: Align(
-                        //     child: Text(
-                        //         textAlign: TextAlign.center,
-                        //         selectedLanguage == 'ch'
-                        //             ? '注册即表示您同意我们的条款和条件以及隐私政策'
-                        //             : selectedLanguage == 'en'
-                        //                 ? 'By signing up, you agree to our Terms &  Privacy Policy'
-                        //                 : 'サインアップすると、利用規約と\nプライバシーポリシーに\n同意したことになります。',
-                        //         style: TextStyle(
-                        //             fontSize: 15,
-                        //             fontWeight: FontWeight.w500,
-                        //             color: Colors.grey),
-                        //         softWrap: true),
-                        //   ),
-                        // ),
 // =========================================================  SignUp Button =====================================================
 
                         ElevatedButton(

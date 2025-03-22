@@ -3,7 +3,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:pulse_diagnosis/Pages/HomePage.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
-
+import 'package:easy_localization/easy_localization.dart';
 class QrcodeForSignin extends StatefulWidget {
   const QrcodeForSignin({super.key});
 
@@ -38,7 +38,7 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('QR Code Scanner')),
+      appBar: AppBar(title:  Text('Scan QrCode'.tr())),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +76,6 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                           return Center(child: CircularProgressIndicator());
                         });
                     String token = await getToken(number);
-                  console([token]);
                     console([globalData.email, globalData.uid]);
 
                     final _isAdd = await addPatient(

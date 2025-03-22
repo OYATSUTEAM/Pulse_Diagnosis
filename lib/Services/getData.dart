@@ -91,7 +91,7 @@ Future<String> getAll(String token, String email) async {
       'token': token,
       'Content-Type': 'application/json',
     };
-
+//
     final data = '{"current": 1, "size": 10, "params": {"email":"ddd@ddd"}}';
     // final data = '{"current": 1, "size": 10, "params": {"email":$email}}';
 
@@ -240,15 +240,13 @@ Future<void> saveVisitData(
 Future<List<String>> getVisitDates(String uid) async {
   try {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
-
-    // Query the data subcollection for the user and get the document IDs (visit dates)
+    console([uid]);
     QuerySnapshot snapshot = await firestore
         .collection('Users')
         .doc(uid) // Replace with the actual user ID
         .collection('data') // The subcollection containing the visits
         .get();
 
-    // Extract visit dates (document IDs) from the query result
     List<String> visitDates = snapshot.docs.map((doc) => doc.id).toList();
 
     return visitDates;
@@ -290,9 +288,10 @@ addDataToFirebase(String token) async {
     await Future.delayed(Duration(milliseconds: 100));
   }
   if (globalData.patientResult.isNotEmpty) {
-    int id =
-        await globalData.patientResult['data']['records'][0]['id'];
+    int id = await globalData.patientResult['data']['records'][0]['id'];
+    // final result =
     await getDetails(id, token);
+    // console([result]);
     String visitDate =
         globalData.pulseResult["visitInfo"]["visitTime"].split(" ")[0];
     await saveVisitData(globalData.uid, visitDate, globalData.pulseResult);

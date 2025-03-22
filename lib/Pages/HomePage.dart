@@ -3,10 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Pages/PulseResultPage.dart';
-import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_Get_New_Data.dart';
+import 'package:pulse_diagnosis/Pages/Results/About_Pulse.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Widgets/MyDrawer.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:pulse_diagnosis/main.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -22,15 +24,19 @@ class _MyHomePageState extends State<MyHomePage> {
   signOut() async {
     await auth.signOut();
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const Login_Page()));
+        context, MaterialPageRoute(builder: (context) => const MyApp()));
   }
 
   @override
   void initState() {
+    getUserUid();
     getVisitDataByDate();
   }
 
   Future<void> getVisitDataByDate() async {
+    while (globalData.uid == 'default') {
+      await Future.delayed(Duration(milliseconds: 100));
+    }
     final _allData = await getVisitDates(globalData.uid);
     if (mounted) {
       setState(() {
@@ -39,31 +45,19 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> logOutConfirmationDialogue(
-    BuildContext context,
-  ) async {
-    final shouldDelete = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('サインアウトしますか？'),
-        actions: [
-          TextButton(
-              onPressed: () => Navigator.pop(context, false),
-              child: const Text('キャンセル')),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('はい', style: TextStyle(color: Colors.red)),
-          ),
-        ],
-      ),
-    );
-
-    if (shouldDelete == true) {
-      try {
-        signOut();
-      } catch (e) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('ログアウトに失敗した。: $e')));
+  Future<void> getUserUid() async {
+    Map<String, dynamic>? userData = await getUserData();
+    User? user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      if (userData != null) {
+        await globalData.updatePatientDetail(
+            userData['uid'],
+            userData['email'],
+            userData['name'],
+            userData['address'],
+            userData['gender'],
+            userData['birth'],
+            userData['phone']);
       }
     }
   }
@@ -73,29 +67,35 @@ class _MyHomePageState extends State<MyHomePage> {
     globalData.updateS_Size(MediaQuery.of(context).size);
     return Scaffold(
         appBar: AppBar(),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {
-        //     logOutConfirmationDialogue(context);
-        //   },
-        //   child: const Icon(Icons.logout),
-        // ),
         drawer: Mydrawer(),
         body: Column(
           children: [
             Padding(
-                padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Center(
-                    child: Text('AI脈診機',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 40,
-                            color: const Color.fromARGB(255, 211, 162, 57))))),
+                    child: TextButton(
+                  child: Text('AI Pulse Diagnosis Machine'.tr(),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                          color: const Color.fromARGB(255, 211, 162, 57))),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AboutPulse()));
+                  },
+                ))),
             SizedBox(
               width: globalData.s_width * 0.5,
               child: Divider(),
             ),
-            Text('取得した脈拍データ',
-                style: TextStyle(color: Colors.blue, fontSize: 20)),
+            TextButton(
+              onPressed: () async {
+                await getVisitDataByDate();
+              },
+              child: Text('measurement results'.tr(),
+                  style: TextStyle(color: Colors.blue, fontSize: 20)),
+            ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         });
                                     final visitData = await getVisitData(
                                         globalData.uid, visitDate);
-                                      
+
                                     if (visitData != null) {
                                       await globalData
                                           .updatePulseResult(visitData);
@@ -143,9 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   child: Text(
                                     visitDate,
                                     style: TextStyle(
-                                      fontSize: 22,
-                                      color: Colors.blue,
-                                    ),
+                                        fontSize: 22, color: Colors.blue),
                                   ))
                             ],
                           ),

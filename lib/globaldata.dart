@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 class GlobalData {
   static final GlobalData _instance = GlobalData._internal();
   factory GlobalData() {
@@ -10,7 +11,8 @@ class GlobalData {
   Map<String, dynamic> patientResult = {};
   double s_width = 0.0;
   double s_height = 0.0;
-  String uid = '',
+  String currentLocal = 'ja';
+  String uid = 'default',
       email = '',
       name = '',
       address = '',
@@ -19,6 +21,10 @@ class GlobalData {
       phone = '';
   updatePulseResult(Map<String, dynamic> _pulseResult) async {
     pulseResult = _pulseResult;
+  }
+
+  updateCurrentLocal(String _local) async {
+    currentLocal = _local;
   }
 
   updatePatientResult(Map<String, dynamic> _patientResult) async {

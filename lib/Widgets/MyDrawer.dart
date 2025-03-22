@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_Get_New_Data.dart';
+import 'package:pulse_diagnosis/Pages/Results/About_Pulse.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -27,7 +28,10 @@ class _MydrawerState extends State<Mydrawer> {
     final shouldDelete = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Would you like to sign out?'.tr()),
+        title: Text(
+          'Would you like to sign out?'.tr(),
+          style: TextStyle(fontSize: 20),
+        ),
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(context, false),
@@ -36,6 +40,7 @@ class _MydrawerState extends State<Mydrawer> {
             onPressed: () => Navigator.pop(context, true),
             child: Text('yes'.tr(), style: TextStyle(color: Colors.red)),
           ),
+       
         ],
       ),
     );
@@ -68,7 +73,7 @@ class _MydrawerState extends State<Mydrawer> {
                   },
                   child: Text(
                     'fetch new data'.tr(),
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center,
                   )),
               Row(
@@ -82,12 +87,13 @@ class _MydrawerState extends State<Mydrawer> {
                         children: [
                           Text('logout'.tr(),
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.red)),
+                                  TextStyle(fontSize: 18, color: Colors.red)),
                           Icon(Icons.logout, color: Colors.red)
                         ],
                       ))
                 ],
-              )
+              ),
+            
             ],
           ))),
     );

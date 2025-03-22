@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_For_SignIn.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -17,6 +17,14 @@ class _SignIn_to_PulseState extends State<SignIn_to_Pulse> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        mini: true,
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => Login_Page()));
+        },
+        child: Icon(Icons.logout),
+      ),
       body: Center(
         child: Column(
           children: [
@@ -37,17 +45,6 @@ class _SignIn_to_PulseState extends State<SignIn_to_Pulse> {
                   );
                 },
                 child: Text('scan qr code to connect with pc'.tr())),
-            Text(number),
-            TextButton(
-                onPressed: () async {
-                  final _number = await getNumber();
-                  if (mounted) {
-                    setState(() {
-                      number = _number;
-                    });
-                  }
-                },
-                child: Text('get')),
           ],
         ),
       ),

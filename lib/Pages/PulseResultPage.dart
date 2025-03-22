@@ -9,6 +9,7 @@ import 'package:pulse_diagnosis/Pages/Results/Meridians_Analysis.dart';
 import 'package:pulse_diagnosis/Pages/Results/Physical_Health_Care.dart';
 import 'package:pulse_diagnosis/Pages/Results/Plan_Your_Health.dart';
 import 'package:pulse_diagnosis/Pages/Results/Pulse_Detail.dart';
+import 'package:pulse_diagnosis/Pages/Results/User_Page.dart';
 import 'package:pulse_diagnosis/Pages/Results/Wellness.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
@@ -85,71 +86,76 @@ class _PulseresultpageState extends State<Pulseresultpage>
                   height: 80,
                   child: TabCard(
                       isSelected: _tabController.index == 0,
+                      path: 'maizhenjieguo.png',
+                      title: "総合結果")),
+
+              Tab(
+                  height: 80,
+                  child: TabCard(
+                      isSelected: _tabController.index == 1,
+                      path: 'tizhibianshi.png',
+                      title: "体質スコア分析")),
+              Tab(
+                  height: 80,
+                  child: TabCard(
+                      isSelected: _tabController.index == 2,
+                      path: 'jiankangpinggu.png',
+                      title: "健康評価")),
+
+              Tab(
+                  height: 80,
+                  child: TabCard(
+                      isSelected: _tabController.index == 3,
                       path: 'liliaobaojian.png',
                       title: "理療保健")),
 //------------------------------------------------------------------------------   1.   healplan          -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
-                      isSelected: _tabController.index == 1,
+                      isSelected: _tabController.index == 4,
                       path: 'yinshijianyi.png',
                       title: "飲食\nアドバイス")),
 //------------------------------------------------------------------------------   2.   Food and drink advice          -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
-                      isSelected: _tabController.index == 2,
+                      isSelected: _tabController.index == 5,
                       path: 'yundongshenghuo.png',
                       title: "運動\nアドバイス")),
 //------------------------------------------------------------------------------   3.   Exercise Advice           -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
-                      isSelected: _tabController.index == 3,
+                      isSelected: _tabController.index == 6,
                       path: 'shenghuojianyi.png',
                       title: "養生\nアドバイス")),
 //------------------------------------------------------------------------------   4.   Curing Advice           -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
-                      isSelected: _tabController.index == 4,
+                      isSelected: _tabController.index == 7,
                       path: 'fenbumaixiang.png',
                       title: "脈象詳細")),
 //------------------------------------------------------------------------------   5.   Pulse Elephant Detail           -------------------------------------
-              Tab(
-                  height: 80,
-                  child: TabCard(
-                      isSelected: _tabController.index == 5,
-                      path: 'tizhibianshi.png',
-                      title: "体質辨識")),
+
 //------------------------------------------------------------------------------   6.   Complete knowledge of one's constitution          -------------------------------------
-              Tab(
-                  height: 80,
-                  child: TabCard(
-                      isSelected: _tabController.index == 6,
-                      path: 'jiankangpinggu.png',
-                      title: "健康評価")),
-//------------------------------------------------------------------------------   7.   Health Evaluation          -------------------------------------
-              Tab(
-                  height: 80,
-                  child: TabCard(
-                      isSelected: _tabController.index == 7,
-                      path: 'bagangbianzheng.png',
-                      title: "八綱辨証")),
-//------------------------------------------------------------------------------   8.   Eight-Principle Syndrome Differentiation          -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
                       isSelected: _tabController.index == 8,
                       path: 'jingluofenxi.png',
                       title: "経絡解析")),
-//------------------------------------------------------------------------------   9.   Health Plan          -------------------------------------
+//------------------------------------------------------------------------------   7.   Health Evaluation          -------------------------------------
               Tab(
                   height: 80,
                   child: TabCard(
                       isSelected: _tabController.index == 9,
-                      path: 'maizhenjieguo.png',
-                      title: "养生方案")),
+                      path: 'bagangbianzheng.png',
+                      title: "八綱辨証")),
+//------------------------------------------------------------------------------   8.   Eight-Principle Syndrome Differentiation          -------------------------------------
+
+//------------------------------------------------------------------------------   9.   Health Plan          -------------------------------------
+
 //------------------------------------------------------------------------------   10.   Health Plan          -------------------------------------
             ],
           ),
@@ -163,16 +169,16 @@ class _PulseresultpageState extends State<Pulseresultpage>
                 });
               },
               children: [
+                UserPage(title: '総合結果'),
+                BodyRecognization(title: '体質スコア分析'),
+                HealthAssessment(title: '健康評価'),
                 Physical_Health_Care(title: '理療保健'),
                 FoodList(title: '飲食アドバイス'),
                 ExerciseList(title: '運動アドバイス'),
                 Wellness(title: '養生アドバイス'),
                 PulseDetail(title: '脈象詳細'),
-                BodyRecognization(title: '体質辨識'),
-                HealthAssessment(title: '健康評価'),
-                EightPrinciple(title: '八綱辨証'),
                 MeridiansAnalysis(title: '経絡解析'),
-                PlanYourHealth(title: '养生方案'),
+                EightPrinciple(title: '八綱辨証'),
               ],
             ),
           )
