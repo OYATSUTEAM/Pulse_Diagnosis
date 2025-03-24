@@ -12,14 +12,14 @@ class CategoryWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Image.asset('assets/images/category1.png',
-                width: globalData.s_width * 0.24),
+                width: MediaQuery.of(context).size.width * 0.24),
             Text(
               textAlign: TextAlign.center,
               title,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Image.asset('assets/images/category2.png',
-                    width: globalData.s_width * 0.24),
+                    width: MediaQuery.of(context).size.width * 0.24),
           ],
         ));
   }

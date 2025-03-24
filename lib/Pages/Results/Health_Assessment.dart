@@ -82,9 +82,8 @@ class _HealthAssessmentState extends State<HealthAssessment> {
                                       children: [
                                         TextSpan(
                                           text:
-                                              '\n${overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n')}\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
+                                              '\n${overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
+                                          style: TextStyle(fontSize: 15),
                                         ),
                                       ],
                                     ),

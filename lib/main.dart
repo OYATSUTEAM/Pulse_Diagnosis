@@ -21,9 +21,8 @@ void main() async {
         Locale('zh', 'CN'),
         Locale('en', 'US'),
       ],
-      saveLocale:false,
+      saveLocale: false,
       path: 'assets/translations',
-      // fallbackLocale: Locale('ja', 'JP'),
       startLocale: const Locale('ja', 'JP'),
       child: const MyApp(),
     ),
@@ -43,8 +42,6 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,10 +51,16 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'Poppins',
-        primarySwatch: Colors.blue,
-        brightness: Brightness.light,
-      ),
+          textTheme: TextTheme(),
+          scaffoldBackgroundColor: Colors.white,
+          fontFamily: 'NotoSansJP',
+          appBarTheme: AppBarTheme(color: Colors.white),
+          primarySwatch: Colors.blue,
+          brightness: Brightness.light,
+          drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+              foregroundColor: Colors.white,
+              backgroundColor: const Color.fromARGB(255, 68, 171, 255))),
       home: AuthGate(),
     );
   }

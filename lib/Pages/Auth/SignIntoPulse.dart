@@ -33,7 +33,7 @@ class _SignIn_to_PulseState extends State<SignIn_to_Pulse> {
               padding: const EdgeInsets.only(top: 8.0),
               child: Image.asset(
                 'assets/images/login.png',
-                width: globalData.s_width * 0.8,
+                width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
             ElevatedButton(

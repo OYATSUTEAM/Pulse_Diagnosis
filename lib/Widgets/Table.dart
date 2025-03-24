@@ -23,15 +23,13 @@ class TableExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double s_width = 400;
-    if (globalData.s_width != 0.0) {
-      s_width = globalData.s_width;
-    }
+    double s_width = MediaQuery.of(context).size.width;
+
     return Table(
       border: TableBorder.all(),
       columnWidths: <int, TableColumnWidth>{
-        0: FixedColumnWidth(s_width * 0.2 - 10),
-        1: FixedColumnWidth(s_width * 0.8 - 10),
+        0: FixedColumnWidth(s_width * 0.2 - 1),
+        1: FixedColumnWidth(s_width * 0.8 - 1),
       },
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
       children: <TableRow>[
@@ -65,28 +63,34 @@ class TableExample extends StatelessWidget {
             Text(
               '気虚質\n(ききょしつ)',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
-            ),
-            RichText(
-              text: TextSpan(
-                style: TextStyle(color: Colors.black),
-                children: [
-                  TextSpan(
-                    text:
-                        '「気」（生命エネルギー）が不足しがちな体質です。\n気虚質のスコアが高いと風邪をひきやすく常に疲労を感じるなど、エネルギー切れの症状が出やすいことを意味します。具体的には体力がなく免疫力も低めで、肌は乾燥しやすく、性格的には内向的で気力に欠ける傾向があります。',
-                  ),
-                  TextSpan(
-                      text: '対策として、冷たい物や生ものを避けて胃腸に優しい温かい食事を心がけましょう。',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontWeight: FontWeight.bold)),
-                  TextSpan(
-                    text:
-                        '気虚質のスコアが低ければ、気（エネルギー）が充実していて疲れにくく、体力や免疫もしっかりしていると考えられます。',
-                  ),
-                ],
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.bold,
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: RichText(
+                text: TextSpan(
+                  style: TextStyle(color: Colors.black),
+                  children: [
+                    TextSpan(
+                      text:
+                          '「気」（生命エネルギー）が不足しがちな体質です。\n気虚質のスコアが高いと風邪をひきやすく常に疲労を感じるなど、エネルギー切れの症状が出やすいことを意味します。具体的には体力がなく免疫力も低めで、肌は乾燥しやすく、性格的には内向的で気力に欠ける傾向があります。',
+                    ),
+                    TextSpan(
+                        text: '対策として、冷たい物や生ものを避けて胃腸に優しい温かい食事を心がけましょう。',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontWeight: FontWeight.bold)),
+                    TextSpan(
+                      text:
+                          '気虚質のスコアが低ければ、気（エネルギー）が充実していて疲れにくく、体力や免疫もしっかりしていると考えられます。',
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
         TableRow(

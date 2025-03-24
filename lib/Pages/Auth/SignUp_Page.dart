@@ -194,7 +194,7 @@ class _SignUp_Page extends State<SignUp_Page> {
                                 style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.w700,
-                                    fontFamily: 'Poppins'),
+                                    ),
                               ),
 // =========================================================  Language Dropdown Button =========================================
                               DropdownButtonHideUnderline(
@@ -338,9 +338,9 @@ class _SignUp_Page extends State<SignUp_Page> {
                                     labelText: "Select Date".tr(),
                                   ),
                                   readOnly:
-                                      true, // Prevent keyboard from showing
+                                      true,
                                   onTap: () => _selectDate(
-                                      context), // Show date picker on tap
+                                      context), 
                                 ),
                               ],
                             )),

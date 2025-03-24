@@ -12,11 +12,7 @@ class TitleWidget extends StatelessWidget {
         Stack(
           alignment: AlignmentDirectional.center,
           children: [
-            SizedBox(
-              width: 150,
-              height: 40,
-              child: Positioned(child: Image.asset('assets/images/title.png')),
-            ),
+            Image.asset('assets/images/title.png', width: 150, height: 40),
             Positioned(
                 child: Text(title, style: TextStyle(color: Colors.white))),
           ],

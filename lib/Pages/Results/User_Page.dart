@@ -8,10 +8,10 @@ class UserPage extends StatefulWidget {
   const UserPage({super.key, required this.title});
   final String title;
   @override
-  State<UserPage> createState() => _ExerciseListState();
+  State<UserPage> createState() => _UserPageState();
 }
 
-class _ExerciseListState extends State<UserPage> {
+class _UserPageState extends State<UserPage> {
   Map<String, dynamic> visitInfo = {};
   Map<String, dynamic> patient = {};
   String age = '30';
@@ -74,7 +74,8 @@ class _ExerciseListState extends State<UserPage> {
   Widget build(BuildContext context) {
     console([patient]);
     return SafeArea(
-      child: Column(
+        child: Scaffold(
+      body: Column(
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
@@ -109,7 +110,7 @@ class _ExerciseListState extends State<UserPage> {
                     ),
                     CategoryWidget(title: '総合結果'),
                     Image.asset('assets/images/description.png',
-                        width: globalData.s_width),
+                        width: MediaQuery.of(context).size.width),
                     Padding(
                         padding: EdgeInsets.all(20),
                         child: Row(
@@ -165,7 +166,8 @@ class _ExerciseListState extends State<UserPage> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                       TextSpan(
-                                          text: '${bodyRecognization.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
+                                          text:
+                                              '${bodyRecognization.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
                                           style: TextStyle()),
                                     ])))
                               ],
@@ -187,7 +189,8 @@ class _ExerciseListState extends State<UserPage> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                       TextSpan(
-                                          text: '${healthAssessments.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
+                                          text:
+                                              '${healthAssessments.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
                                           style: TextStyle()),
                                     ])))
                               ],
@@ -242,6 +245,6 @@ class _ExerciseListState extends State<UserPage> {
               ))
         ],
       ),
-    );
+    ));
   }
 }

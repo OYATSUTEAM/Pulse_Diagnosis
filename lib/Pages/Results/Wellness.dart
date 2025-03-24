@@ -47,8 +47,7 @@ class _WellnessState extends State<Wellness> {
             itemBuilder: (context, index) {
               var item = wellnessList[index];
               var imageUrl = item["images"][0]["path"];
-              return Card(
-                child: Padding(
+              return Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +67,7 @@ class _WellnessState extends State<Wellness> {
                       SizedBox(height: 10),
                     ],
                   ),
-                ),
+                
               );
             },
           )),

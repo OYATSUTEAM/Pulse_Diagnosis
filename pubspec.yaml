@@ -44,9 +44,11 @@ flutter:
     
   
   fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Medium.ttf
+    - family: NotoSansJP  
+      fonts:  
+        - asset: assets/fonts/NotoSansJP-Regular.ttf  # Update with your font's path  
+        - asset: assets/fonts/NotoSansJP-Bold.ttf    # If you have a bold variant  
+          weight: 700  
   
 
   

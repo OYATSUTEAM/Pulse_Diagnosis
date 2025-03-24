@@ -5,7 +5,6 @@ import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Services/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pulse_diagnosis/Pages/HomePage.dart';
 import 'package:pulse_diagnosis/Services/otp_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
@@ -82,10 +81,10 @@ class _Login_Page extends State<Login_Page> {
         password: password.text.toString(),
       );
 
-      isEmailVerified();
       if (mounted) {
         Navigator.pop(context);
       }
+      isEmailVerified();
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
         const emailError = 'Enter valid email ID';
