@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
@@ -12,9 +11,11 @@ class MeasurementResults extends StatefulWidget {
 
 class _MeasurementResultsState extends State<MeasurementResults> {
   List<dynamic> physiquePlanList = [];
+
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -25,7 +26,6 @@ class _MeasurementResultsState extends State<MeasurementResults> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {

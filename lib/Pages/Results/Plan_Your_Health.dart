@@ -15,6 +15,7 @@ class _PlanYourHealthState extends State<PlanYourHealth> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {

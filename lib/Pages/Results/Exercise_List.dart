@@ -15,6 +15,7 @@ class _ExerciseListState extends State<ExerciseList> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -25,7 +26,6 @@ class _ExerciseListState extends State<ExerciseList> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -72,9 +72,18 @@ class _ExerciseListState extends State<ExerciseList> {
                                         children: imageList.map((image) {
                                           final imageUrl =
                                               "http://mzy-jp.dajingtcm.com/double-ja/${image['path']}";
-                                          return Image.network(
-                                              imageUrl,
-                                              fit: BoxFit.cover);
+                                          return Image.network(imageUrl,
+                                              fit: BoxFit.cover, loadingBuilder:
+                                                  (context, child, progress) {
+                                            return progress == null
+                                                ? child
+                                                : Center(
+                                                    child:
+                                                        CircularProgressIndicator());
+                                          }, errorBuilder:
+                                                  (context, error, stackTrace) {
+                                            return Icon(Icons.error);
+                                          });
                                         }).toList(),
                                       )),
                                   RichText(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_For_SignIn.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class SignIn_to_Pulse extends StatefulWidget {

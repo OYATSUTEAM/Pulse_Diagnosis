@@ -18,27 +18,58 @@ class _UserPageState extends State<UserPage> {
   String gender = '男';
   String pulseExplain = '沈滑有力';
   String visitTime = '2020-1-2';
-  String bodyRecognization = '';
-  String healthAssessments = '';
-  String principleList = '';
-  String jingluoListV2 = '';
+
+//-------------------------    bodyRecognization   -------------------------------
+
+  List healthAssessments0 = [];
+  List healthAssessments1 = [];
+  List symptoms0 = [];
+  List symptoms1 = [];
+  String healthAssessments_overview = '';
+  String symptom0 = '';
+  String symptom1 = '';
+  String symptom2 = '';
+  String symptom3 = '';
+  String symptom4 = '';
+  String symptom5 = '';
+//-------------------------    bodyRecognization   -------------------------------
+  String bodyRecognization0_name = '';
+  String bodyRecognization0_note = '';
+  String bodyRecognization1_name = '';
+  String bodyRecognization1_note = '';
+
+//-------------------------    principleList   -------------------------------
+
+  List principleList = [];
+  String principleList0_name = '';
+  String principleList1_name = '';
+  String principleList2_name = '';
+  String principleList3_name = '';
+  String principleList0_note = '';
+  String principleList1_note = '';
+  String principleList2_note = '';
+  String principleList3_note = '';
+
+//-------------------------    jingluoListV2   -------------------------------
+
+  List jingluoListV2 = [];
+  String jingluoListV0_name = '';
+  String jingluoListV1_name = '';
+  String jingluoListV2_name = '';
+  String jingluoListV3_name = '';
+  String jingluoListV4_name = '';
+  String jingluoListV0_note = '';
+  String jingluoListV1_note = '';
+  String jingluoListV2_note = '';
+  String jingluoListV3_note = '';
+  String jingluoListV4_note = '';
+
+//-------------------------    physiqueList   -------------------------------
+  List physiqueList = [];
   @override
   void initState() {
     getDate();
-  }
-
-  int calculateAge(String birthDate) {
-    final DateTime birth = DateTime.parse(birthDate);
-    final DateTime now = DateTime.now();
-    int age = now.year - birth.year;
-
-    // Check if the birthday has occurred this year
-    if (now.month < birth.month ||
-        (now.month == birth.month && now.day < birth.day)) {
-      age--;
-    }
-
-    return age;
+    super.initState();
   }
 
   getDate() async {
@@ -49,21 +80,62 @@ class _UserPageState extends State<UserPage> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
+          physiqueList = globalData.pulseResult['physiqueList'];
           patient = globalData.pulseResult['visitInfo']['patient'];
           pulseExplain = globalData.pulseResult['pulseExplain'][0]['name'];
           gender = patient['gender'];
           visitTime = globalData.pulseResult['visitInfo']['visitTime'];
-          bodyRecognization = globalData.pulseResult['physiqueList'][0]['body'];
-          principleList = globalData.pulseResult['principleList'][0]['desc'];
-          jingluoListV2 =
-              globalData.pulseResult['jingluoListV2'][0]['mainSymptom'];
-          healthAssessments = globalData.pulseResult['physiqueList'][0]
-              ['healthAssessments'][0]['overview'];
-          age = calculateAge(patient['birth']).toString();
+
+//-------------------------    healthAssessments   -------------------------------
+
+          healthAssessments0 = physiqueList[0]['healthAssessments'];
+          healthAssessments1 = physiqueList[1]['healthAssessments'];
+          healthAssessments_overview = healthAssessments0[0]['overview'];
+          symptoms0 = healthAssessments0[0]['symptoms'];
+          symptoms1 = healthAssessments1[0]['symptoms'];
+          symptom0 = symptoms0[0]['symptom'];
+          symptom1 = symptoms0[1]['symptom'];
+          symptom2 = symptoms0[2]['symptom'];
+          symptom3 = symptoms1[0]['symptom'];
+          symptom4 = symptoms1[1]['symptom'];
+          symptom5 = symptoms1[2]['symptom'];
+//-------------------------    bodyRecognization   -------------------------------
+
+          bodyRecognization0_name = physiqueList[0]['images'][0]['name'];
+          bodyRecognization1_name = physiqueList[1]['images'][0]['name'];
+          bodyRecognization0_note = physiqueList[0]['note'];
+          bodyRecognization1_note = physiqueList[1]['note'];
+
+//-------------------------    principleList   -------------------------------
+
+          principleList = globalData.pulseResult['principleList'];
+          principleList0_name = principleList[0]['name'];
+          principleList1_name = principleList[1]['name'];
+          principleList2_name = principleList[2]['name'];
+          principleList3_name = principleList[3]['name'];
+
+          principleList0_note = principleList[0]['note'];
+          principleList1_note = principleList[1]['note'];
+          principleList2_note = principleList[2]['note'];
+          principleList3_note = principleList[3]['note'];
+
+//-------------------------    jingluoListV2   -------------------------------
+          jingluoListV2 = globalData.pulseResult['jingluoListV2'];
+          jingluoListV0_name = jingluoListV2[0]['main'];
+          jingluoListV1_name = jingluoListV2[1]['main'];
+          jingluoListV2_name = jingluoListV2[2]['main'];
+          jingluoListV3_name = jingluoListV2[3]['main'];
+          jingluoListV4_name = jingluoListV2[4]['main'];
+          jingluoListV0_note = jingluoListV2[0]['mainNote'];
+          jingluoListV1_note = jingluoListV2[1]['mainNote'];
+          jingluoListV2_note = jingluoListV2[2]['mainNote'];
+          jingluoListV3_note = jingluoListV2[3]['mainNote'];
+          jingluoListV4_note = jingluoListV2[4]['mainNote'];
+
+          age = globalData.age;
           // patient = visitInfo['patient'];
         });
       }
@@ -72,7 +144,6 @@ class _UserPageState extends State<UserPage> {
 
   @override
   Widget build(BuildContext context) {
-    console([patient]);
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -145,8 +216,7 @@ class _UserPageState extends State<UserPage> {
                     CategoryWidget(title: '健康状態'),
                     Padding(
                         padding: EdgeInsets.all(10),
-                        child: Container(
-                            child: Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
@@ -162,13 +232,17 @@ class _UserPageState extends State<UserPage> {
                                                 TextStyle(color: Colors.black),
                                             children: [
                                       TextSpan(
-                                          text: '【体質認識】',
+                                          text: '【体質認識】\n',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                       TextSpan(
-                                          text:
-                                              '${bodyRecognization.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
-                                          style: TextStyle()),
+                                        text:
+                                            '$bodyRecognization0_name (${bodyRecognization0_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})　、\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$bodyRecognization1_name (${bodyRecognization1_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})',
+                                      ),
                                     ])))
                               ],
                             ),
@@ -185,13 +259,17 @@ class _UserPageState extends State<UserPage> {
                                                 TextStyle(color: Colors.black),
                                             children: [
                                       TextSpan(
-                                          text: '【健康評価】',
+                                          text: '【健康評価】\n',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                       TextSpan(
-                                          text:
-                                              '${healthAssessments.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}',
-                                          style: TextStyle()),
+                                        text:
+                                            '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$symptom0　、$symptom1　、$symptom2　、$symptom3　、$symptom4　、$symptom5　',
+                                      ),
                                     ])))
                               ],
                             ),
@@ -207,12 +285,33 @@ class _UserPageState extends State<UserPage> {
                                                 TextStyle(color: Colors.black),
                                             children: [
                                       TextSpan(
-                                          text: '【八綱弁証】',
+                                          text: '【八綱弁証】\n',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
-                                      TextSpan(
-                                          text: '$principleList',
-                                          style: TextStyle()),
+                                      principleList0_note != ''
+                                          ? TextSpan(
+                                              text:
+                                                  '$principleList0_name ($principleList0_note)　',
+                                            )
+                                          : TextSpan(),
+                                      principleList1_note != ''
+                                          ? TextSpan(
+                                              text:
+                                                  '、\n$principleList1_name ($principleList1_note)　',
+                                            )
+                                          : TextSpan(),
+                                      principleList2_note != ''
+                                          ? TextSpan(
+                                              text:
+                                                  '、\n$principleList2_name ($principleList2_note)　',
+                                            )
+                                          : TextSpan(),
+                                      principleList3_note != ''
+                                          ? TextSpan(
+                                              text:
+                                                  '、\n$principleList3_name ($principleList3_note)　',
+                                            )
+                                          : TextSpan(),
                                     ])))
                               ],
                             ),
@@ -229,17 +328,37 @@ class _UserPageState extends State<UserPage> {
                                                 TextStyle(color: Colors.black),
                                             children: [
                                       TextSpan(
-                                          text: '【経絡解析】',
+                                          text: '【経絡解析】\n',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold)),
                                       TextSpan(
-                                          text: '$jingluoListV2',
-                                          style: TextStyle()),
+                                        text: '現在、異常が考えられる経絡は次の通りです：\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$jingluoListV0_name$jingluoListV0_note、\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$jingluoListV1_name$jingluoListV1_note、\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$jingluoListV2_name$jingluoListV2_note、\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$jingluoListV3_name$jingluoListV3_note、\n',
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            '$jingluoListV4_name$jingluoListV4_note\n',
+                                      ),
                                     ])))
                               ],
                             ),
                           ],
-                        ))),
+                        )),
                   ],
                 ),
               ))

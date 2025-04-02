@@ -61,16 +61,32 @@ Future<String> getToken(String number) async {
   }
 }
 
+String convertAgeToBirthDate(String age) {
+  // Parse the age to an integer
+  int ageInt = int.parse(age);
+
+  // Get the current year
+  int currentYear = DateTime.now().year;
+
+  // Calculate the birth year
+  int birthYear = currentYear - ageInt;
+
+  // Create a date string in the format "YYYY-MM-DD"
+  String birthDate = "$birthYear-1-1"; // January 1st
+
+  return birthDate;
+}
+
 Future<bool> addPatient(String number, String token, String email, String name,
     String gender, String birth, String phone, String address) async {
   try {
     final headers = {
-      "token": '$token',
+      "token": token,
       'Content-Type': 'application/json',
     };
 
     final data =
-        '{"number": "$number", "email": $email, "name": $name, "gender": $gender, "birth": $birth, "phone": $phone, "address": $address}';
+        '{"number": "$number", "email": "$email", "name": "$name", "gender": "$gender", "birth": "${convertAgeToBirthDate(birth)}", "phone": "$phone", "address": "$address"}';
 
     final url = Uri.parse(
         'http://mzy-jp.dajingtcm.com/double-ja/business/qrcode/patient/add');
@@ -85,29 +101,30 @@ Future<bool> addPatient(String number, String token, String email, String name,
   }
 }
 
-Future<String> getAll(String token, String email) async {
+Future<int> getAll(String token, String email) async {
   try {
     final headers = {
       'token': token,
       'Content-Type': 'application/json',
     };
-//
-    final data = '{"current": 1, "size": 10, "params": {"email":"ddd@ddd"}}';
-    // final data = '{"current": 1, "size": 10, "params": {"email":$email}}';
+    // final data = '{"current": 1, "size": 10, "params": {"email":"ddd@ddd"}}';
+    final data = '{"current": 1, "size": 10, "params": {"email":"$email"}}';
 
     final url = Uri.parse(
         'http://mzy-jp.dajingtcm.com/double-ja/business/pulse/result/patient/paging/all');
 
     final res = await http.post(url, headers: headers, body: data);
     final status = res.statusCode;
+    final body = res.body;
+
     if (status != 200) throw Exception('http.post error: statusCode= $status');
 
     final jsonResponse = jsonDecode(res.body) as Map<String, dynamic>;
     await globalData.updatePatientResult(jsonResponse);
-    console([jsonResponse]);
-    return jsonResponse['msg'];
+    List pulseResult = jsonResponse['data']['records'];
+    return pulseResult.isNotEmpty ? 0 : 500;
   } catch (e) {
-    return e.toString();
+    return 500;
   }
 }
 
@@ -130,7 +147,7 @@ Future<String> getDetails(int id, String token) async {
     final jsonResponse = jsonDecode(res.body) as Map<String, dynamic>;
     await globalData.updatePulseResult(jsonResponse['data']);
     const encoder = JsonEncoder.withIndent('  ');
-    // log(encoder.convert(jsonResponse));
+    log(encoder.convert(jsonResponse));
     return jsonResponse['msg'];
   } catch (e) {
     return e.toString();
@@ -145,11 +162,11 @@ Future<void> initUserData(
     String phone,
     String address,
     String gender,
-    String birth) async {
+    String age) async {
   FirebaseFirestore database = FirebaseFirestore.instance;
   try {
     await globalData.updatePatientDetail(
-        uid, email, name, address, gender, birth, phone);
+        uid, email, name, address, gender, age, phone);
     final auth = FirebaseAuth.instance;
     await database.collection("Users").doc(auth.currentUser?.uid).set({
       "uid": auth.currentUser?.uid,
@@ -159,8 +176,41 @@ Future<void> initUserData(
       "phone": phone,
       "address": address,
       "gender": gender,
-      "birth": birth,
+      "age": AggregateQuerySnapshot,
       'registered': false,
+    }, SetOptions(merge: true));
+    return;
+  } on FirebaseAuthException {
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+Future<void> updateUserData(String name, String gender, String age) async {
+  globalData.updateProfile(name, age, gender);
+  FirebaseFirestore database = FirebaseFirestore.instance;
+  try {
+    final auth = FirebaseAuth.instance;
+    await database.collection("Users").doc(auth.currentUser?.uid).set({
+      "name": name,
+      "gender": gender,
+      "age": age,
+    }, SetOptions(merge: true));
+    return;
+  } on FirebaseAuthException {
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+Future<void> updatePassword(String password) async {
+  FirebaseFirestore database = FirebaseFirestore.instance;
+  try {
+    final auth = FirebaseAuth.instance;
+    await database.collection("Users").doc(auth.currentUser?.uid).set({
+      "password": password,
     }, SetOptions(merge: true));
     return;
   } on FirebaseAuthException {
@@ -240,12 +290,8 @@ Future<void> saveVisitData(
 Future<List<String>> getVisitDates(String uid) async {
   try {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
-    console([uid]);
-    QuerySnapshot snapshot = await firestore
-        .collection('Users')
-        .doc(uid) // Replace with the actual user ID
-        .collection('data') // The subcollection containing the visits
-        .get();
+    QuerySnapshot snapshot =
+        await firestore.collection('Users').doc(uid).collection('data').get();
 
     List<String> visitDates = snapshot.docs.map((doc) => doc.id).toList();
 
@@ -282,18 +328,38 @@ Future<Map<String, dynamic>?> getVisitData(String uid, String visitDate) async {
   }
 }
 
-addDataToFirebase(String token) async {
-  await getAll(token, globalData.email);
-  while (globalData.patientResult.isEmpty) {
-    await Future.delayed(Duration(milliseconds: 100));
-  }
-  if (globalData.patientResult.isNotEmpty) {
+Future<int> isPulseFinished(String token) async {
+  final status = await getAll(token, globalData.email);
+  // final status = await getAll(token, "ddd@ddd");
+  return status;
+}
+
+Future<String> addDataToFirebase(String token) async {
+  List recordResult = globalData.patientResult['data']['records'];
+  if (recordResult.isNotEmpty) {
     int id = await globalData.patientResult['data']['records'][0]['id'];
-    // final result =
     await getDetails(id, token);
-    // console([result]);
     String visitDate =
         globalData.pulseResult["visitInfo"]["visitTime"].split(" ")[0];
     await saveVisitData(globalData.uid, visitDate, globalData.pulseResult);
+    return visitDate;
+  } else {
+    // Handle the case when 'data' does not exist
+    return '';
+  }
+}
+
+Future<String> getUserPassword(String uid) async {
+  final DocumentSnapshot documentSnapshot;
+  try {
+    documentSnapshot =
+        await FirebaseFirestore.instance.collection("Users").doc(uid).get();
+    if (documentSnapshot.exists && documentSnapshot.data() != null) {
+      return documentSnapshot.get('password');
+    }
+    return '123456';
+  } catch (e) {
+    print("Error fetching document: $e");
+    return '123456';
   }
 }

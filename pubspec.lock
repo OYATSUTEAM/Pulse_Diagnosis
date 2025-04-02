@@ -421,14 +421,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
-  open_mail:
-    dependency: "direct main"
-    description:
-      name: open_mail
-      sha256: "77d4513dc8fdcc33072450a512763aae1eefa8867658d00df69481e2c91fa020"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.7"
   path:
     dependency: transitive
     description:
@@ -485,6 +477,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.0"
+  percent_indicator:
+    dependency: "direct main"
+    description:
+      name: percent_indicator
+      sha256: "0d77d5c6fa9b7f60202cedf748b568ba9ba38d3f30405d6ceae4da76f5185462"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.4"
   petitparser:
     dependency: transitive
     description:
@@ -602,6 +602,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+  square_progress_indicator:
+    dependency: "direct main"
+    description:
+      name: square_progress_indicator
+      sha256: a2bc87ad159ba19e097f45f701a782ad97f0a1c8a6db16138b311e5ab41529ec
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.8"
   stack_trace:
     dependency: transitive
     description:

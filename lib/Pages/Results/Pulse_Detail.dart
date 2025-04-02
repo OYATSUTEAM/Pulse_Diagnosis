@@ -16,6 +16,7 @@ class _PulseDetailState extends State<PulseDetail> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -26,7 +27,6 @@ class _PulseDetailState extends State<PulseDetail> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -56,65 +56,67 @@ class _PulseDetailState extends State<PulseDetail> {
 //=========================   cunResult  ========================
                     String posType = cunResult['posType'];
 
-                    String cunResult_pulsePosPopularDesc =
+                    String cunresultPulsepospopulardesc =
                         cunResult['pulsePosPopularDesc'];
-                    String cunResult_pulsePos = cunResult['pulsePos'];
+                    String cunresultPulsepos = cunResult['pulsePos'];
 
-                    String cunResult_pulseFreqPopularDesc =
+                    String cunresultPulsefreqpopulardesc =
                         cunResult['pulseFreqPopularDesc'];
-                    String cunResult_pulseFreq = cunResult['pulseFreq'];
+                    String cunresultPulsefreq = cunResult['pulseFreq'];
 
-                    String cunResult_pulsePeakPopularDesc =
+                    String cunresultPulsepeakpopulardesc =
                         cunResult['pulsePeakPopularDesc'];
-                    String cunResult_pulsePeak = cunResult['pulsePeak'];
+                    String cunresultPulsepeak = cunResult['pulsePeak'];
 
-                    String cunResult_fluencyPopularDesc =
+                    String cunresultFluencypopulardesc =
                         cunResult['fluencyPopularDesc'];
-                    String cunResult_fluency = cunResult['fluency'];
+                    String cunresultFluency = cunResult['fluency'];
 
-                    String cunResult_tensionPopularDesc =
+                    String cunresultTensionpopulardesc =
                         cunResult['tensionPopularDesc'];
-                    String cunResult_tension = cunResult['tension'];
+                    String cunresultTension = cunResult['tension'];
 //=========================   guanResult  ========================
-                    String guanResult_pulsePosPopularDesc =
+                    String guanresultPulsepospopulardesc =
                         guanResult['pulsePosPopularDesc'];
-                    String guanResult_pulseFreqPopularDesc =
+                    String guanresultPulsefreqpopulardesc =
                         guanResult['pulseFreqPopularDesc'];
-                    String guanResult_pulsePeakPopularDesc =
+                    String guanresultPulsepeakpopulardesc =
                         guanResult['pulsePeakPopularDesc'];
-                    String guanResult_fluencyPopularDesc =
+                    String guanresultFluencypopulardesc =
                         guanResult['fluencyPopularDesc'];
-                    String guanResult_tensionPopularDesc =
+                    String guanresultTensionpopulardesc =
                         guanResult['tensionPopularDesc'];
-                    String guanResult_pulsePos = guanResult['pulsePos'];
-                    String guanResult_pulseFreq = guanResult['pulseFreq'];
-                    String guanResult_pulsePeak = guanResult['pulsePeak'];
-                    String guanResult_fluency = guanResult['fluency'];
-                    String guanResult_tension = guanResult['tension'];
+                    String guanresultPulsepos = guanResult['pulsePos'];
+                    String guanresultPulsefreq = guanResult['pulseFreq'];
+                    String guanresultPulsepeak = guanResult['pulsePeak'];
+                    String guanresultFluency = guanResult['fluency'];
+                    String guanresultTension = guanResult['tension'];
 //=========================   chiResult  ========================
 
-                    String chiResult_pulsePosPopularDesc =
+                    String chiresultPulsepospopulardesc =
                         chiResult['pulsePosPopularDesc'];
-                    String chiResult_pulseFreqPopularDesc =
+                    String chiresultPulsefreqpopulardesc =
                         chiResult['pulseFreqPopularDesc'];
-                    String chiResult_pulsePeakPopularDesc =
+                    String chiresultPulsepeakpopulardesc =
                         chiResult['pulsePeakPopularDesc'];
-                    String chiResult_fluencyPopularDesc =
+                    String chiresultFluencypopulardesc =
                         chiResult['fluencyPopularDesc'];
-                    String chiResult_tensionPopularDesc =
+                    String chiresultTensionpopulardesc =
                         chiResult['tensionPopularDesc'];
-                    String chiResult_pulsePos = chiResult['pulsePos'];
-                    String chiResult_pulseFreq = chiResult['pulseFreq'];
-                    String chiResult_pulsePeak = chiResult['pulsePeak'];
-                    String chiResult_fluency = chiResult['fluency'];
-                    String chiResult_tension = chiResult['tension'];
+                    String chiresultPulsepos = chiResult['pulsePos'];
+                    String chiresultPulsefreq = chiResult['pulseFreq'];
+                    String chiresultPulsepeak = chiResult['pulsePeak'];
+                    String chiresultFluency = chiResult['fluency'];
+                    String chiresultTension = chiResult['tension'];
                     return Container(
                       padding: EdgeInsets.all(20),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CategoryWidget(title: posType == 0 ? '左手' : '右手'),
-                      
+                          CategoryWidget(title: posType == "0" ? '左手' : '右手'),
+                          Image.asset('assets/images/chi$index.png'),
+                          const SizedBox(height: 15),
+// ==========================================       chi result ===============================================
                           RichText(
                               text: TextSpan(children: [
                                 WidgetSpan(
@@ -124,13 +126,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 224, 151, 91)),
                                 ),
                                 TextSpan(
-                                    text: '$cunResult_pulsePos : ',
+                                    text: '$cunresultPulsepos : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $cunResult_pulsePosPopularDesc',
+                                    text: ' $cunresultPulsepospopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -146,13 +148,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 121, 231, 171)),
                                 ),
                                 TextSpan(
-                                    text: '$cunResult_pulseFreq : ',
+                                    text: '$cunresultFluency : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $cunResult_pulseFreqPopularDesc',
+                                    text: ' $cunresultFluencypopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -168,13 +170,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 50, 133, 228)),
                                 ),
                                 TextSpan(
-                                    text: '$cunResult_pulsePeak : ',
+                                    text: '$cunresultPulsepeak : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $cunResult_pulsePeakPopularDesc',
+                                    text: ' $cunresultPulsepeakpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -190,13 +192,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 202, 139, 87)),
                                 ),
                                 TextSpan(
-                                    text: '$cunResult_fluency : ',
+                                    text: '$cunresultPulsefreq : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $cunResult_fluencyPopularDesc',
+                                    text: ' $cunresultPulsefreqpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -212,20 +214,23 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 133, 95, 64)),
                                 ),
                                 TextSpan(
-                                    text: '$cunResult_tension : ',
+                                    text: '$cunresultTension : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $cunResult_tensionPopularDesc\n\n',
+                                    text: ' $cunresultTensionpopulardesc\n\n',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
                               softWrap: true),
-                       
+
 // ==========================================       cun result ===============================================
-                       
+
+                          Image.asset('assets/images/cun$index.png'),
+                          const SizedBox(height: 15),
+
                           RichText(
                               text: TextSpan(children: [
                                 WidgetSpan(
@@ -235,13 +240,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 224, 151, 91)),
                                 ),
                                 TextSpan(
-                                    text: '$guanResult_pulsePos : ',
+                                    text: '$guanresultPulsepos : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $guanResult_pulsePosPopularDesc',
+                                    text: ' $guanresultPulsepospopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -257,13 +262,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 121, 231, 171)),
                                 ),
                                 TextSpan(
-                                    text: '$guanResult_pulseFreq : ',
+                                    text: '$guanresultFluency : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $guanResult_pulseFreqPopularDesc',
+                                    text: ' $guanresultFluencypopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -279,13 +284,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 50, 133, 228)),
                                 ),
                                 TextSpan(
-                                    text: '$guanResult_pulsePeak : ',
+                                    text: '$guanresultPulsepeak : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $guanResult_pulsePeakPopularDesc',
+                                    text: ' $guanresultPulsepeakpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -301,13 +306,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 202, 139, 87)),
                                 ),
                                 TextSpan(
-                                    text: '$guanResult_fluency : ',
+                                    text: '$guanresultPulsefreq : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $guanResult_fluencyPopularDesc',
+                                    text: ' $guanresultPulsefreqpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -323,20 +328,23 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 133, 95, 64)),
                                 ),
                                 TextSpan(
-                                    text: '$guanResult_tension : ',
+                                    text: '$guanresultTension : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $guanResult_tensionPopularDesc\n\n',
+                                    text: ' $guanresultTensionpopulardesc\n\n',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
                               softWrap: true),
-                       
+
 // ==========================================       guan result ===============================================
-                       
+
+                          Image.asset('assets/images/gun$index.png'),
+                          const SizedBox(height: 15),
+
                           RichText(
                               text: TextSpan(children: [
                                 WidgetSpan(
@@ -346,13 +354,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 224, 151, 91)),
                                 ),
                                 TextSpan(
-                                    text: '$chiResult_pulsePos : ',
+                                    text: '$chiresultPulsepos : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $chiResult_pulsePosPopularDesc',
+                                    text: ' $chiresultPulsepospopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -368,13 +376,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 121, 231, 171)),
                                 ),
                                 TextSpan(
-                                    text: '$chiResult_pulseFreq : ',
+                                    text: '$chiresultFluency : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $chiResult_pulseFreqPopularDesc',
+                                    text: ' $chiresultFluencypopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -390,13 +398,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 50, 133, 228)),
                                 ),
                                 TextSpan(
-                                    text: '$chiResult_pulsePeak : ',
+                                    text: '$chiresultPulsepeak : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $chiResult_pulsePeakPopularDesc',
+                                    text: ' $chiresultPulsepeakpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -412,13 +420,13 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 202, 139, 87)),
                                 ),
                                 TextSpan(
-                                    text: '$chiResult_fluency : ',
+                                    text: '$chiresultPulsefreq : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $chiResult_fluencyPopularDesc',
+                                    text: ' $chiresultPulsefreqpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
@@ -435,23 +443,17 @@ class _PulseDetailState extends State<PulseDetail> {
                                       const Color.fromARGB(255, 133, 95, 64)),
                                 ),
                                 TextSpan(
-                                    text: '$chiResult_tension : ',
+                                    text: '$chiresultTension : ',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold)),
                                 TextSpan(
-                                    text: ' $chiResult_tensionPopularDesc',
+                                    text: ' $chiresultTensionpopulardesc',
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 14))
                               ]),
                               softWrap: true),
-                       
-                       
-                       
-                       
-                       
-                       
                         ],
                       ),
                     );

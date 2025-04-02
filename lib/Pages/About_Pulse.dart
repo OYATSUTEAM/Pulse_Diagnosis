@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Pages/HomePage.dart';
-import 'package:pulse_diagnosis/Widgets/About_Body.dart';
-import 'package:pulse_diagnosis/Widgets/Table.dart';
-import 'package:pulse_diagnosis/Widgets/category.dart';
 
 class AboutPulse extends StatefulWidget {
   const AboutPulse({super.key});
@@ -16,14 +12,6 @@ class _AboutPulseState extends State<AboutPulse> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            floatingActionButton: FloatingActionButton(
-              mini: true,
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => MyHomePage()));
-              },
-              child: Icon(Icons.arrow_forward_ios),
-            ),
             body: Padding(
                 padding: EdgeInsets.all(0),
                 child: Center(
@@ -49,13 +37,16 @@ class _AboutPulseState extends State<AboutPulse> {
                                 child: Container(
                               height: 40,
                               decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 68, 171, 255),
+                                  color: Color.fromARGB(255, 247, 250, 249),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                               child: Center(
                                   child: Text('体質種類と体質スコアの詳細',
                                       style: TextStyle(
-                                          fontSize: 20, color: Colors.white))),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          color: const Color.fromARGB(
+                                              255, 0, 168, 154)))),
                             )),
                             TextSpan(
                                 text: '\n\n　体質',
@@ -97,7 +88,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n気虚質(ききょしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -137,7 +130,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n陽虚質(ようきょしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -176,7 +171,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n陰虚質(いんきょしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -216,7 +213,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n瘀血質(おけつしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -239,8 +238,8 @@ class _AboutPulseState extends State<AboutPulse> {
                         ),
                       ),
                     )
-                  ])
-                 ,   Stack(children: [
+                  ]),
+                  Stack(children: [
                     Opacity(
                       opacity: 0.5,
                       child: Image.asset('assets/images/about_background.jpg',
@@ -256,7 +255,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n痰湿質(たんしつしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -279,9 +280,8 @@ class _AboutPulseState extends State<AboutPulse> {
                         ),
                       ),
                     )
-                  ])
-               
-                 ,   Stack(children: [
+                  ]),
+                  Stack(children: [
                     Opacity(
                       opacity: 0.5,
                       child: Image.asset('assets/images/about_background.jpg',
@@ -297,7 +297,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n気鬱質(きうつしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -320,10 +322,8 @@ class _AboutPulseState extends State<AboutPulse> {
                         ),
                       ),
                     )
-                  ])
-               
-               
-                  ,   Stack(children: [
+                  ]),
+                  Stack(children: [
                     Opacity(
                       opacity: 0.5,
                       child: Image.asset('assets/images/about_background.jpg',
@@ -339,7 +339,9 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n湿熱質(しつねつしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
@@ -347,8 +349,7 @@ class _AboutPulseState extends State<AboutPulse> {
                                   '\n体内に余分な「湿」（水分）と「熱」がこもりやすい体質です。\n湿熱質のスコアが高いと、皮膚が脂っぽくテカリ気味でニキビや吹き出物ができやすいことを示します。また口の中が苦く感じたり、口臭が出たり、便がねばついてすっきり出ない・尿が熱っぽいなどの傾向も強まります​。これは体内に炎症や過剰な熱があるサインです。\n',
                             ),
                             TextSpan(
-                                text:
-                                    '\n 辛辣な刺激物や油っこい物は体に熱と湿気を溜め込むので控えましょう。\n',
+                                text: '\n 辛辣な刺激物や油っこい物は体に熱と湿気を溜め込むので控えましょう。\n',
                                 style: TextStyle(
                                     fontSize: 15,
                                     decoration: TextDecoration.underline,
@@ -362,9 +363,8 @@ class _AboutPulseState extends State<AboutPulse> {
                         ),
                       ),
                     )
-                  ])
-               
-                 ,   Stack(children: [
+                  ]),
+                  Stack(children: [
                     Opacity(
                       opacity: 0.5,
                       child: Image.asset('assets/images/about_background.jpg',
@@ -380,32 +380,20 @@ class _AboutPulseState extends State<AboutPulse> {
                             WidgetSpan(
                               child: Center(
                                   child: Text('\n平和質(へいわしつ)\n',
-                                      style: TextStyle(fontSize: 20))),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20))),
                             ),
                             TextSpan(
                               style: TextStyle(fontSize: 15),
                               text:
                                   '\nいわゆる「バランスの取れた」体質です。\n疲れにくく精力旺盛で、暑さ寒さに強く、睡眠や食欲も良好な健康優良タイプで、病気にかかりにくいのが特徴です​。\n',
                             ),
-           
                           ],
                         ),
                       ),
                     )
                   ])
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
                 ]))))));
   }
 }

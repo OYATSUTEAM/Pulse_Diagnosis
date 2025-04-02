@@ -17,7 +17,7 @@ class GlobalData {
       name = '',
       address = '',
       gender = '',
-      birth = '',
+      age = '',
       phone = '';
   updatePulseResult(Map<String, dynamic> _pulseResult) async {
     pulseResult = _pulseResult;
@@ -32,14 +32,20 @@ class GlobalData {
   }
 
   updatePatientDetail(String _uid, String _email, String _name, String _address,
-      String _gender, String _birth, String _phone) async {
+      String _gender, String _age, String _phone) async {
     uid = _uid;
     email = _email;
     name = _name;
     address = _address;
     gender = _gender;
-    birth = _birth;
+    age = _age;
     phone = _phone;
+  }
+
+  updateProfile(String _name, String _age, String _gender) async {
+    name = _name;
+    gender = _gender;
+    age = _age;
   }
 
   updateS_Size(Size size) async {

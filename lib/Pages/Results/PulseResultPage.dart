@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Pages/HomePage.dart';
+import 'package:pulse_diagnosis/Pages/NavigationPage.dart';
 import 'package:pulse_diagnosis/Pages/Results/Body_Recognization.dart';
 import 'package:pulse_diagnosis/Pages/Results/Eight_Principle.dart';
 import 'package:pulse_diagnosis/Pages/Results/Exercise_List.dart';
@@ -7,7 +7,6 @@ import 'package:pulse_diagnosis/Pages/Results/Food_List.dart';
 import 'package:pulse_diagnosis/Pages/Results/Health_Assessment.dart';
 import 'package:pulse_diagnosis/Pages/Results/Meridians_Analysis.dart';
 import 'package:pulse_diagnosis/Pages/Results/Physical_Health_Care.dart';
-import 'package:pulse_diagnosis/Pages/Results/Plan_Your_Health.dart';
 import 'package:pulse_diagnosis/Pages/Results/Pulse_Detail.dart';
 import 'package:pulse_diagnosis/Pages/Results/User_Page.dart';
 import 'package:pulse_diagnosis/Pages/Results/Wellness.dart';
@@ -63,8 +62,10 @@ class _PulseresultpageState extends State<Pulseresultpage>
       floatingActionButton: FloatingActionButton(
         mini: true,
         onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => MyHomePage()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => Navigationpage(
+                    selectedIndex: 1,
+                  )));
         },
         child: Icon(Icons.keyboard_return),
       ),

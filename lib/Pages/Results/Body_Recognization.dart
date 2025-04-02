@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
@@ -15,6 +14,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -25,7 +25,6 @@ class _BodyRecognizationState extends State<BodyRecognization> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -46,6 +45,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    Image.asset('assets/images/bodychart.png'),
                     ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
@@ -53,6 +53,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                         itemBuilder: (context, index) {
                           String body = physiqueList[index]['body'];
                           String mental = physiqueList[index]['mental'];
+                          String jianJia = physiqueList[index]['jianJia'];
                           String performance =
                               physiqueList[index]['performance'];
                           List<dynamic> imageList =
@@ -73,7 +74,17 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                                           final imageUrl =
                                               "http://mzy-jp.dajingtcm.com/double-ja/${image['path']}";
                                           return Image.network(imageUrl,
-                                              fit: BoxFit.cover);
+                                              fit: BoxFit.cover, loadingBuilder:
+                                                  (context, child, progress) {
+                                            return progress == null
+                                                ? child
+                                                : Center(
+                                                    child:
+                                                        CircularProgressIndicator());
+                                          }, errorBuilder:
+                                                  (context, error, stackTrace) {
+                                            return Icon(Icons.error);
+                                          });
                                         }).toList(),
                                       )),
                                   RichText(
@@ -98,7 +109,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        TextSpan(text: '$mental'),
+                                        TextSpan(text: '$performance'),
                                       ],
                                     ),
                                   ),
@@ -111,7 +122,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        TextSpan(text: '$performance'),
+                                        TextSpan(text: '$jianJia'),
                                       ],
                                     ),
                                   ),

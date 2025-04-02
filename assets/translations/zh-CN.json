@@ -15,8 +15,11 @@
     "address": "您的地址",
     "birth": "出生日期",
     "Select Date": "选择日期",
-    "password": "密码",
     "Scan QrCode":"扫描 QR 码",
+    "password": "密码",
+    "password reset": "Password Reset",
+    "current password": "Current Password",
+    "password has changed":"password has changed",
     "What is a Body Mass Index?" :"什么是宪法评分？",
     "History of previous measurements":"以前的测量历史" ,
     "measurement results":"测量结果",
@@ -35,5 +38,14 @@
     "Password must be more than 6 characters": "密码必须超过 6 个字符",
     "The passwords do not match.": "密码不匹配.",
     "Please enter a valid email address.": "请输入有效的电子邮件地址.",
-    "confirmation email": "已向注册的电子邮件地址发送了一封确认电子邮件。请检查您的账户并重新登录。"
+    "confirmation email": "已向注册的电子邮件地址发送了一封确认电子邮件。请检查您的账户并重新登录。",
+    "home":"主页",
+    "history":"History",
+    "fetch pulse":"获取脉搏",
+    "body score":"身体得分",
+    "user info": "用户信息",
+    "user info has changed": "登録情報が変更されました",
+    "age":"年齢",
+    "save":"保存",
+    "Please enter a valid age":"Please enter a valid age"
 }

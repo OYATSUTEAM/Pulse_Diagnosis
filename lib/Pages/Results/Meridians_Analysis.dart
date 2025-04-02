@@ -15,6 +15,7 @@ class _MeridiansAnalysisState extends State<MeridiansAnalysis> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -25,7 +26,6 @@ class _MeridiansAnalysisState extends State<MeridiansAnalysis> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -85,7 +85,16 @@ class _MeridiansAnalysisState extends State<MeridiansAnalysis> {
                                           text:
                                               '${main.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n')}',
                                           style: TextStyle(
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '    ${jingluoListV2[index]['mainGrade']}',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.orange,
+                                              fontSize: 20),
                                         ),
                                       ],
                                     ),
@@ -111,7 +120,16 @@ class _MeridiansAnalysisState extends State<MeridiansAnalysis> {
                                           text:
                                               '${minor.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n')}',
                                           style: TextStyle(
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '    ${jingluoListV2[index]['minorGrade']}',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.orange,
+                                              fontSize: 20),
                                         ),
                                       ],
                                     ),

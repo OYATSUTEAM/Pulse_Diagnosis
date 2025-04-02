@@ -1,0 +1,2537 @@
+[log] {
+    "standard": null,
+    "pulseExplain": [
+      {
+        "popularDesc": "主里证。沉而有力为里实，可见于积滞、气滞、寒凝、痰饮等病症；沉而无力为里虚，如阳虚气陷、气少等，可见于各脏腑的虚证。脉沉数，有内热邪；脉沉迟，有里寒；脉沉滑，有痰饮。亦可见于正常人，肥人脉象多沉；冬天脉象也偏沉。",
+        "part": "总脉象",
+        "about": "主里证。沉而有力为里实，可见于积滞、气滞、寒凝、痰饮等病症；沉而无力为里虚，如阳虚气陷、气少等，可见于各脏腑的虚证。脉沉数，有内热邪；脉沉迟，有里寒；脉沉滑，有痰饮。亦可见于正常人，肥人脉象多沉；冬天脉象也偏沉。",
+        "pulseName": null,
+        "name": "沈",
+        "id": null,
+        "pulseType": "脉位",
+        "pulseId": null,
+        "type": "总脉象",
+        "bodyPart": null
+      },
+      {
+        "popularDesc": "主热证，也可见于里虚证。新病脉数，可见外感风热，或里热炽盛；久病脉数，可是阴虚、血虚，也可是阳虚、气虚。亦见于正常人，儿童的脉搏一般都会比成年人快，运动、饮酒或情绪激动也会出现数脉。",
+        "part": "总脉象",
+        "name": "数",
+        "pulseName": null,
+        "about": "主热证，也可见于里虚证。新病脉数，可见外感风热，或里热炽盛；久病脉数，可是阴虚、血虚，也可是阳虚、气虚。亦见于正常人，儿童的脉搏一般都会比成年人快，运动、饮酒或情绪激动也会出现数脉。",
+        "id": null,
+        "pulseType": "脉率",
+        "type": "总脉象",
+        "pulseId": null,
+        "bodyPart": null
+      },
+      {
+        "popularDesc": "主实证。脉力辨虚实，有力者正气实，邪气正不虚，亦可见健康人。",
+        "part": "总脉象",
+        "pulseName": null,
+        "name": "有力",
+        "about": "主实证。脉力辨虚实，有力者正气实，邪气正不虚，亦可见健康人。",
+        "id": null,
+        "pulseType": "脉力",
+        "pulseId": null,
+        "type": "总脉象",
+        "bodyPart": null
+      },
+      {
+        "popularDesc": "主精血亏少，气滞血瘀，挟痰，挟食。可见胸闷、胸痛、脾胃虚弱伴两肋气滞胀满、汗吐泻过剧、肠结便秘、便血、小便淋沥等。寒冷刺激，也会出现一时涩脉。",
+        "part": "总脉象",
+        "about": "主精血亏少，气滞血瘀，挟痰，挟食。可见胸闷、胸痛、脾胃虚弱伴两肋气滞胀满、汗吐泻过剧、肠结便秘、便血、小便淋沥等。寒冷刺激，也会出现一时涩脉。",
+        "pulseName": null,
+        "name": "澀",
+        "id": null,
+        "pulseId": null,
+        "pulseType": "流利度",
+        "type": "总脉象",
+        "bodyPart": null
+      },
+      {
+        "popularDesc": "主肝胆病，痰饮，痛证，疟疾。弦是脉气紧张的表现，可见诸痛、痰饮，有胸胁胀满、善怒、烦躁等情志不畅症状，或目赤、眼花、眼干等眼疾，或肝气犯脾，痰湿运化不利等。",
+        "part": "总脉象",
+        "pulseName": null,
+        "about": "主肝胆病，痰饮，痛证，疟疾。弦是脉气紧张的表现，可见诸痛、痰饮，有胸胁胀满、善怒、烦躁等情志不畅症状，或目赤、眼花、眼干等眼疾，或肝气犯脾，痰湿运化不利等。",
+        "name": "弦",
+        "id": null,
+        "pulseType": "紧张度",
+        "pulseId": null,
+        "type": "总脉象",
+        "bodyPart": null
+      }
+    ],
+    "physiotherapyCareList": null,
+    "physiotherapyCareListV2": [
+      {
+        "list": [
+          {
+            "principle": "1、各部位に灸を10～15分間行い、皮膚に赤みが出るまで行います；<br/>\n2、病気や不快感がある場合は毎日行うことができ、保健のための灸は3～5日に1回行い、毎回2組の経穴を選びます。",
+            "images": [
+              {
+                "path": "material/2024/11/22/bf5906d4e55a501fdcd6e91ee4af0941.png",
+                "createTime": "2022-11-03 13:34:46",
+                "name": "心兪穴区",
+                "main": 1,
+                "id": 131
+              },
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/04a45c8ccaff3bf286a0d409ed5bdb22.png",
+                "createTime": "2023-08-17 10:28:30",
+                "name": "郄門",
+                "main": 0,
+                "id": 212
+              },
+              {
+                "path": "material/2024/11/22/7f238c1f9c2cbdc4ec25ac0fc816a53e.png",
+                "createTime": "2022-11-03 13:34:33",
+                "name": "太溪",
+                "main": 0,
+                "id": 130
+              }
+            ],
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "about": "",
+                "length": "201040",
+                "mediaUri480": null,
+                "title": "艾灸-心",
+                "hit": null,
+                "filename": "艾灸-心.mp4",
+                "mediaUri1080": null,
+                "createTime": "2022-11-18 16:57:37",
+                "masterMediaUri": "/video/2022/11/18/3947bb684e7482d9d8cba4049d1f5356_master.m3u8",
+                "mediaUriOrigin": null,
+                "id": 842,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": null,
+            "type": "艾灸",
+            "efficacy": "1、経絡を温め、寒邪を散らす；&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp\n2、毛穴を開き、熱を外に導く；<br/>\n3、陽気を補い、脱力した状態を改善する；<br/>\n4、気の流れを促進し、血行を良くし、瘀血を解消する；<br/>\n5、疾病を防ぎ、健康を維持し、寿命を延ばす。",
+            "bodyPart": "心",
+            "frequency": null,
+            "precaution": "1、艾灸の際は「守神」を守り、注意を分散させないようにします。灸を継続的に行い、中断しないようにしないと、期待する効果が得られません；<br/>\n2、密閉された空間や、過度に熱いまたは寒い環境での艾灸は避けてください。そうしないと、効果がないだけでなく、体に不快感を引き起こす可能性があります；<br/>\n3、艾灸が終了した後は、筋肉をほぐすような緩やかな動きを行うことをお勧めします。",
+            "createTime": "2022-10-31 17:06:24",
+            "id": 4,
+            "acupoint": "心俞穴区（由厥阴俞、心俞、督俞、膈俞穴组成），内关，神门，郄门，百会",
+            "operation": null,
+            "contraindication": "1、重度の器質的心臓病を伴う心機能不全の方、精神分裂症の患者、艾灸治療に協力できない方；<br/>\n2、高熱、高血圧危機、肺結核による大出血、急性感染症、皮膚の膿瘍や腫れが発生している期間；<br/>\n3、過度に空腹、過食、過度の疲労、精神的に興奮している時、大量に飲酒した後、または大汗をかいている時；<br/>\n4、妊娠中や生理中は、できれば艾灸を避けた方が良いです。"
+          },
+          {
+            "images": [
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/fcb9f28954ba6918cbcbdc8303112b74.png",
+                "createTime": "2022-11-03 13:34:00",
+                "name": "神闕から関元",
+                "main": 0,
+                "id": 127
+              },
+              {
+                "path": "material/2024/11/22/7f238c1f9c2cbdc4ec25ac0fc816a53e.png",
+                "createTime": "2022-11-03 13:34:33",
+                "name": "太溪",
+                "main": 0,
+                "id": 130
+              },
+              {
+                "path": "material/2024/11/22/3ed76038fa62c56b6be9110e75ba9007.png",
+                "createTime": "2022-11-03 13:40:38",
+                "name": "腰陽関至命門",
+                "main": 0,
+                "id": 140
+              },
+              {
+                "path": "material/2024/11/22/61f59b465a7d304f0b52664a45d452c6.png",
+                "createTime": "2022-11-03 13:33:45",
+                "name": "三陰交",
+                "main": 0,
+                "id": 125
+              }
+            ],
+            "principle": "1、各部位に灸を10～15分間行い、皮膚に赤みが出るまで行います；<br/>\n2、病気や不快感がある場合は毎日行うことができ、保健のための灸は3～5日に1回行い、毎回2組の経穴を選びます。",
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "length": "204280",
+                "about": "",
+                "mediaUri480": null,
+                "title": "艾灸-肾",
+                "hit": null,
+                "filename": "艾灸-肾.mp4",
+                "mediaUri1080": null,
+                "createTime": "2022-11-18 17:10:56",
+                "masterMediaUri": "/video/2022/11/18/b6b026872dfaf12111b77b5913f142ff_master.m3u8",
+                "mediaUriOrigin": null,
+                "id": 846,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": null,
+            "type": "艾灸",
+            "efficacy": "1、経絡を温め、寒邪を散らす；&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp\n2、毛穴を開き、熱を外に導く；<br/>\n3、陽気を補い、脱力した状態を改善する；<br/>\n4、気の流れを促進し、血行を良くし、瘀血を解消する；<br/>\n5、疾病を防ぎ、健康を維持し、寿命を延ばす。",
+            "bodyPart": "肾",
+            "precaution": "1、艾灸の際は「守神」を守り、注意を分散させないようにします。灸を継続的に行い、中断しないようにしないと、期待する効果が得られません；<br/>\n2、密閉された空間や、過度に熱いまたは寒い環境での艾灸は避けてください。そうしないと、効果がないだけでなく、体に不快感を引き起こす可能性があります；<br/>\n3、艾灸が終了した後は、筋肉をほぐすような緩やかな動きを行うことをお勧めします。",
+            "frequency": null,
+            "createTime": "2022-10-31 17:10:36",
+            "id": 8,
+            "acupoint": "肾俞穴区（由肾俞、气海俞、关元俞穴组成），神阙至气海至关元，太溪",
+            "operation": null,
+            "contraindication": "1、重度の器質的心臓病を伴う心機能不全の方、精神分裂症の患者、艾灸治療に協力できない方；<br/>\n2、高熱、高血圧危機、肺結核による大出血、急性感染症、皮膚の膿瘍や腫れが発生している期間；<br/>\n3、過度に空腹、過食、過度の疲労、精神的に興奮している時、大量に飲酒した後、または大汗をかいている時；<br/>\n4、妊娠中や生理中は、できれば艾灸を避けた方が良いです。"
+          }
+        ],
+        "type": "艾灸"
+      },
+      {
+        "type": "拔罐",
+        "list": [
+          {
+            "images": [
+              {
+                "path": "material/2024/11/22/bf5906d4e55a501fdcd6e91ee4af0941.png",
+                "createTime": "2022-11-03 13:34:46",
+                "name": "心兪穴区",
+                "main": 1,
+                "id": 131
+              },
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/1f82aaf82b2570c9e74972d5ca20d592.png",
+                "createTime": "2022-11-03 13:39:55",
+                "name": "膻中",
+                "main": 0,
+                "id": 138
+              },
+              {
+                "path": "material/2024/11/22/fcb9f28954ba6918cbcbdc8303112b74.png",
+                "createTime": "2022-11-03 13:34:00",
+                "name": "神闕から関元",
+                "main": 0,
+                "id": 127
+              }
+            ],
+            "principle": "毎回2組の穴位を選び、罐を10分間留め、3日以上の間隔を空けて施術を行う。",
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "about": "",
+                "length": "151040",
+                "mediaUri480": null,
+                "title": "拔罐-心",
+                "hit": null,
+                "filename": "拔罐-心.mp4",
+                "mediaUri1080": null,
+                "masterMediaUri": "/video/2022/11/18/4c04ec31fc64b467c2e6a3ff4e8f9096_master.m3u8",
+                "createTime": "2022-11-18 16:49:20",
+                "mediaUriOrigin": null,
+                "id": 837,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": null,
+            "type": "拔罐",
+            "efficacy": "主治症状：心悸、易驚、健忘、不眠、精神恍惚、多夢、口舌の生じる潰瘍、大便の乾燥など。",
+            "precaution": "1、拔罐の際は、施術部位の大きさに合った適切な罐を選び、器具は必ず消毒すること。施術は、動作を安定させ、正確で素早く行う；<br/>\n2、初めて拔罐を行う人、または体力の弱い人、子供に対しては、施術時間を短くし、使用する罐の数を減らすこと；<br/>\n3、同じ部位には毎日施術をしないこと。拔罐の痕が完全に消える前に再び施術を行わないこと。",
+            "frequency": null,
+            "bodyPart": "心",
+            "createTime": "2022-10-31 17:12:04",
+            "id": 9,
+            "operation": null,
+            "acupoint": "心俞穴区（由厥阴俞、心俞、督俞、膈俞穴组成），膻中，曲泽，内关，劳宫",
+            "contraindication": "1、重度の心臓病で心機能不全のある人、統合失調症患者、拔罐治療に協力できない人；<br/>\n2、高熱、高血圧の危機状態、肺結核による血痰、急性の感染症、皮膚の腫瘍や炎症がある期間；<br/>\n3、空腹、満腹、過度の疲労、強い感情の動揺がある場合、または飲酒後や大量の発汗があるとき；<br/>\n4、妊娠中、または生理期間中は拔罐を避けること。"
+          },
+          {
+            "images": [
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/fcb9f28954ba6918cbcbdc8303112b74.png",
+                "createTime": "2022-11-03 13:34:00",
+                "name": "神闕から関元",
+                "main": 0,
+                "id": 127
+              },
+              {
+                "path": "material/2024/11/22/7f238c1f9c2cbdc4ec25ac0fc816a53e.png",
+                "createTime": "2022-11-03 13:34:33",
+                "name": "太溪",
+                "main": 0,
+                "id": 130
+              },
+              {
+                "path": "material/2024/11/22/3ed76038fa62c56b6be9110e75ba9007.png",
+                "createTime": "2022-11-03 13:40:38",
+                "name": "腰陽関至命門",
+                "main": 0,
+                "id": 140
+              },
+              {
+                "path": "material/2024/11/22/c25d7bd67e826eba0b885556f1345f5f.png",
+                "createTime": "2022-11-03 13:40:52",
+                "name": "湧泉",
+                "main": 0,
+                "id": 142
+              }
+            ],
+            "principle": "毎回2組の穴位を選び、罐を10分間留め、3日以上の間隔を空けて施術を行う。",
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "length": "151960",
+                "about": "",
+                "mediaUri480": null,
+                "title": "拔罐-肾",
+                "hit": null,
+                "filename": "拔罐-肾.mp4",
+                "createTime": "2022-11-18 16:55:30",
+                "masterMediaUri": "/video/2022/11/18/af16e80dd7598cc3a61a9af01b299d7c_master.m3u8",
+                "mediaUri1080": null,
+                "mediaUriOrigin": null,
+                "id": 841,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": null,
+            "type": "拔罐",
+            "efficacy": "主治症状：めまい、健忘、動悸、息切れ、虚弱、疲労、腰や膝の痛み、精神的な疲弊、動作の遅れなど。",
+            "precaution": "1、重度の心臓病で心機能不全のある人、統合失調症患者、拔罐治療に協力できない人；<br/>\n2、高熱、高血圧の危機状態、肺結核による血痰、急性の感染症、皮膚の腫瘍や炎症がある期間；<br/>\n3、空腹、満腹、過度の疲労、強い感情の動揺がある場合、または飲酒後や大量の発汗があるとき；<br/>\n4、妊娠中、または生理期間中は拔罐を避けること。",
+            "bodyPart": "肾",
+            "frequency": null,
+            "createTime": "2022-10-31 17:15:42",
+            "id": 13,
+            "acupoint": "肾俞穴区（由肾俞、气海俞、关元俞穴、命门组成），神阙至气海至关元，腰阳关至命门，太溪，涌泉",
+            "operation": null,
+            "contraindication": "1、重度の心臓病で心機能不全のある人、統合失調症患者、拔罐治療に協力できない人；<br/>\n2、高熱、高血圧の危機状態、肺結核による血痰、急性の感染症、皮膚の腫瘍や炎症がある期間；<br/>\n3、空腹、満腹、過度の疲労、強い感情の動揺がある場合、または飲酒後や大量の発汗があるとき；<br/>\n4、妊娠中、または生理期間中は拔罐を避けること。"
+          }
+        ]
+      },
+      {
+        "list": [
+          {
+            "principle": "圧力を大きくし、速度は遅くします。熱証は容易に痧を出し、熱の程度が重いほど、痧が出る速度は速く、痧の量は多く、痧の色は鮮やかまたは紫紅色で、明らかな痛みや膨張感を伴い、刮痧板の下に砂利のような感触があります。",
+            "images": [
+              {
+                "path": "material/2024/11/22/bf5906d4e55a501fdcd6e91ee4af0941.png",
+                "createTime": "2022-11-03 13:34:46",
+                "name": "心兪穴区",
+                "main": 1,
+                "id": 131
+              },
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/aecf2b284b2612f7cdf81f91ccd31d66.png",
+                "createTime": "2022-11-04 10:58:05",
+                "name": "極泉",
+                "main": 0,
+                "id": 144
+              },
+              {
+                "path": "material/2024/11/22/1f82aaf82b2570c9e74972d5ca20d592.png",
+                "createTime": "2022-11-03 13:39:55",
+                "name": "膻中",
+                "main": 0,
+                "id": 138
+              }
+            ],
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "about": "",
+                "length": "150360",
+                "mediaUri480": null,
+                "title": "刮痧-心",
+                "hit": null,
+                "filename": "刮痧-心.mp4",
+                "mediaUri1080": null,
+                "masterMediaUri": "/video/2022/11/18/ae78679d048af1038f94a1b5726efe9a_master.m3u8",
+                "createTime": "2022-11-18 16:24:21",
+                "mediaUriOrigin": null,
+                "id": 831,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": "有力",
+            "type": "刮痧",
+            "efficacy": "心血管・脳神経の活力を高め、気血の循環を促進し、血脈を通じさせます。",
+            "frequency": "数",
+            "precaution": "1、刮痧の後は風を避け、保温に気をつけます。<br/>\n2、水分補給のために温かい水を一杯飲むことを推奨します。<br/>\n3、施術後3時間以内の入浴は避けてください。",
+            "bodyPart": "心",
+            "createTime": "2022-11-01 13:43:50",
+            "id": 52,
+            "operation": "首、背中、肩、顔などを一定方向にこすり、滞った血の流れを改善し、新陳代謝を促す。四肢、胸腹部の経穴は、毎日衣服越しにさすり、背中は2週間ごとまたは毎月1回、刮痧油を塗ってさすりましょう。痛みや結節のある場所は、重点的にさすってください。",
+            "acupoint": "心俞穴区（由厥阴俞、心俞、督俞、膈俞穴组成），膻中穴，劳宫穴",
+            "contraindication": "1、出血傾向がある病症や重度の貧血の患者は、刮痧を禁止します；<br/>\n2、妊娠中や月経期間中の女性は、腰部や仙骨部への施術を避けます；<br/>\n3、急性の捻挫や、外科手術後の瘢痕部には、手術後3ヶ月経過してから施術を行います；<br/>\n4、腹や満腹、疲労、酩酊状態では、強い圧力や広範囲の施術は避けます。これにより、虚脱状態になる可能性があります；<br/>\n5、染性皮膚病の患者や糖尿病による皮膚損傷、重度の下肢静脈瘤のある部分への施術は禁止します。"
+          },
+          {
+            "images": [
+              {
+                "path": "material/2024/11/22/96913870dff2132fdb8e6091af2db71c.png",
+                "createTime": "2022-11-03 13:34:07",
+                "name": "腎兪穴区",
+                "main": 1,
+                "id": 128
+              },
+              {
+                "path": "material/2024/11/22/3ed76038fa62c56b6be9110e75ba9007.png",
+                "createTime": "2022-11-03 13:40:38",
+                "name": "腰陽関至命門",
+                "main": 0,
+                "id": 140
+              },
+              {
+                "path": "material/2024/11/22/c25d7bd67e826eba0b885556f1345f5f.png",
+                "createTime": "2022-11-03 13:40:52",
+                "name": "湧泉",
+                "main": 0,
+                "id": 142
+              },
+              {
+                "path": "material/2024/11/22/1dd00ad51eebb1fdc10272370afe377d.png",
+                "createTime": "2022-11-03 13:34:56",
+                "name": "足三里",
+                "main": 0,
+                "id": 132
+              },
+              {
+                "path": "material/2024/11/22/3fe625e525760046aed7463c73243606.png",
+                "createTime": "2024-11-22 17:23:56",
+                "name": "復溜から太渓",
+                "main": 0,
+                "id": 273
+              }
+            ],
+            "principle": "圧力を大きくし、速度は遅くします。熱証は容易に痧を出し、熱の程度が重いほど、痧が出る速度は速く、痧の量は多く、痧の色は鮮やかまたは紫紅色で、明らかな痛みや膨張感を伴い、刮痧板の下に砂利のような感触があります。",
+            "videos": [
+              {
+                "mediaUri720": null,
+                "coverImgPath": null,
+                "length": "162640",
+                "about": "",
+                "mediaUri480": null,
+                "title": "刮痧-肾",
+                "hit": null,
+                "filename": "刮痧-肾.mp4",
+                "masterMediaUri": "/video/2022/11/18/1dfb8b662ea14b7583a3e53c16b88148_master.m3u8",
+                "createTime": "2022-11-18 16:42:58",
+                "mediaUri1080": null,
+                "mediaUriOrigin": null,
+                "id": 835,
+                "sourcePath": null,
+                "status": "published"
+              }
+            ],
+            "peak": "有力",
+            "type": "刮痧",
+            "efficacy": "腎の活力を高め、全身の臓腑器官の活動を支え、老化の進行を遅らせます。",
+            "bodyPart": "肾",
+            "frequency": "数",
+            "precaution": "1、刮痧の後は風を避け、保温に気をつけます。<br/>\n2、水分補給のために温かい水を一杯飲むことを推奨します。<br/>\n3、施術後3時間以内の入浴は避けてください。",
+            "createTime": "2022-11-01 13:47:40",
+            "id": 56,
+            "acupoint": "肾俞穴区（由肾俞、气海俞、关元俞穴组成），腰阳关至命门，涌泉，复溜至太溪，足三里",
+            "operation": "首、背中、肩、顔などを一定方向にこすり、滞った血の流れを改善し、新陳代謝を促す。四肢、胸腹部の経穴は、毎日衣服越しにさすり、背中は2週間ごとまたは毎月1回、刮痧油を塗ってさすりましょう。痛みや結節のある場所は、重点的にさすってください。",
+            "contraindication": "1、出血傾向がある病症や重度の貧血の患者は、刮痧を禁止します；<br/>\n2、妊娠中や月経期間中の女性は、腰部や仙骨部への施術を避けます；<br/>\n3、急性の捻挫や、外科手術後の瘢痕部には、手術後3ヶ月経過してから施術を行います；<br/>\n4、腹や満腹、疲労、酩酊状態では、強い圧力や広範囲の施術は避けます。これにより、虚脱状態になる可能性があります；<br/>\n5、染性皮膚病の患者や糖尿病による皮膚損傷、重度の下肢静脈瘤のある部分への施術は禁止します。"
+          }
+        ],
+        "type": "刮痧"
+      }
+    ],
+    "physiqueList": [
+      {
+        "note": "血の流れが悪く、滞りやすい体質",
+        "images": [
+          {
+            "path": "material/2022/11/01/04471d7a670de07ea570369907e3ecc8.png",
+            "createTime": "2022-11-01 11:37:48",
+            "name": "血瘀质",
+            "main": null,
+            "id": 115
+          }
+        ],
+        "mental": "性格内郁，易烦，急躁健忘。",
+        "body": "血瘀質は、体内に血液の循環が悪い潜在的な傾向や瘀血の内阻に基づく病理状態を指し、一連の外的な兆候が見られる体質です。この体質は、先天的な素質や後天的な損傷、憂鬱による気滞、血行不良、長期的な病気による経絡の損傷によって形成されることが多い。心理的特性としては、イライラしやすく、忘れっぽい傾向がある。外部環境への適応能力は、寒邪に対する耐性が低く、冬には体調が悪くなりがちである。",
+        "tend": "易出血，痛经，闭经，中风等。",
+        "healthFoods": [],
+        "associationPhysiqueList": [
+          {
+            "note": "エネルギーが不足しやすく、疲れやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気虚質",
+            "rank": null,
+            "id": 3,
+            "jianJia": "気虚の人は、気の推進力が不足し、気血の流れが円滑でなく、水液の代謝が異常になる。そのため、気鬱、血瘀、痰湿がしばしば混在する。痰湿が長く蓄積すると熱に変化し、湿熱体質が形成される。気虚が長引くと、陽気が消耗したり、体内の陰液が損なわれたりすることが多く、気虚の人は陽虚および陰虚の状態を伴う。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "気が滞りやすく、ストレスを感じやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気鬱質",
+            "rank": null,
+            "id": 8,
+            "medicinalFoods": null,
+            "jianJia": "気は血液や津液の流れを推進する力がある。気鬱体質の人は、気機の流れが円滑でなく、血液や津液の正常な流れを推進できない。その結果、血行不良や水液の代謝異常が起こり、血瘀体質や痰湿体質を伴うことがある。気虚の人は気機を運行させる力がないため、気鬱を伴うことが多い。陽虚の人は、陽気が不足しているため身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質を伴うことが多い。したがって、気虚および陽虚体質は気鬱体質と兼ねることがある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "余分な水分や脂肪がたまりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "痰湿質",
+            "rank": null,
+            "id": 6,
+            "medicinalFoods": null,
+            "jianJia": "痰湿体質の人は、体内に湿気が長く蓄積し、火熱に変化して湿熱が形成される。痰湿が蓄積すると、気血の流れが妨げられるため、痰湿と血瘀、気鬱体質がしばしば同時に現れる。痰湿が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、人体の正気が不足し、臓腑の機能が低下し、気虚体質や陽虚体質などの虚体質を伴うことが多い。",
+            "healthAssessments": null
+          },
+          {
+            "note": "体を温める力が弱く、冷えやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陽虚質",
+            "rank": null,
+            "id": 4,
+            "jianJia": "陽虚の人は、陽気が不足し、温める機能が失われ、気虚とともに現れることが多い。陽気不足は、気虚、陰虚とともに見られる。陽気が不足すると身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質や血瘀体質を伴うことが多い。また、陽気不足は体の運化能力を低下させ、湿邪が体内に蓄積しやすく、痰湿体質を伴うこともある。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "体の潤いが不足し、乾燥しやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陰虚質",
+            "rank": null,
+            "id": 5,
+            "jianJia": "陰虚の人は、陰液が不足し、万物を滋養することができない。気虚と共に現れることが多く、気陰両虚と称される。陰虚の場合、内熱が生じやすく、血液が粘滞して血瘀体質を形成することがある。陽虚体質を伴うことも多い。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          }
+        ],
+        "performance": "顔色が暗く、皮膚は暗いか色素沈着が見られ、皮膚にあざができやすい。口唇は紫色がかり、皮膚は乾燥しているか、爪が変形している。体は原因不明の痛みが出やすく、運動を好まない。",
+        "createTime": "2022-10-31 16:59:45",
+        "physiqueGrade": 70,
+        "name": "血瘀質",
+        "rank": 7,
+        "id": 9,
+        "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+        "medicinalFoods": [
+          {
+            "physiqueId": "9",
+            "images": [],
+            "ingredient": "姜黄、山楂、香橼、佛手、桃仁、西红花、肉桂、玫瑰花、陈皮、当归、槐花、白茅根、薏苡仁、党参、茯苓、薤白、葛根",
+            "code": "GF_TRHHG001",
+            "buyUri": "",
+            "physique": null,
+            "usage": "一天两次，每次10g。冲服，取药膏放入杯中，冲入50-200ml的白开水，搅拌均匀后服用。",
+            "type": "膏方",
+            "content": "10",
+            "efficacy": "活血化瘀，养血通络",
+            "createTime": "2023-05-26 09:38:56",
+            "name": "桃仁红花膏",
+            "id": 10,
+            "shelfLife": "阴凉干燥处存放。冷藏6个月。",
+            "storageCondition": "平时应储存在阴凉处，启用后宜存放于冰箱中，一旦发现霉变则不宜再服。",
+            "contraindication": "1.身体健康的未成年人。&nbsp&nbsp2.妊娠期和哺乳期妇女。<br/>3.慢性疾病的急性发作期、活动期。&nbsp&nbsp4.急性疾病患者。<br/>5.有严重精神障碍或疾病患者。"
+          }
+        ],
+        "healthAssessments": [
+          {
+            "physiqueId": 9,
+            "symptoms": [
+              {
+                "symptom": "冠状動脈疾患",
+                "rank": 1,
+                "id": 1190,
+                "healthAssessmentId": null,
+                "desc": "血液が滞りやすい体質の人は、血液循環が遅く、流れが悪くなるか、瘀血が形成され、心脈が閉塞し、血流が悪化することで胸部の痛みが発生する。"
+              },
+              {
+                "symptom": "子宮筋腫",
+                "rank": 2,
+                "id": 1191,
+                "healthAssessmentId": null,
+                "desc": "瘀血が全身のさまざまな部位の疾患を引き起こすことがある。静脈の瘀血が代謝物質の排出を妨げ、長期間にわたり毒素を形成し、腫瘍になる可能性がある。"
+              },
+              {
+                "symptom": "生理痛",
+                "rank": 3,
+                "id": 1192,
+                "healthAssessmentId": null,
+                "desc": "瘀血が経絡を閉塞し、子宮内に滞り、気血の運行が不調であるため、「通じずして痛む」として、月経前や月経中に腹痛が激しくなる。"
+              },
+              {
+                "symptom": "円形脱毛症",
+                "rank": 4,
+                "id": 1193,
+                "healthAssessmentId": null,
+                "desc": "血液循環に障害が生じ、気血が頭皮を潤すことができず、毛髪が栄養を失い、脱毛が進行する。"
+              },
+              {
+                "symptom": "肝斑",
+                "rank": 5,
+                "id": 1194,
+                "healthAssessmentId": null,
+                "desc": "気血の運行が不調で、気が滞り、血が瘀血となり、顔面が栄養を失い、長期間にわたって黒斑が形成され、色艶が失われる。"
+              },
+              {
+                "symptom": "関節痛",
+                "rank": 6,
+                "id": 1195,
+                "healthAssessmentId": null,
+                "desc": "気血の運行が不調で、経絡が阻滞し、瘀血が関節に留まることで痛みが生じる。"
+              }
+            ],
+            "overview": "発生する可能性のある、または発生するリスクには次のようなものがあります：",
+            "images": [
+              {
+                "path": "material/2024/11/21/f1d7dced2f8ea9ab1df2f3c82b0656f6.png",
+                "createTime": null,
+                "name": "女年轻",
+                "main": null,
+                "id": 209
+              }
+            ],
+            "modifyTime": "2024-11-13 16:37:45",
+            "gender": "女",
+            "createTime": "2023-07-04 16:39:37",
+            "physique": {
+              "note": null,
+              "images": null,
+              "mental": null,
+              "body": null,
+              "tend": null,
+              "healthFoods": null,
+              "associationPhysiqueList": null,
+              "performance": null,
+              "createTime": null,
+              "physiqueGrade": null,
+              "name": "血瘀質",
+              "rank": null,
+              "id": 9,
+              "medicinalFoods": null,
+              "jianJia": null,
+              "healthAssessments": null
+            },
+            "id": 42,
+            "ageId": null,
+            "age": {
+              "maxAge": null,
+              "createTime": null,
+              "minAge": null,
+              "name": "15-60岁",
+              "id": 3
+            }
+          }
+        ]
+      },
+      {
+        "note": "気が滞りやすく、ストレスを感じやすい体質",
+        "images": [
+          {
+            "path": "material/2022/11/01/575fb38b93ee0ec54e0678e0279d94cb.png",
+            "createTime": "2022-11-01 11:37:29",
+            "name": "气郁质",
+            "main": null,
+            "id": 112
+          }
+        ],
+        "mental": "性格内向忧郁，敏感多疑。",
+        "body": "気郁質は、先天的な遺伝や精神的な刺激、驚かされたり、望みがかなわなかったり、憂鬱や思慮によって引き起こされることが多い。この体質は、神情が抑鬱し、心配や脆弱さが主要な特徴である。性格は内向的で不安定、敏感で多くのことを気にする。外部環境への適応能力は、精神的な刺激に対する適応が難しく、陰雨の天候には不適応である。",
+        "healthFoods": [],
+        "tend": "失眠，抑郁，焦虑。",
+        "associationPhysiqueList": [
+          {
+            "note": "血の流れが悪く、滞りやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "血瘀質",
+            "rank": null,
+            "id": 9,
+            "medicinalFoods": null,
+            "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "余分な水分や脂肪がたまりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "痰湿質",
+            "rank": null,
+            "id": 6,
+            "medicinalFoods": null,
+            "jianJia": "痰湿体質の人は、体内に湿気が長く蓄積し、火熱に変化して湿熱が形成される。痰湿が蓄積すると、気血の流れが妨げられるため、痰湿と血瘀、気鬱体質がしばしば同時に現れる。痰湿が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、人体の正気が不足し、臓腑の機能が低下し、気虚体質や陽虚体質などの虚体質を伴うことが多い。",
+            "healthAssessments": null
+          },
+          {
+            "note": "体内に余分な湿気と熱がこもりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "湿熱質",
+            "rank": null,
+            "id": 7,
+            "medicinalFoods": null,
+            "jianJia": "湿熱の邪気は気血の流れを妨げ、気鬱や血瘀を伴って現れる。湿気が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、気の生成に影響を与える。そのため、湿熱体質はしばしば気虚体質と同時に見られる。痰湿体質は湿気が体内に長く蓄積し、火熱に変化することで湿熱を形成するため、痰湿体質は湿熱体質と兼ねることがある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "体を温める力が弱く、冷えやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陽虚質",
+            "rank": null,
+            "id": 4,
+            "medicinalFoods": null,
+            "jianJia": "陽虚の人は、陽気が不足し、温める機能が失われ、気虚とともに現れることが多い。陽気不足は、気虚、陰虚とともに見られる。陽気が不足すると身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質や血瘀体質を伴うことが多い。また、陽気不足は体の運化能力を低下させ、湿邪が体内に蓄積しやすく、痰湿体質を伴うこともある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "エネルギーが不足しやすく、疲れやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気虚質",
+            "rank": null,
+            "id": 3,
+            "jianJia": "気虚の人は、気の推進力が不足し、気血の流れが円滑でなく、水液の代謝が異常になる。そのため、気鬱、血瘀、痰湿がしばしば混在する。痰湿が長く蓄積すると熱に変化し、湿熱体質が形成される。気虚が長引くと、陽気が消耗したり、体内の陰液が損なわれたりすることが多く、気虚の人は陽虚および陰虚の状態を伴う。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          }
+        ],
+        "performance": "先天的な素質や長期間湿地に住んでいたり、脂っこく甘い食べ物を好んだり、長期にわたって飲酒することで、湿熱体質が形成されやすい。体形は中等またはやや痩せ気味で、性格はイライラしやすくせっかちな傾向がある。外部環境への適応能力は、夏の終わりから秋の初めの湿熱気候や気温が高い環境には適応しにくい。",
+        "createTime": "2022-10-31 16:59:23",
+        "physiqueGrade": 70,
+        "name": "気鬱質",
+        "rank": 6,
+        "id": 8,
+        "jianJia": "気は血液や津液の流れを推進する力がある。気鬱体質の人は、気機の流れが円滑でなく、血液や津液の正常な流れを推進できない。その結果、血行不良や水液の代謝異常が起こり、血瘀体質や痰湿体質を伴うことがある。気虚の人は気機を運行させる力がないため、気鬱を伴うことが多い。陽虚の人は、陽気が不足しているため身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質を伴うことが多い。したがって、気虚および陽虚体質は気鬱体質と兼ねることがある。",
+        "medicinalFoods": [
+          {
+            "physiqueId": "8",
+            "images": [],
+            "code": "GF_MGFSG001",
+            "ingredient": "玫瑰花、香橼、佛手、陈皮、茯苓、薄荷、山楂、百合、生甘草、大枣、紫苏、桔梗、代代花、生麦芽、莲子、枸杞子",
+            "buyUri": "",
+            "physique": null,
+            "usage": "一天两次，每次10g。冲服，取药膏放入杯中，冲入50-200ml的白开水，搅拌均匀后服用。",
+            "type": "膏方",
+            "efficacy": "疏肝解郁，行气散结",
+            "content": "10",
+            "createTime": "2023-05-26 09:35:00",
+            "name": "玫瑰佛手膏",
+            "id": 9,
+            "shelfLife": "阴凉干燥处存放。冷藏6个月。",
+            "storageCondition": "平时应储存在阴凉处，启用后宜存放于冰箱中，一旦发现霉变则不宜再服。",
+            "contraindication": "1.身体健康的未成年人。&nbsp&nbsp2.妊娠期和哺乳期妇女。<br/>3.慢性疾病的急性发作期、活动期。&nbsp4.急性疾病患者。<br/>5.有严重精神障碍或疾病患者。"
+          }
+        ],
+        "healthAssessments": [
+          {
+            "symptoms": [
+              {
+                "symptom": "抑うつ",
+                "rank": 1,
+                "id": 1126,
+                "healthAssessmentId": null,
+                "desc": "肝は疏泄を好み、抑うつを嫌います。長期にわたって精神・感情が不調であると、肝の疏泄機能が失われ、普段から憂うつ感や不安感が多くなり、精神的に煩わしく楽しめない状態が続きます。"
+              },
+              {
+                "symptom": "乳腺過形成",
+                "rank": 2,
+                "id": 1127,
+                "healthAssessmentId": null,
+                "desc": "七情の鬱結により肝の条達が失われ、肝が鬱結して気滞が生じ、気機の運行が不調となり、気血が経脈に滞って乳房の脈絡が阻害され、病気を引き起こします。"
+              },
+              {
+                "symptom": "不眠",
+                "rank": 3,
+                "id": 1128,
+                "healthAssessmentId": null,
+                "desc": "肝は魂を、心は神を宿し、気郁が火に変わることで熱が心魂を乱し、睡眠が悪化し、夢が多く、容易に目覚め、物忘れます。"
+              },
+              {
+                "symptom": "子宮筋腫",
+                "rank": 4,
+                "id": 1129,
+                "healthAssessmentId": null,
+                "desc": "感情が思うようにいかず、七情が鬱結し、気機が滞って、または気が津を布かず、痰湿が内部で生じること、または気滞と血瘀が生じること、あるいは鬱熱が陰を傷めることで、虚実が混在し、最終的には痰湿と血瘀が互いに結びついて腫塊が形成されます。"
+              },
+              {
+                "symptom": "咽喉閉塞感",
+                "rank": 5,
+                "id": 1130,
+                "healthAssessmentId": null,
+                "desc": "無形の気が咽喉に滞ることで「梅核気」が形成され、臨床では咽頭に異物があるような感覚を伴い、咽喉で飲み込めず、吐き出せないことがよく見られます。"
+              },
+              {
+                "symptom": "甲状腺機能異常",
+                "rank": 6,
+                "id": 1131,
+                "healthAssessmentId": null,
+                "desc": "感情がうまく発散できず、怒りや悲しみのコントロールができず、気化が調和せず、運行が阻害されることで気滞や痰凝が生じ、頸部に結びつき甲状腺疾患を引き起こします。症状としては、甲状腺結節、甲状腺機能低下症、甲状腺機能亢進症が見られます。"
+              }
+            ],
+            "physiqueId": 8,
+            "overview": "発生する可能性のある、または発生するリスクには次のようなものがあります：",
+            "images": [
+              {
+                "path": "material/2024/11/21/f1d7dced2f8ea9ab1df2f3c82b0656f6.png",
+                "createTime": null,
+                "name": "女年轻",
+                "main": null,
+                "id": 209
+              }
+            ],
+            "modifyTime": "2024-11-13 16:22:01",
+            "gender": "女",
+            "createTime": "2023-07-05 11:30:35",
+            "physique": {
+              "note": null,
+              "images": null,
+              "mental": null,
+              "body": null,
+              "tend": null,
+              "healthFoods": null,
+              "associationPhysiqueList": null,
+              "performance": null,
+              "createTime": null,
+              "physiqueGrade": null,
+              "name": "気鬱質",
+              "rank": null,
+              "id": 8,
+              "jianJia": null,
+              "medicinalFoods": null,
+              "healthAssessments": null
+            },
+            "id": 72,
+            "ageId": null,
+            "age": {
+              "createTime": null,
+              "maxAge": null,
+              "minAge": null,
+              "name": "15-60岁",
+              "id": 3
+            }
+          }
+        ]
+      }
+    ],
+    "videoQrcodeUrl": null,
+    "lifeGuideListV2": [
+      {
+        "read": "徵（zhǐ）音为火，对应人体的心脏，把手心放在左乳房心脏的部位，“徵”声从腹下丹田部位发出拉长，会有一种冲击波和震荡波使心脏功能加强。\n念羽音时，将双手心放置在腰后的两个肾脏部位，缓缓吸气，使羽声从底下的肾脏震动，一直震动到下腹、膀胱，以及生殖系统。这对肾脏和泌尿系统都有代谢和促进作用。",
+        "musicPath": "",
+        "createTime": "2024-01-13 09:23:17",
+        "instrument": "丝弦乐，如古琴、小提琴等。入心经与小肠经，主理小肠和心脏健康，调理神志，疏导血脉，平稳血压。\n水音为鼓、水声等乐，入肾经与膀胱经，主理肾脏与膀胱的健康。",
+        "id": 19,
+        "type": "音乐疗法",
+        "listen": "《紫竹调》。最佳欣赏时间：21：00-23：00。 《梅花三弄》。最佳欣赏时间：7：00-11：00。",
+        "musicName": "紫竹调、梅花三弄",
+        "bodyPart": "心,肾"
+      }
+    ],
+    "advertisingList": [
+      {
+        "physiqueId": 9,
+        "images": [
+          {
+            "path": "material/2023/11/06/06928f23d6a5f9adf174f9d5129b2b90.jpg",
+            "createTime": "2023-11-06 14:27:48",
+            "name": "三七粉",
+            "main": null,
+            "id": 245
+          }
+        ],
+        "buyUri": "",
+        "price": "32/瓶",
+        "physique": {
+          "note": "血の流れが悪く、滞りやすい体質",
+          "images": null,
+          "mental": "性格内郁，易烦，急躁健忘。",
+          "body": "血瘀質は、体内に血液の循環が悪い潜在的な傾向や瘀血の内阻に基づく病理状態を指し、一連の外的な兆候が見られる体質です。この体質は、先天的な素質や後天的な損傷、憂鬱による気滞、血行不良、長期的な病気による経絡の損傷によって形成されることが多い。心理的特性としては、イライラしやすく、忘れっぽい傾向がある。外部環境への適応能力は、寒邪に対する耐性が低く、冬には体調が悪くなりがちである。",
+          "healthFoods": null,
+          "tend": "易出血，痛经，闭经，中风等。",
+          "associationPhysiqueList": null,
+          "performance": "顔色が暗く、皮膚は暗いか色素沈着が見られ、皮膚にあざができやすい。口唇は紫色がかり、皮膚は乾燥しているか、爪が変形している。体は原因不明の痛みが出やすく、運動を好まない。",
+          "createTime": "2022-10-31 16:59:45",
+          "physiqueGrade": null,
+          "name": "血瘀質",
+          "rank": 7,
+          "id": 9,
+          "medicinalFoods": null,
+          "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+          "healthAssessments": null
+        },
+        "name": "三七粉 南京同仁堂",
+        "specification": "150g/瓶",
+        "id": 65,
+        "hospital": "五季中医",
+        "type": "普通食品",
+        "efficacy": "补气补血，活血止血"
+      },
+      {
+        "physiqueId": 9,
+        "images": [
+          {
+            "path": "material/2023/11/06/14f9cc0d66f83b875ba54b48fde577a8.jpg",
+            "createTime": "2023-11-06 14:26:37",
+            "name": "阿胶桂圆膏",
+            "main": null,
+            "id": 235
+          }
+        ],
+        "buyUri": "#111111",
+        "physique": {
+          "note": "血の流れが悪く、滞りやすい体質",
+          "images": null,
+          "mental": "性格内郁，易烦，急躁健忘。",
+          "body": "血瘀質は、体内に血液の循環が悪い潜在的な傾向や瘀血の内阻に基づく病理状態を指し、一連の外的な兆候が見られる体質です。この体質は、先天的な素質や後天的な損傷、憂鬱による気滞、血行不良、長期的な病気による経絡の損傷によって形成されることが多い。心理的特性としては、イライラしやすく、忘れっぽい傾向がある。外部環境への適応能力は、寒邪に対する耐性が低く、冬には体調が悪くなりがちである。",
+          "tend": "易出血，痛经，闭经，中风等。",
+          "healthFoods": null,
+          "associationPhysiqueList": null,
+          "performance": "顔色が暗く、皮膚は暗いか色素沈着が見られ、皮膚にあざができやすい。口唇は紫色がかり、皮膚は乾燥しているか、爪が変形している。体は原因不明の痛みが出やすく、運動を好まない。",
+          "createTime": "2022-10-31 16:59:45",
+          "physiqueGrade": null,
+          "name": "血瘀質",
+          "rank": 7,
+          "id": 9,
+          "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+          "medicinalFoods": null,
+          "healthAssessments": null
+        },
+        "price": "104/盒",
+        "name": "阿胶固元糕 南京同仁堂",
+        "specification": "500g/盒",
+        "id": 66,
+        "hospital": "五季中医",
+        "type": "普通食品",
+        "efficacy": "补血活血，益气祛瘀"
+      }
+    ],
+    "physiquePlanList": [
+      {
+        "physiqueId": 9,
+        "overview": "血瘀体質の人は特に運動が必要です。血液の流れが滞る傾向があるため、運動によって血流を促進することが重要です。しかし、血瘀体質の人はしばしば虚の状態も併せ持っており、特に陽虚や気血虚がよく見られます。そのため、運動の強度や量は過度にならないように注意する必要があります。",
+        "images": [
+          {
+            "path": "material/2024/11/21/8ba1f08b1acd0320f556c49087fccd14.png",
+            "createTime": "2024-11-21 14:42:58",
+            "name": "sanbu",
+            "main": null,
+            "id": 269
+          }
+        ],
+        "physique": {
+          "note": null,
+          "images": null,
+          "mental": null,
+          "body": null,
+          "healthFoods": null,
+          "tend": null,
+          "associationPhysiqueList": null,
+          "performance": null,
+          "createTime": null,
+          "physiqueGrade": null,
+          "name": "血瘀質",
+          "rank": null,
+          "id": 9,
+          "jianJia": null,
+          "medicinalFoods": null,
+          "healthAssessments": null
+        },
+        "suggestion": "有酸素運動を推奨します。これは血行を助けるだけでなく、身体を強化する効果もあります。",
+        "recommend": "一般的な有酸素運動の例としては、ウォーキング、ジョギング、緩やかな登山、スケート、泳ぎ、自転車、フィットネスダンス、リズム体操などがあります。",
+        "dietSummary": "柑橘類、山査子、ローズティー",
+        "createTime": "2024-11-12 18:05:18",
+        "exerciseSummary": "有酸素運動",
+        "name": "血瘀質養生方案",
+        "should": "血瘀体質は活血散瘀が重視されます。行気や活血の機能を持つ食材を選ぶことが推奨されます。具体的には、大根、柑橘類、にんにく、しょうが、フェンネル、シナモン、クローブ、ニラ、赤ワイン、玉ねぎ、イチョウ、レモン、グレープフルーツ、キンカン、ローズティー、ジャスミンティーなどがあります。",
+        "id": 16,
+        "avoid": "血瘀体質の人は塩や味精の摂取を控え、血液の粘度が高くなることを避け、血瘀の程度を悪化させることが望ましいです。膨満感を引き起こしやすいサツマイモ、里芋、そら豆、栗などは避けるべきです。また、脂肪の多い肉類、クリーム、ウナギ、かにみそ、卵黄、チョコレート、揚げ物などを多く摂ることも避け、血脂の上昇や血管の閉塞を防ぎ、気血の循環に影響を与えることを避けるべきです。"
+      }
+    ],
+    "exercisesList": [],
+    "homePageQrcodeUrl": null,
+    "physiqueTable": [
+      {
+        "note": "血の流れが悪く、滞りやすい体質",
+        "images": [
+          {
+            "path": "material/2022/11/01/04471d7a670de07ea570369907e3ecc8.png",
+            "createTime": "2022-11-01 11:37:48",
+            "name": "血瘀质",
+            "main": null,
+            "id": 115
+          }
+        ],
+        "mental": "性格内郁，易烦，急躁健忘。",
+        "body": "血瘀質は、体内に血液の循環が悪い潜在的な傾向や瘀血の内阻に基づく病理状態を指し、一連の外的な兆候が見られる体質です。この体質は、先天的な素質や後天的な損傷、憂鬱による気滞、血行不良、長期的な病気による経絡の損傷によって形成されることが多い。心理的特性としては、イライラしやすく、忘れっぽい傾向がある。外部環境への適応能力は、寒邪に対する耐性が低く、冬には体調が悪くなりがちである。",
+        "healthFoods": [],
+        "tend": "易出血，痛经，闭经，中风等。",
+        "associationPhysiqueList": [
+          {
+            "note": "エネルギーが不足しやすく、疲れやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気虚質",
+            "rank": null,
+            "id": 3,
+            "medicinalFoods": null,
+            "jianJia": "気虚の人は、気の推進力が不足し、気血の流れが円滑でなく、水液の代謝が異常になる。そのため、気鬱、血瘀、痰湿がしばしば混在する。痰湿が長く蓄積すると熱に変化し、湿熱体質が形成される。気虚が長引くと、陽気が消耗したり、体内の陰液が損なわれたりすることが多く、気虚の人は陽虚および陰虚の状態を伴う。",
+            "healthAssessments": null
+          },
+          {
+            "note": "気が滞りやすく、ストレスを感じやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気鬱質",
+            "rank": null,
+            "id": 8,
+            "medicinalFoods": null,
+            "jianJia": "気は血液や津液の流れを推進する力がある。気鬱体質の人は、気機の流れが円滑でなく、血液や津液の正常な流れを推進できない。その結果、血行不良や水液の代謝異常が起こり、血瘀体質や痰湿体質を伴うことがある。気虚の人は気機を運行させる力がないため、気鬱を伴うことが多い。陽虚の人は、陽気が不足しているため身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質を伴うことが多い。したがって、気虚および陽虚体質は気鬱体質と兼ねることがある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "余分な水分や脂肪がたまりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "痰湿質",
+            "rank": null,
+            "id": 6,
+            "medicinalFoods": null,
+            "jianJia": "痰湿体質の人は、体内に湿気が長く蓄積し、火熱に変化して湿熱が形成される。痰湿が蓄積すると、気血の流れが妨げられるため、痰湿と血瘀、気鬱体質がしばしば同時に現れる。痰湿が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、人体の正気が不足し、臓腑の機能が低下し、気虚体質や陽虚体質などの虚体質を伴うことが多い。",
+            "healthAssessments": null
+          },
+          {
+            "note": "体を温める力が弱く、冷えやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陽虚質",
+            "rank": null,
+            "id": 4,
+            "jianJia": "陽虚の人は、陽気が不足し、温める機能が失われ、気虚とともに現れることが多い。陽気不足は、気虚、陰虚とともに見られる。陽気が不足すると身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質や血瘀体質を伴うことが多い。また、陽気不足は体の運化能力を低下させ、湿邪が体内に蓄積しやすく、痰湿体質を伴うこともある。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "体の潤いが不足し、乾燥しやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陰虚質",
+            "rank": null,
+            "id": 5,
+            "jianJia": "陰虚の人は、陰液が不足し、万物を滋養することができない。気虚と共に現れることが多く、気陰両虚と称される。陰虚の場合、内熱が生じやすく、血液が粘滞して血瘀体質を形成することがある。陽虚体質を伴うことも多い。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          }
+        ],
+        "performance": "顔色が暗く、皮膚は暗いか色素沈着が見られ、皮膚にあざができやすい。口唇は紫色がかり、皮膚は乾燥しているか、爪が変形している。体は原因不明の痛みが出やすく、運動を好まない。",
+        "createTime": "2022-10-31 16:59:45",
+        "physiqueGrade": 70,
+        "name": "血瘀質",
+        "rank": 7,
+        "id": 9,
+        "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+        "medicinalFoods": [
+          {
+            "physiqueId": "9",
+            "images": [],
+            "ingredient": "姜黄、山楂、香橼、佛手、桃仁、西红花、肉桂、玫瑰花、陈皮、当归、槐花、白茅根、薏苡仁、党参、茯苓、薤白、葛根",
+            "code": "GF_TRHHG001",
+            "buyUri": "",
+            "physique": null,
+            "usage": "一天两次，每次10g。冲服，取药膏放入杯中，冲入50-200ml的白开水，搅拌均匀后服用。",
+            "type": "膏方",
+            "efficacy": "活血化瘀，养血通络",
+            "content": "10",
+            "createTime": "2023-05-26 09:38:56",
+            "name": "桃仁红花膏",
+            "id": 10,
+            "shelfLife": "阴凉干燥处存放。冷藏6个月。",
+            "storageCondition": "平时应储存在阴凉处，启用后宜存放于冰箱中，一旦发现霉变则不宜再服。",
+            "contraindication": "1.身体健康的未成年人。&nbsp&nbsp2.妊娠期和哺乳期妇女。<br/>3.慢性疾病的急性发作期、活动期。&nbsp&nbsp4.急性疾病患者。<br/>5.有严重精神障碍或疾病患者。"
+          }
+        ],
+        "healthAssessments": [
+          {
+            "physiqueId": 9,
+            "symptoms": [
+              {
+                "symptom": "冠状動脈疾患",
+                "rank": 1,
+                "id": 1190,
+                "healthAssessmentId": null,
+                "desc": "血液が滞りやすい体質の人は、血液循環が遅く、流れが悪くなるか、瘀血が形成され、心脈が閉塞し、血流が悪化することで胸部の痛みが発生する。"
+              },
+              {
+                "symptom": "子宮筋腫",
+                "rank": 2,
+                "id": 1191,
+                "healthAssessmentId": null,
+                "desc": "瘀血が全身のさまざまな部位の疾患を引き起こすことがある。静脈の瘀血が代謝物質の排出を妨げ、長期間にわたり毒素を形成し、腫瘍になる可能性がある。"
+              },
+              {
+                "symptom": "生理痛",
+                "rank": 3,
+                "id": 1192,
+                "healthAssessmentId": null,
+                "desc": "瘀血が経絡を閉塞し、子宮内に滞り、気血の運行が不調であるため、「通じずして痛む」として、月経前や月経中に腹痛が激しくなる。"
+              },
+              {
+                "symptom": "円形脱毛症",
+                "rank": 4,
+                "id": 1193,
+                "healthAssessmentId": null,
+                "desc": "血液循環に障害が生じ、気血が頭皮を潤すことができず、毛髪が栄養を失い、脱毛が進行する。"
+              },
+              {
+                "symptom": "肝斑",
+                "rank": 5,
+                "id": 1194,
+                "healthAssessmentId": null,
+                "desc": "気血の運行が不調で、気が滞り、血が瘀血となり、顔面が栄養を失い、長期間にわたって黒斑が形成され、色艶が失われる。"
+              },
+              {
+                "symptom": "関節痛",
+                "rank": 6,
+                "id": 1195,
+                "healthAssessmentId": null,
+                "desc": "気血の運行が不調で、経絡が阻滞し、瘀血が関節に留まることで痛みが生じる。"
+              }
+            ],
+            "overview": "発生する可能性のある、または発生するリスクには次のようなものがあります：",
+            "images": [
+              {
+                "path": "material/2024/11/21/f1d7dced2f8ea9ab1df2f3c82b0656f6.png",
+                "createTime": null,
+                "name": "女年轻",
+                "main": null,
+                "id": 209
+              }
+            ],
+            "modifyTime": "2024-11-13 16:37:45",
+            "gender": "女",
+            "createTime": "2023-07-04 16:39:37",
+            "physique": {
+              "note": null,
+              "images": null,
+              "mental": null,
+              "body": null,
+              "healthFoods": null,
+              "tend": null,
+              "associationPhysiqueList": null,
+              "performance": null,
+              "createTime": null,
+              "physiqueGrade": null,
+              "name": "血瘀質",
+              "rank": null,
+              "id": 9,
+              "jianJia": null,
+              "medicinalFoods": null,
+              "healthAssessments": null
+            },
+            "id": 42,
+            "ageId": null,
+            "age": {
+              "createTime": null,
+              "maxAge": null,
+              "minAge": null,
+              "name": "15-60岁",
+              "id": 3
+            }
+          }
+        ]
+      },
+      {
+        "note": "気が滞りやすく、ストレスを感じやすい体質",
+        "images": [
+          {
+            "path": "material/2022/11/01/575fb38b93ee0ec54e0678e0279d94cb.png",
+            "createTime": "2022-11-01 11:37:29",
+            "name": "气郁质",
+            "main": null,
+            "id": 112
+          }
+        ],
+        "mental": "性格内向忧郁，敏感多疑。",
+        "body": "気郁質は、先天的な遺伝や精神的な刺激、驚かされたり、望みがかなわなかったり、憂鬱や思慮によって引き起こされることが多い。この体質は、神情が抑鬱し、心配や脆弱さが主要な特徴である。性格は内向的で不安定、敏感で多くのことを気にする。外部環境への適応能力は、精神的な刺激に対する適応が難しく、陰雨の天候には不適応である。",
+        "healthFoods": [],
+        "tend": "失眠，抑郁，焦虑。",
+        "associationPhysiqueList": [
+          {
+            "note": "血の流れが悪く、滞りやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "血瘀質",
+            "rank": null,
+            "id": 9,
+            "jianJia": "気血は相互に依存し、相互に作用し、互いに影響し合うため、しばしば気血が同時に病む。血瘀と気鬱、血瘀と気虚は互いに因果関係があり、同時に現れることがある。血液は脈中を運行し、全身に流布している。血瘀体質の人は気血の流れが円滑でないため、津液の運搬に障害が生じ、水液が停滞し、痰湿体質が併発することがある。陽虚の人は、身体を温めることができず、気血が寒に遭遇すると凝固しやすく、血瘀を伴うことが多い。陰虚の場合、内熱が生じやすく、血液が粘滞し、血瘀を形成しやすいため、陽虚および陰虚体質は血瘀体質と兼ねることがある。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "余分な水分や脂肪がたまりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "healthFoods": null,
+            "tend": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "痰湿質",
+            "rank": null,
+            "id": 6,
+            "jianJia": "痰湿体質の人は、体内に湿気が長く蓄積し、火熱に変化して湿熱が形成される。痰湿が蓄積すると、気血の流れが妨げられるため、痰湿と血瘀、気鬱体質がしばしば同時に現れる。痰湿が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、人体の正気が不足し、臓腑の機能が低下し、気虚体質や陽虚体質などの虚体質を伴うことが多い。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "体内に余分な湿気と熱がこもりやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "湿熱質",
+            "rank": null,
+            "id": 7,
+            "jianJia": "湿熱の邪気は気血の流れを妨げ、気鬱や血瘀を伴って現れる。湿気が脾胃を困厄し、水穀の精微が化生されず、身体を滋養することができないため、気の生成に影響を与える。そのため、湿熱体質はしばしば気虚体質と同時に見られる。痰湿体質は湿気が体内に長く蓄積し、火熱に変化することで湿熱を形成するため、痰湿体質は湿熱体質と兼ねることがある。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          },
+          {
+            "note": "体を温める力が弱く、冷えやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "陽虚質",
+            "rank": null,
+            "id": 4,
+            "medicinalFoods": null,
+            "jianJia": "陽虚の人は、陽気が不足し、温める機能が失われ、気虚とともに現れることが多い。陽気不足は、気虚、陰虚とともに見られる。陽気が不足すると身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質や血瘀体質を伴うことが多い。また、陽気不足は体の運化能力を低下させ、湿邪が体内に蓄積しやすく、痰湿体質を伴うこともある。",
+            "healthAssessments": null
+          },
+          {
+            "note": "エネルギーが不足しやすく、疲れやすい体質",
+            "images": null,
+            "mental": null,
+            "body": null,
+            "tend": null,
+            "healthFoods": null,
+            "associationPhysiqueList": null,
+            "performance": null,
+            "createTime": null,
+            "physiqueGrade": null,
+            "name": "気虚質",
+            "rank": null,
+            "id": 3,
+            "jianJia": "気虚の人は、気の推進力が不足し、気血の流れが円滑でなく、水液の代謝が異常になる。そのため、気鬱、血瘀、痰湿がしばしば混在する。痰湿が長く蓄積すると熱に変化し、湿熱体質が形成される。気虚が長引くと、陽気が消耗したり、体内の陰液が損なわれたりすることが多く、気虚の人は陽虚および陰虚の状態を伴う。",
+            "medicinalFoods": null,
+            "healthAssessments": null
+          }
+        ],
+        "performance": "先天的な素質や長期間湿地に住んでいたり、脂っこく甘い食べ物を好んだり、長期にわたって飲酒することで、湿熱体質が形成されやすい。体形は中等またはやや痩せ気味で、性格はイライラしやすくせっかちな傾向がある。外部環境への適応能力は、夏の終わりから秋の初めの湿熱気候や気温が高い環境には適応しにくい。",
+        "createTime": "2022-10-31 16:59:23",
+        "physiqueGrade": 70,
+        "name": "気鬱質",
+        "rank": 6,
+        "id": 8,
+        "jianJia": "気は血液や津液の流れを推進する力がある。気鬱体質の人は、気機の流れが円滑でなく、血液や津液の正常な流れを推進できない。その結果、血行不良や水液の代謝異常が起こり、血瘀体質や痰湿体質を伴うことがある。気虚の人は気機を運行させる力がないため、気鬱を伴うことが多い。陽虚の人は、陽気が不足しているため身体を温めることができず、気血が寒に遭遇すると凝固しやすく、気鬱体質を伴うことが多い。したがって、気虚および陽虚体質は気鬱体質と兼ねることがある。",
+        "medicinalFoods": [
+          {
+            "physiqueId": "8",
+            "images": [],
+            "ingredient": "玫瑰花、香橼、佛手、陈皮、茯苓、薄荷、山楂、百合、生甘草、大枣、紫苏、桔梗、代代花、生麦芽、莲子、枸杞子",
+            "code": "GF_MGFSG001",
+            "buyUri": "",
+            "physique": null,
+            "usage": "一天两次，每次10g。冲服，取药膏放入杯中，冲入50-200ml的白开水，搅拌均匀后服用。",
+            "type": "膏方",
+            "content": "10",
+            "efficacy": "疏肝解郁，行气散结",
+            "createTime": "2023-05-26 09:35:00",
+            "name": "玫瑰佛手膏",
+            "id": 9,
+            "shelfLife": "阴凉干燥处存放。冷藏6个月。",
+            "storageCondition": "平时应储存在阴凉处，启用后宜存放于冰箱中，一旦发现霉变则不宜再服。",
+            "contraindication": "1.身体健康的未成年人。&nbsp&nbsp2.妊娠期和哺乳期妇女。<br/>3.慢性疾病的急性发作期、活动期。&nbsp4.急性疾病患者。<br/>5.有严重精神障碍或疾病患者。"
+          }
+        ],
+        "healthAssessments": [
+          {
+            "symptoms": [
+              {
+                "symptom": "抑うつ",
+                "rank": 1,
+                "id": 1126,
+                "healthAssessmentId": null,
+                "desc": "肝は疏泄を好み、抑うつを嫌います。長期にわたって精神・感情が不調であると、肝の疏泄機能が失われ、普段から憂うつ感や不安感が多くなり、精神的に煩わしく楽しめない状態が続きます。"
+              },
+              {
+                "symptom": "乳腺過形成",
+                "rank": 2,
+                "id": 1127,
+                "healthAssessmentId": null,
+                "desc": "七情の鬱結により肝の条達が失われ、肝が鬱結して気滞が生じ、気機の運行が不調となり、気血が経脈に滞って乳房の脈絡が阻害され、病気を引き起こします。"
+              },
+              {
+                "symptom": "不眠",
+                "rank": 3,
+                "id": 1128,
+                "healthAssessmentId": null,
+                "desc": "肝は魂を、心は神を宿し、気郁が火に変わることで熱が心魂を乱し、睡眠が悪化し、夢が多く、容易に目覚め、物忘れます。"
+              },
+              {
+                "symptom": "子宮筋腫",
+                "rank": 4,
+                "id": 1129,
+                "healthAssessmentId": null,
+                "desc": "感情が思うようにいかず、七情が鬱結し、気機が滞って、または気が津を布かず、痰湿が内部で生じること、または気滞と血瘀が生じること、あるいは鬱熱が陰を傷めることで、虚実が混在し、最終的には痰湿と血瘀が互いに結びついて腫塊が形成されます。"
+              },
+              {
+                "symptom": "咽喉閉塞感",
+                "rank": 5,
+                "id": 1130,
+                "healthAssessmentId": null,
+                "desc": "無形の気が咽喉に滞ることで「梅核気」が形成され、臨床では咽頭に異物があるような感覚を伴い、咽喉で飲み込めず、吐き出せないことがよく見られます。"
+              },
+              {
+                "symptom": "甲状腺機能異常",
+                "rank": 6,
+                "id": 1131,
+                "healthAssessmentId": null,
+                "desc": "感情がうまく発散できず、怒りや悲しみのコントロールができず、気化が調和せず、運行が阻害されることで気滞や痰凝が生じ、頸部に結びつき甲状腺疾患を引き起こします。症状としては、甲状腺結節、甲状腺機能低下症、甲状腺機能亢進症が見られます。"
+              }
+            ],
+            "physiqueId": 8,
+            "overview": "発生する可能性のある、または発生するリスクには次のようなものがあります：",
+            "images": [
+              {
+                "path": "material/2024/11/21/f1d7dced2f8ea9ab1df2f3c82b0656f6.png",
+                "createTime": null,
+                "name": "女年轻",
+                "main": null,
+                "id": 209
+              }
+            ],
+            "modifyTime": "2024-11-13 16:22:01",
+            "gender": "女",
+            "createTime": "2023-07-05 11:30:35",
+            "physique": {
+              "note": null,
+              "images": null,
+              "mental": null,
+              "body": null,
+              "healthFoods": null,
+              "tend": null,
+              "associationPhysiqueList": null,
+              "performance": null,
+              "createTime": null,
+              "physiqueGrade": null,
+              "name": "気鬱質",
+              "rank": null,
+              "id": 8,
+              "medicinalFoods": null,
+              "jianJia": null,
+              "healthAssessments": null
+            },
+            "id": 72,
+            "ageId": null,
+            "age": {
+              "createTime": null,
+              "maxAge": null,
+              "minAge": null,
+              "name": "15-60岁",
+              "id": 3
+            }
+          }
+        ]
+      },
+      {
+        "note": null,
+        "images": null,
+        "mental": null,
+        "body": null,
+        "tend": null,
+        "healthFoods": null,
+        "associationPhysiqueList": null,
+        "performance": null,
+        "createTime": null,
+        "physiqueGrade": 23,
+        "name": "気虚質",
+        "rank": null,
+        "id": 3,
+        "jianJia": null,
+        "medicinalFoods": null,
+        "healthAssessments": null
+      },
+      {
+        "note": null,
+        "images": null,
+        "mental": null,
+        "body": null,
+        "tend": null,
+        "healthFoods": null,
+        "associationPhysiqueList": null,
+        "performance": null,
+        "createTime": null,
+        "physiqueGrade": 35,
+        "name": "陽虚質",
+        "rank": null,
+        "id": 4,
+        "jianJia": null,
+        "medicinalFoods": null,
+        "healthAssessments": null
+      },
+      {
+        "note": null,
+        "images": null,
+        "mental": null,
+        "body": null,
+        "tend": null,
+        "healthFoods": null,
+        "associationPhysiqueList": null,
+        "performance": null,
+        "createTime": null,
+        "physiqueGrade": 25,
+        "name": "痰湿質",
+        "rank": null,
+        "id": 6,
+        "medicinalFoods": null,
+        "jianJia": null,
+        "healthAssessments": null
+      },
+      {
+        "note": null,
+        "images": null,
+        "mental": null,
+        "body": null,
+        "healthFoods": null,
+        "tend": null,
+        "associationPhysiqueList": null,
+        "performance": null,
+        "createTime": null,
+        "physiqueGrade": 28,
+        "name": "陰虚質",
+        "rank": null,
+        "id": 5,
+        "medicinalFoods": null,
+        "jianJia": null,
+        "healthAssessments": null
+      },
+      {
+        "note": null,
+        "images": null,
+        "mental": null,
+        "body": null,
+        "healthFoods": null,
+        "tend": null,
+        "associationPhysiqueList": null,
+        "performance": null,
+        "createTime": null,
+        "physiqueGrade": 30,
+        "name": "湿熱質",
+        "rank": null,
+        "id": 7,
+        "medicinalFoods": null,
+        "jianJia": null,
+        "healthAssessments": null
+      }
+    ],
+    "principleList": [
+      {
+        "note": "内臓や体の奥で起こる問題。例：胃腸の不調、便秘、内臓の炎症",
+        "visitId": 339,
+        "name": "里",
+        "id": 385,
+        "type": null,
+        "value": 1,
+        "desc": "含意としては、気血が不足して肌表まで達しないことから、衛気が不足し抵抗力が弱いことを考えます。または、気血が内に鬱滞している場合には、抑うつ状態がある可能性があり、女性の   場合は月経や産後にこの脈象が現れることがあります。",
+        "principleId": 2
+      },
+      {
+        "note": "体に余分なものが溜まっている状態。例：頭痛、便秘、お腹の張り",
+        "visitId": 339,
+        "name": "実",
+        "id": 386,
+        "type": null,
+        "value": 1,
+        "desc": "実脈は、正気が充実し、体力や精力が豊富な状態を示します。病態下で「数脈」や「滑脈」が伴う場合、内熱を示し、高血圧、胃火、便秘、口内炎などの症状が見られる可能性があります。",
+        "principleId": 4
+      },
+      {
+        "note": "体が熱を持っている状態。例：発熱、のどの渇き、便秘、肌の赤み",
+        "visitId": 339,
+        "name": "熱",
+        "id": 387,
+        "type": null,
+        "value": 1,
+        "desc": "数脈は「熱」の徴であり、新陳代謝が旺盛であることを示しますが、虚実を参考にして虚熱か実熱かを判断します。虚熱の場合は軽く補うが、実熱の場合は清熱降火が適します。",
+        "principleId": 6
+      },
+      {
+        "note": "",
+        "visitId": 339,
+        "name": "正常",
+        "id": 388,
+        "type": null,
+        "value": 0,
+        "desc": "正常状態では、脈象に根があり、脈の往来がゆったりとして、陰陽が調和し、精神が安定しています。",
+        "principleId": 12
+      }
+    ],
+    "jingluoListV2": [
+      {
+        "mainShowGrade": 70,
+        "images": [],
+        "minor": "小腸経",
+        "gender": "全部",
+        "minorNote": "（栄養吸収や思考の整理を司る経絡。役割：栄養の吸収、余分なものの排泄）",
+        "mainGrade": 70,
+        "main": "心経",
+        "videos": [],
+        "mainSymptom": "1、心、胸および精神の病症：心臓痛、動悸、胸の圧迫感、記憶力低下、不眠など。2、経脈が巡る部位の病症：肩や腕の痛み、脇腹の痛み、手首や腕の痛みなど。",
+        "minorSymptom": "1、頭部および五官の病症：頭痛、目の病気、咽喉の腫れや痛みなど。2、発熱および精神症状。3、経脈が巡る部位の病症：頸椎の不快感、腰背部痛、指や肘腕の痛みなど。",
+        "minorGrade": 46,
+        "createTime": "2024-06-26 14:22:01",
+        "mainNote": "（心臓や精神を司る経絡.役割：血液循環、精神安定、睡眠の質を保つ）",
+        "rank": 4,
+        "position": "心",
+        "id": 25,
+        "projectName": "脉诊仪3C版",
+        "ageId": 3,
+        "age": {
+          "maxAge": 60,
+          "createTime": "2023-06-30 09:28:34",
+          "minAge": 15,
+          "name": "15-60岁",
+          "id": 3
+        }
+      },
+      {
+        "mainShowGrade": 69,
+        "images": [],
+        "minor": "膀胱経",
+        "gender": "女",
+        "minorNote": "（水分代謝や排尿を司る経絡。役割：体内の水分調整、老廃物の排泄）",
+        "mainGrade": 69,
+        "videos": [],
+        "main": "腎経",
+        "mainSymptom": "1、腎臓関連の病症：頻尿、多尿、腰痛など。2、頭部および五官の病症：頭痛、めまい、咽喉の腫れや痛み、歯痛、難聴、耳鳴りなど。3、婦人科の病症：過多月経、無月経、月経痛など。4、経脈が巡る部位の病症：腰のだるさや痛み、ふくらはぎの内側の痛みなど。",
+        "minorSymptom": "1、五臓六腑および関連する組織器官の病症。2、精神症状。3、頭部および五官の病症：頭痛、鼻づまり、鼻出血など。4、経脈が巡る部位の病症：頸椎、背中、腰、下肢の病症など。",
+        "minorGrade": 45,
+        "createTime": "2024-06-26 15:25:26",
+        "mainNote": "（成長やエネルギーの貯蔵を司る経絡。役割：生命力の源、成長・老化、ホルモンバランスの調整）",
+        "rank": 3,
+        "position": "肾",
+        "id": 48,
+        "projectName": "脉诊仪3C版",
+        "ageId": 3,
+        "age": {
+          "createTime": "2023-06-30 09:28:34",
+          "maxAge": 60,
+          "minAge": 15,
+          "name": "15-60岁",
+          "id": 3
+        }
+      },
+      {
+        "mainShowGrade": 64,
+        "images": [],
+        "minor": "胆経",
+        "gender": "女",
+        "minorNote": "（決断力や胆力を司る経絡。役割：消化を助け、判断力や決断力を高める）",
+        "mainGrade": 64,
+        "videos": [],
+        "main": "肝経",
+        "mainSymptom": "1、肝胆の病症：黄疸、口の苦み、脇腹の痛みなど。2、婦人科の病症：月経不順、月経痛など。3、経脈が巡る部位の病症：下肢の痛みや痺れ、運動障害など。",
+        "minorSymptom": "1、肝胆の病症：黄疸、口の苦み、脇腹の痛みなど。2、頭部および五官の病症：偏頭痛、耳鳴りなど。3、発熱および精神症状。4、経脈が巡る部位の病症：下肢の痛みや痺れ、運動障害など。",
+        "minorGrade": 47,
+        "createTime": "2024-06-26 14:32:03",
+        "mainNote": "（血の流れや感情を司る経絡。役割：血流の調整、ストレス解消、目の健康維持）",
+        "rank": 2,
+        "id": 31,
+        "position": "肝",
+        "projectName": "脉诊仪3C版",
+        "ageId": 3,
+        "age": {
+          "createTime": "2023-06-30 09:28:34",
+          "maxAge": 60,
+          "minAge": 15,
+          "name": "15-60岁",
+          "id": 3
+        }
+      },
+      {
+        "mainShowGrade": 50,
+        "images": [],
+        "minor": "胃経",
+        "gender": "女",
+        "minorNote": "（消化器系の中心で、食欲や消化を司る経絡。役割：食べ物の消化・吸収を助ける）",
+        "mainGrade": 50,
+        "main": "脾経",
+        "videos": [],
+        "mainSymptom": "1、脾胃の病症：胃痛、吐き気、腹痛、下痢、便秘など。2、婦人科の病症：過多月経、無月経、月経痛など。3、経脈が巡る部位の病症：下肢の痛み、足首の痛みなど。",
+        "minorSymptom": "1、胃腸の病症：食欲不振、胃痛、吐き気、腹部膨満、下痢、便秘など。2、頭部および五官の病症：目の痛みやかゆみ、鼻出血、歯痛、耳の病気など。3、精神症状および発熱。4、経脈が巡る部位の病症：下肢、腰膝の痛み、膝の屈伸困難など。",
+        "minorGrade": 34,
+        "createTime": "2024-06-26 14:59:37",
+        "mainNote": "（消化吸収や筋肉を司る経絡。役割：胃腸の働き、血液の生成、エネルギーを蓄える）",
+        "rank": 1,
+        "id": 38,
+        "position": "脾",
+        "projectName": "脉诊仪3C版",
+        "ageId": 3,
+        "age": {
+          "createTime": "2023-06-30 09:28:34",
+          "maxAge": 60,
+          "minAge": 15,
+          "name": "15-60岁",
+          "id": 3
+        }
+      },
+      {
+        "mainShowGrade": 50,
+        "images": [],
+        "gender": "全部",
+        "minor": "大腸経",
+        "minorNote": "（排泄や免疫を司る経絡。役割：体内の老廃物を排出し、免疫を高める）",
+        "mainGrade": 50,
+        "main": "肺経",
+        "videos": [],
+        "mainSymptom": "1、肺の病症：咳、風邪、気管支喘息、喘息、咽喉の腫れや痛み、肺炎、胸痛など。2、経脈が巡る部位の病症：肩背部痛、腕の痛み、手首の痛みなど。",
+        "minorSymptom": "1、頭部および五官の病症：目の充血や腫れ、歯痛、咽喉の腫れや痛み、鼻出血、耳鳴り、難聴など。2、発熱および精神症状：めまいなど。3、腸の病症：腹部膨満、腹痛、腸鳴、下痢など。4、経脈が巡る部位の病症：上腕のだるさ、痺れ、手首の痛みなど。",
+        "minorGrade": 37,
+        "createTime": "2024-06-26 14:34:29",
+        "mainNote": "（呼吸や皮膚、免疫の状態を司る経絡.役割：呼吸器系（肺）、皮膚、大腸の働きを助ける）",
+        "rank": 5,
+        "position": "肺",
+        "id": 33,
+        "projectName": "脉诊仪3C版",
+        "ageId": 3,
+        "age": {
+          "createTime": "2023-06-30 09:28:34",
+          "maxAge": 60,
+          "minAge": 15,
+          "name": "15-60岁",
+          "id": 3
+        }
+      }
+    ],
+    "traditionalExercisesList": null,
+    "visitId": "339",
+    "jingluoList": null,
+    "wellnessList": null,
+    "healthFoodList": null,
+    "wellnessListV2": [
+      {
+        "images": [
+          {
+            "path": "material/2024/12/02/8994a9573649a1e0686910a7b2851fdb.png",
+            "createTime": "2024-12-02 10:52:08",
+            "name": "午時_短時間の昼寝をする、酉時_労働と休息のバランスを取り、水分補給をする",
+            "main": null,
+            "id": 283
+          }
+        ],
+        "createTime": "2024-01-13 09:29:07",
+        "id": 17,
+        "type": "养生推荐",
+        "content": "心は「君主之官」であり、すなわち心は人体の主宰です。もし人が正午に少しの間眠ることができれば、心の養生に大いに役立ち、午後や夜まで顔色が赤く、精力が充実します。四季を通じて昼寝は必要で、各回は約30分程度です。<br/>\n腎経が当令の時期には、過労を避け、少し休むことが望ましいです。申時の身体的および精神的活動を経て、酉時に精華を蓄える時期に入ります。したがって、休息を取り、過労を避けるべきです。腎虚の人にとっては、酉時に腎を補うことが最も効果的です。",
+        "bodyPart": "心,肾"
+      }
+    ],
+    "lifeGuideList": null,
+    "visitInfo": {
+      "serialNumber": null,
+      "patientId": 48,
+      "outVisitId": null,
+      "pulseResultAlias": "脈沈、脈澀、脈弦、脈数、脈有力",
+      "userId": 71,
+      "number": "2025032800000014",
+      "visitTime": "2025-03-28 13:00:42",
+      "patient": {
+        "address": "111",
+        "gender": "女",
+        "city": null,
+        "weight": null,
+        "birth": "1984-1-1",
+        "dist": null,
+        "outVisitId": null,
+        "idNumber": null,
+        "userId": null,
+        "number": "2025032800000012",
+        "province": null,
+        "feature": null,
+        "createTime": "2025-03-28 12:55:50",
+        "phone": "08070583876",
+        "temperature": null,
+        "name": "陶蕾蕾",
+        "outPatientId": null,
+        "id": 48,
+        "email": "xiner811224@gmail.com",
+        "height": null
+      },
+      "hasTips": 0,
+      "parts": [
+        {
+          "standard": {
+            "thirdMaxPercent": "50",
+            "sixthMax": "60",
+            "createUserId": null,
+            "fourthMin": "0.055",
+            "fifthMax": "80",
+            "pressure": "150",
+            "firstMax": "80",
+            "thirdMax": "180",
+            "fourthMax": "0.06",
+            "secondMax": "9",
+            "thirdMin": "70",
+            "pressures": [
+              {
+                "gender": "男",
+                "id": 265,
+                "value": "200",
+                "ageId": 14,
+                "age": {
+                  "createTime": "2023-08-24 16:03:05",
+                  "maxAge": 16,
+                  "minAge": 0,
+                  "name": "16岁及以下",
+                  "id": 14
+                }
+              },
+              {
+                "gender": "女",
+                "id": 266,
+                "value": "160",
+                "ageId": 14,
+                "age": {
+                  "createTime": "2023-08-24 16:03:05",
+                  "maxAge": 16,
+                  "minAge": 0,
+                  "name": "16岁及以下",
+                  "id": 14
+                }
+              },
+              {
+                "gender": "男",
+                "id": 267,
+                "value": "220",
+                "ageId": 15,
+                "age": {
+                  "maxAge": 70,
+                  "createTime": "2023-08-24 16:03:23",
+                  "minAge": 17,
+                  "name": "17-70岁",
+                  "id": 15
+                }
+              },
+              {
+                "gender": "女",
+                "id": 268,
+                "ageId": 15,
+                "value": "180",
+                "age": {
+                  "maxAge": 70,
+                  "createTime": "2023-08-24 16:03:23",
+                  "minAge": 17,
+                  "name": "17-70岁",
+                  "id": 15
+                }
+              },
+              {
+                "gender": "男",
+                "id": 269,
+                "ageId": 16,
+                "value": "180",
+                "age": {
+                  "createTime": "2023-08-24 16:03:37",
+                  "maxAge": 200,
+                  "minAge": 71,
+                  "name": "71岁及以上",
+                  "id": 16
+                }
+              },
+              {
+                "gender": "女",
+                "id": 270,
+                "value": "140",
+                "ageId": 16,
+                "age": {
+                  "maxAge": 200,
+                  "createTime": "2023-08-24 16:03:37",
+                  "minAge": 71,
+                  "name": "71岁及以上",
+                  "id": 16
+                }
+              }
+            ],
+            "secondMin": "6",
+            "thirdMinPercent": "20",
+            "firstMin": "60",
+            "id": 158,
+            "fifthMin": "60"
+          },
+          "physiqueList": null,
+          "guanData": null,
+          "chiData": null,
+          "part": 0,
+          "standardId": 158,
+          "visitInfoPartId": 152,
+          "graphValue": "4.38,3.92,3.50,2.98,2.44,1.74,1.04,0.30,-0.26,-0.76,-0.84,-0.96,-0.84,-0.72,-0.66,-0.64,-0.48,-0.48,-0.48,-0.52,-0.66,-0.90,-1.10,-1.26,-1.32,-1.52,-1.76,-2.02,-2.24,-2.38,-2.44,-2.52,-2.68,-2.86,-2.92,-3.02,-3.06,-3.10,-3.10,-3.22,-3.18,-3.28,-3.38,-3.58,-3.76,-3.98,-4.04,-4.08,-3.98,-3.60,-2.48,-0.68,1.92,4.72,7.54,9.26,9.88,9.44,8.70,7.80,7.04,6.42,5.82,5.18,4.66,4.16,3.80,3.38,2.96,2.46,1.88,1.24,0.54,-0.16,-0.86,-1.34,-1.54,-1.64,-1.60,-1.56,-1.42,-1.34,-1.26,-1.30,-1.30,-1.44,-1.56,-1.76,-1.92,-2.12,-2.26,-2.56,-2.80,-3.02,-3.16,-3.46,-3.58,-3.78,-3.84,-3.96,-4.00,-4.06,-4.10,-4.20,-4.24,-4.40,-4.48,-4.60,-4.66,-4.74,-4.76,-4.86,-4.98,-5.16,-5.26,-5.34,-5.24,-5.00,-4.16,-2.56,-0.16,2.66,5.66,8.16,9.42,9.44,8.84,7.98,7.30,6.62,6.12,5.64,5.20,4.70,4.32,3.80,3.40,2.88,2.48,2.04,1.46,0.68,-0.06,-0.76,-1.22,-1.54,-1.70,-1.76,-1.72,-1.72,-1.70,-1.76,-1.78,-1.78,-1.82,-1.96,-2.04,-2.22,-2.42,-2.70,-2.88,-3.06,-3.26,-3.48,-3.60,-3.74,-3.82,-3.96,-4.06,-4.18,-4.26,-4.40,-4.48,-4.60,-4.68,-4.74,-4.76,-4.92,-4.98,-5.04,-5.10,-5.14,-5.26,-5.44,-5.50,-5.50,-5.32,-4.52,-2.92,-0.68,2.16,5.26,7.92,9.20,9.34,8.66,7.88,7.22,6.72,6.30,5.80,5.36,4.92,4.42,3.94,3.48,3.06,2.64,2.20,1.68,1.02,0.22,-0.54,-1.18,-1.58,-1.78,-1.90,-1.84,-1.86,-1.92,-1.92,-1.80,-1.74,-1.72,-1.72,-1.82,-1.94,-2.22,-2.44,-2.56,-2.62,-2.72,-2.82,-2.86,-2.92,-3.10,-3.28,-3.38,-3.48,-3.58,-3.74,-3.84,-3.88,-3.98,-3.96,-3.96,-3.94,-4.00,-4.08,-4.22,-4.28,-4.38,-4.44,-4.42,-4.26,-4.00,-3.10,-1.48,1.04,3.92,7.04,9.26,10.32,10.24,9.50,8.70,7.94,7.40,6.82,6.32,5.80,5.36,4.86,4.40,3.98,3.62,3.12,2.62,2.04,1.26,0.52,-0.14,-0.52,-0.72,-0.76,-0.70,-0.52,-0.42,-0.32,-0.24,-0.22,-0.22,-0.26,-0.38,-0.54,-0.76,-1.04,-1.20,-1.34,-1.48,-1.62,-1.78,-1.98,-2.24,-2.38,-2.48,-2.56,-2.62,-2.68,-2.74,-2.86,-2.96,-3.14,-3.30,-3.34,-3.48,-3.58,-3.74,-3.84,-3.98,-4.02,-4.02,-3.48,-2.18,-0.26,2.36,5.12,7.64,9.22,9.70,9.32,8.52,7.76,7.00,6.32,5.68,5.14,4.58,4.04,3.58,3.16,2.72,2.24,1.68,0.96,0.26,-0.46,-1.04,-1.42,-1.64,-1.74,-1.76,-1.62,-1.52,-1.38,-1.36,-1.48,-1.54,-1.64,-1.76,-1.94,-2.14,-2.30,-2.52,-2.68,-2.86,-3.06,-3.24,-3.50,-3.70,-3.82,-3.88,-3.94,-4.06,-4.20,-4.32,-4.42,-4.56,-4.64,-4.70,-4.78,-4.76,-4.74,-4.76,-4.80,-4.96,-5.20,-5.28,-5.32,-5.24,-4.86,-3.88,-2.08,0.44,3.38,6.60,8.78,9.86,9.74,8.84,8.20,7.42,7.02,6.50,5.98,5.58,5.12,4.70,4.32,3.84,3.38,2.82,2.28,1.66,0.98,0.28,-0.36,-0.88,-1.18,-1.42,-1.48,-1.56,-1.60,-1.62,-1.62,-1.58,-1.56,-1.60,-1.64,-1.80,-1.98,-2.30,-2.62,-2.88,-3.12,-3.28,-3.52,-3.70,-3.80,-3.88,-3.96,-4.06,-4.14,-4.24,-4.38,-4.52,-4.66,-4.84,-4.86,-4.98,-4.98,-4.98,-4.98,-5.08,-5.18,-5.36,-5.52,-5.60,-5.52,-5.18,-4.04,-2.16,0.50,3.46,6.52,8.52,9.18,8.84,8.10,7.48,6.94,6.50,6.04,5.58,5.10,4.68,4.22,3.84,3.46,3.04,2.60,2.00,1.36,0.70,0.04,-0.58,-1.10,-1.48,-1.64,-1.72,-1.64,-1.60,-1.62,-1.60,-1.60,-1.62,-1.64,-1.64,-1.74,-1.82,-1.96,-2.18,-2.38,-2.62,-2.74,-2.90,-3.04,-3.16,-3.26,-3.38,-3.42,-3.50,-3.56,-3.64,-3.78,-3.84,-3.92,-3.98,-4.02,-4.02,-4.02,-4.08,-4.22,-4.38,-4.52,-4.56,-4.52,-4.40,-3.96,-2.70,-0.74,1.96,4.94,7.86,9.58,10.02,9.50,8.70,7.82,7.22,6.66,6.20,5.62,5.18,4.70,4.20,3.76,3.36,2.96,2.52,2.02,1.38,0.62,-0.12,-0.80,-1.14,-1.26,-1.18,-1.10,-0.98,-0.88,-0.78,-0.74,-0.70,-0.72,-0.80,-0.98,-1.14,-1.30,-1.42,-1.60,-1.80,-2.12,-2.30,-2.46,-2.60,-2.68,-2.78,-2.78,-2.86,-3.00,-3.16,-3.24,-3.32,-3.36,-3.48,-3.56,-3.60,-3.70,-3.82,-3.98,-4.08,-4.24,-4.38,-4.24,-3.94,-3.04,-1.26,1.22,4.08,6.86,8.86,9.58,9.30,8.50,7.58,6.80,6.10,5.50,4.88,4.30,3.92,3.50,3.04,2.66,2.06,1.50,0.88,0.22,-0.44,-0.96,-1.42,-1.72,-1.84,-1.86,-1.82,-1.70,-1.56,-1.48,-1.44,-1.50,-1.54,-1.68,-1.86,-2.04,-2.26,-2.48,-2.66,-2.92,-3.06,-3.24,-3.36,-3.48,-3.58,-3.72,-3.84,-3.98,-4.06,-4.18,-4.28,-4.34,-4.32,-4.48,-4.62,-4.72,-4.76,-4.76,-4.74,-4.86,-4.96,-5.16,-5.22,-5.26,-5.18,-4.86,-4.00,-2.38,-0.08,2.80,5.76,8.32,9.60,9.58,8.88,8.00,7.26,6.74,6.30,5.86,5.32,4.88,4.42,3.86,3.40,2.96,2.48,2.02,1.46,0.82,0.10,-0.56,-1.12,-1.44,-1.70,-1.76,-1.76,-1.64,-1.60,-1.62,-1.68,-1.72,-1.74,-1.78,-1.86,-2.12,-2.36,-2.58,-2.74,-2.94,-3.10,-3.24,-3.46,-3.60,-3.78,-3.82,-3.98,-4.08,-4.24,-4.38,-4.48,-4.54,-4.60,-4.68,-4.72,-4.80,-4.84,-4.88,-4.92,-4.96,-5.10,-5.22,-5.34,-5.42,-5.38,-5.10,-4.28,-2.62,-0.26,2.72,5.80,8.30,9.32,9.20,8.50,7.68,7.08,6.62,6.20,5.74,5.32,4.82,4.32,3.86,3.44,3.04,2.64,2.10,1.62,0.94,0.24,-0.44,-0.92,-1.26,-1.38,-1.40,-1.32,-1.20,-1.22,-1.26,-1.22,-1.26,-1.28,-1.40,-1.52,-1.68,-1.80,-1.96,-2.08,-2.38,-2.64,-2.88,-3.12,-3.32,-3.36,-3.38,-3.40,-3.48,-3.54,-3.64,-3.70,-3.78,-3.78,-3.86,-3.88,-3.86,-3.88,-3.98,-4.04,-4.14,-4.24,-4.38,-4.44,-4.46,-4.26,-3.64,-2.16,-0.04,2.78,5.78,8.42,9.84,9.92,9.22,8.24,7.48,6.88,6.38,5.90,5.36,4.88,4.46,4.10,3.76,3.42,3.00,2.48,1.88,1.16,0.46,-0.18,-0.64,-1.08,-1.04,-0.98,-0.90,-0.70,-0.64,-0.44,-0.38,-0.32,-0.36,-0.56,-0.88,-1.14,-1.40,-1.54,-1.70,-1.78,-1.98,-2.16,-2.56,-2.58,-2.72,-2.84,-2.96,-3.04,-3.14,-3.30,-3.40,-3.42,-3.58,-3.64,-3.78,-3.86,-3.98,-4.10,-4.22,-4.32,-4.42,-4.42,-4.38,-4.04,-3.04,-1.38,1.16,4.00,6.82,8.74,9.52,9.24,8.38,7.54,6.82,6.24,5.68,5.20,4.60,4.04,3.54,3.10,2.70,2.42,1.96,1.44,0.78,0.08,-0.58,-1.16,-1.56,-1.74,-1.74,-1.70,-1.56,-1.40,-1.38,-1.34,-1.40,-1.42,-1.56,-1.64,-1.86,-2.04,-2.28,-2.44,-2.62,-2.78,-2.96,-3.08,-3.32,-3.50,-3.62,-3.74,-3.80,-3.86,-3.92,-3.98,-4.06,-4.18,-4.28,-4.34,-4.46,-4.46,-4.50,-4.60,-4.72,-4.80,-4.92,-5.02,-5.08,-5.08,-4.88,-4.10,-2.52,-0.12,2.86,5.96,8.52,9.70,9.70,9.08,8.20,7.56,6.96,6.48,6.04,5.66,5.22,4.82,4.38,3.92,3.40,2.96,2.46,1.92,1.26,0.62,-0.14,-0.70,-1.18,-1.38,-1.60,-1.58,-1.58,-1.52,-1.38,-1.32,-1.32,-1.30,-1.38,-1.48,-1.72,-1.98,-2.24,-2.38,-2.52,-2.70,-2.88,-3.02,-3.24,-3.38,-3.50,-3.60,-3.70,-3.74,-3.84,-3.96,-4.02,-4.18,-4.32,-4.30,-4.40,-4.40,-4.46,-4.56,-4.68,-4.78,-4.92,-4.92,-4.92,-4.74,-4.38,-3.14,-1.16,1.58,4.64,7.68,9.42,9.88,9.44,8.66,7.86,7.32,6.86,6.44,5.96;-3.80,-3.64,-2.92,-1.46,0.80,3.00,4.80,5.62,5.88,5.76,5.56,5.22,4.92,4.60,4.44,4.30,4.22,4.08,3.88,3.58,3.40,3.14,2.82,2.34,1.88,1.34,0.90,0.56,0.40,0.26,0.22,0.12,0.06,-0.12,-0.30,-0.56,-0.68,-0.90,-1.06,-1.22,-1.32,-1.40,-1.46,-1.60,-1.70,-1.94,-2.06,-2.20,-2.12,-2.20,-2.20,-2.26,-2.22,-2.26,-2.26,-2.36,-2.48,-2.66,-2.72,-2.82,-2.82,-2.90,-2.90,-2.94,-3.00,-3.28,-3.56,-3.80,-3.84,-3.86,-3.40,-2.62,-1.14,1.06,3.42,5.30,6.12,6.16,5.92,5.44,5.12,4.76,4.50,4.16,3.92,3.78,3.70,3.52,3.40,3.14,2.94,2.52,2.04,1.58,1.02,0.44,0.04,-0.22,-0.34,-0.48,-0.58,-0.74,-0.80,-0.90,-0.88,-0.92,-0.96,-1.16,-1.30,-1.40,-1.44,-1.58,-1.70,-1.90,-2.00,-2.16,-2.32,-2.50,-2.66,-2.76,-2.82,-2.88,-2.84,-2.80,-2.74,-2.78,-2.82,-2.92,-2.96,-2.98,-2.94,-2.94,-3.04,-3.28,-3.38,-3.38,-3.32,-3.16,-2.72,-1.62,0.22,2.42,4.26,5.22,5.46,5.34,5.06,4.68,4.50,4.22,4.02,3.76,3.64,3.42,3.20,2.92,2.66,2.40,2.02,1.54,1.12,0.68,0.32,0.00,-0.18,-0.42,-0.46,-0.44,-0.42,-0.42,-0.50,-0.56,-0.62,-0.66,-0.78,-0.82,-0.86,-0.98,-1.10,-1.20,-1.20,-1.32,-1.48,-1.68,-1.82,-1.96,-2.00,-2.04,-2.08,-2.06,-2.08,-2.16,-2.32,-2.48,-2.54,-2.60,-2.62,-2.70,-2.74,-2.92,-3.16,-3.36,-3.36,-3.28,-2.98,-2.04,-0.32,1.92,4.26,5.86,6.42,6.30,5.90,5.42,5.02,4.80,4.78,4.64,4.46,4.24,4.02,3.72,3.38,3.00,2.58,2.10,1.82,1.38,0.86,0.42,0.02,-0.36,-0.68,-0.88,-0.98,-1.08,-1.16,-1.18,-1.12,-1.14,-1.14,-1.12,-1.18,-1.34,-1.44,-1.54,-1.60,-1.64,-1.66,-1.66,-1.84,-2.04,-2.18,-2.36,-2.52,-2.74,-2.94,-3.14,-3.26,-3.28,-3.28,-3.44,-3.64,-3.66,-3.58,-3.70,-3.76,-3.76,-3.72,-3.82,-3.90,-3.84,-3.72,-3.18,-1.98,0.00,2.34,4.16,5.10,5.30,5.24,5.06,4.94,4.74,4.60,4.40,4.34,4.12,3.92,3.70,3.42,3.12,2.76,2.40,2.06,1.60,1.20,0.68,0.22,-0.22,-0.52,-0.70,-0.80,-0.80,-0.80,-0.84,-0.94,-1.04,-1.10,-1.18,-1.22,-1.28,-1.34,-1.48,-1.60,-1.76,-1.88,-1.96,-2.12,-2.32,-2.54,-2.76,-3.00,-3.06,-3.08,-3.06,-3.02,-3.10,-3.18,-3.28,-3.40,-3.44,-3.42,-3.46,-3.54,-3.66,-3.74,-3.88,-3.94,-3.94,-3.80,-3.30,-2.18,-0.32,1.92,3.96,5.06,5.42,5.24,4.86,4.62,4.44,4.30,4.20,4.08,3.90,3.70,3.48,3.34,3.02,2.68,2.32,1.90,1.42,0.94,0.40,-0.10,-0.50,-0.76,-0.92,-1.00,-1.04,-1.06,-1.08,-1.18,-1.30,-1.40,-1.44,-1.46,-1.52,-1.60,-1.60,-1.70,-1.90,-2.14,-2.32,-2.50,-2.60,-2.70,-2.72,-2.84,-2.72,-2.78,-2.86,-2.98,-3.10,-3.12,-3.14,-3.16,-3.14,-3.22,-3.36,-3.44,-3.58,-3.72,-3.76,-3.64,-3.40,-2.78,-1.64,0.20,2.14,3.80,4.68,4.92,4.84,4.66,4.56,4.48,4.38,4.26,4.06,3.94,3.72,3.46,3.12,2.70,2.28,1.92,1.48,1.00,0.50,0.02,-0.32,-0.58,-0.82,-1.02,-1.18,-1.30,-1.40,-1.40,-1.46,-1.48,-1.44,-1.46,-1.46,-1.50,-1.58,-1.64,-1.80,-2.02,-2.02,-2.12,-2.24,-2.32,-2.40,-2.40,-2.40,-2.44,-2.54,-2.54,-2.48,-2.42,-2.46,-2.54,-2.76,-2.84,-2.88,-2.96,-3.06,-3.16,-3.28,-3.42,-3.38,-3.22,-2.80,-1.72,0.04,2.30,4.24,5.44,5.78,5.68,5.46,5.30,5.16,5.04,4.90,4.58,4.36,4.14,3.88,3.52,3.20,2.80,2.44,2.00,1.56,1.10,0.64,0.20,-0.16,-0.52,-0.76,-0.90,-1.06,-1.16,-1.18,-1.18,-1.20,-1.22,-1.24,-1.38,-1.46,-1.54,-1.64,-1.82,-1.96,-2.02,-2.10,-2.18,-2.26,-2.34,-2.40,-2.48,-2.58,-2.62,-2.64,-2.72,-2.76,-2.90,-3.10,-3.24,-3.34,-3.42,-3.36,-3.38,-3.36,-3.40,-3.40,-3.52,-3.68,-3.72,-3.70,-3.34,-2.36,-0.78,1.24,2.96,4.06,4.58,4.68,4.48,4.52,4.34,4.32,4.30,4.30,4.14,3.92,3.64,3.46,3.26,3.00,2.64,2.28,1.94,1.48,1.02,0.62,0.28,0.02,-0.30,-0.44,-0.64,-0.76,-0.84,-0.90,-0.98,-1.10,-1.30,-1.46,-1.60,-1.74,-1.92,-2.06,-2.18,-2.22,-2.34,-2.54,-2.78,-2.98,-3.18,-3.38,-3.48,-3.52,-3.66,-3.68,-3.68,-3.74,-3.80,-3.86,-4.00,-4.02,-4.02,-3.98,-4.02,-4.08,-4.28,-4.42,-4.50,-4.42,-4.24,-3.60,-2.40,-0.72,1.16,2.70,3.66,4.02,4.08,3.92,3.88,3.92,4.00,4.04,3.94,3.78,3.52,3.26,2.96,2.58,2.10,1.78,1.42,1.04,0.56,0.10,-0.36,-0.82,-1.14,-1.34,-1.48,-1.62,-1.80,-1.96,-2.00,-2.00,-1.92,-1.90,-1.96,-2.14,-2.34,-2.48,-2.58,-2.70,-2.78,-2.94,-3.08,-3.12,-3.24,-3.30,-3.44,-3.58,-3.72,-3.78,-3.78,-3.78,-3.78,-3.72,-3.76,-3.74,-3.78,-3.84,-3.90,-3.88,-3.80,-3.70,-3.48,-3.02,-2.02,-0.56,1.26,2.86,3.98,4.50,4.60,4.58,4.52,4.48,4.32,4.14,3.92,3.58,3.40,3.26,3.00,2.72,2.30,1.86,1.40,0.98,0.54,0.14,-0.28,-0.54,-0.70,-0.80,-0.86,-0.92,-1.00,-0.88,-0.86,-0.88,-0.98,-1.18,-1.28,-1.46,-1.58,-1.58,-1.64,-1.74,-1.80,-1.90,-1.98,-2.06,-2.26,-2.30,-2.34,-2.44,-2.54,-2.64,-2.72,-2.72,-2.84,-2.92,-2.94,-3.00,-2.96,-2.92,-2.96,-3.16,-3.14,-3.24,-3.30,-3.36,-3.28,-3.02,-2.34,-0.96,0.90,2.92,4.38,5.08,5.28,5.28,5.28,5.26,5.16,5.10,4.96,4.86,4.72,4.54,4.30,4.02,3.64,3.30,2.78,2.40,1.94,1.58,1.04,0.64,0.26,0.00,-0.34,-0.42,-0.64,-0.68,-0.80,-0.84,-0.98,-1.02,-1.08,-1.06,-1.16,-1.20,-1.34,-1.38,-1.58,-1.70,-1.92,-2.06,-2.28,-2.34,-2.44,-2.44,-2.54,-2.54,-2.62,-2.70,-2.82,-2.86,-2.98,-2.96,-2.98,-2.90,-2.96,-2.90,-3.00,-3.06,-3.18,-3.30,-3.32,-3.08,-2.48,-1.16,0.48,2.40,3.88,4.86,5.24,5.42,5.48,5.52,5.44,5.46,5.32,5.20,4.92,4.70,4.40,4.12,3.76,3.34,2.80,2.38,1.84,1.28,0.74,0.36,-0.04,-0.30,-0.54,-0.84,-1.00,-1.10,-1.24,-1.20,-1.24,-1.24,-1.26,-1.42,-1.54,-1.60,-1.72,-1.70,-1.68,-1.66,-1.68,-1.66,-1.74,-1.78,-1.88,-1.96,-2.10,-2.16,-2.34,-2.52,-2.66,-2.74,-2.94,-2.94,-3.02,-2.96,-3.12,-3.30,-3.58,-3.74,-3.80,-3.76,-3.68,-3.22,-2.20,-0.52,1.32,2.92,4.10,4.68,4.90,5.08,5.12,5.20,5.18,5.14,4.98,4.86,4.68,4.52,4.22,3.90,3.44,2.92,2.34,1.88,1.28,0.78,0.26,-0.02,-0.34,-0.48,-0.70,-0.84,-0.96,-1.08,-1.20,-1.24,-1.32,-1.26,-1.32,-1.28,-1.38,-1.48,-1.58,-1.66,-1.88,-1.98,-2.06,-2.02,-2.04,-2.06,-2.14,-2.14,-2.18,-2.16,-2.24,-2.26,-2.38,-2.36,-2.42,-2.48,-2.68,-2.72,-2.82,-2.78,-2.88,-2.70,-2.42,-1.58,-0.16,1.74,3.40,4.62,5.14,5.30,5.26,5.32,5.28,5.22,5.14,5.00,4.80,4.58,4.16,3.82,3.46,3.16,2.70,2.34,1.84,1.40,0.84,0.48,0.12,-0.16,-0.38,-0.50,-0.74,-0.94,-1.18,-1.30,-1.36,-1.28,-1.34,-1.38,-1.44,-1.50,-1.64,-1.84,-1.90,-1.98,-2.14,-2.32,-2.34,-2.40,-2.56,-2.62,-2.72,-2.74,-2.84,-2.90,-3.04,-3.14,-3.30,-3.32,-3.32,-3.18,-3.14,-3.16,-3.28,-3.44,-3.62,-3.78,-3.80,-3.58,-2.90,-1.42,0.52,2.64,4.14,4.88,5.14,5.22,5.26;1.78,1.82,1.54,1.12,1.00,1.10,1.12,0.96,0.84,0.82,0.72,0.58,0.40,0.34,0.26,0.14,-0.02,-0.30,-0.58,-0.80,-0.88,-0.84,-0.84,-0.76,-0.68,-0.66,-0.72,-0.82,-0.86,-0.88,-0.92,-0.98,-0.98,-1.04,-1.06,-1.24,-1.18,-1.20,-1.22,-1.36,-1.38,-1.40,-1.34,-1.14,-1.00,-0.96,-0.94,-0.96,-0.98,-1.02,-1.06,-1.18,-1.32,-1.44,-1.38,-1.32,-1.22,-1.00,-0.68,-0.26,0.20,0.66,1.02,1.34,1.78,2.16,2.56,2.86,3.10,3.30,3.46,3.44,3.28,3.16,3.18,3.04,2.82,2.62,2.54,2.36,2.18,2.02,1.94,1.70,1.42,1.20,0.98,0.84,0.56,0.32,0.28,0.28,0.28,0.26,0.32,0.32,0.34,0.32,0.30,0.14,-0.02,-0.16,-0.40,-0.70,-0.80,-0.88,-0.96,-1.24,-1.42,-1.44,-1.64,-1.72,-1.74,-1.72,-1.80,-1.94,-2.14,-2.38,-2.52,-2.54,-2.52,-2.64,-2.82,-2.94,-3.12,-3.38,-3.58,-3.52,-3.12,-2.80,-2.48,-2.16,-1.78,-1.48,-1.22,-1.00,-0.68,-0.42,-0.24,-0.22,-0.12,-0.14,-0.04,-0.06,-0.10,-0.38,-0.78,-1.02,-1.32,-1.54,-1.66,-1.74,-1.82,-2.00,-2.26,-2.48,-2.68,-2.94,-3.12,-3.22,-3.40,-3.58,-3.30,-3.30,-3.84,-3.46,-3.52,-4.04,-4.64,-4.84,-4.92,-4.96,-4.82,-4.64,-4.50,-4.56,-4.72,-4.88,-4.98,-5.00,-5.22,-5.46,-5.58,-5.54,-5.58,-5.40,-5.22,-4.98,-4.90,-4.98,-5.10,-5.18,-5.30,-5.28,-5.14,-4.92,-4.56,-4.06,-3.46,-2.82,-2.24,-1.76,-1.36,-0.92,-0.52,-0.18,0.06,0.18,0.26,0.38,0.56,0.72,0.78,0.84,0.72,0.42,0.18,0.00,-0.16,-0.28,-0.46,-0.54,-0.56,-0.68,-0.68,-0.64,-0.52,-0.54,-0.54,-0.58,-0.44,-0.34,-0.32,-0.40,-0.44,-0.52,-0.58,-0.60,-0.64,-0.70,-0.74,-0.84,-0.86,-0.86,-0.86,-0.88,-1.00,-1.06,-1.14,-1.18,-1.10,-1.06,-1.04,-0.96,-0.88,-0.86,-0.84,-0.84,-1.02,-1.22,-1.20,-1.30,-1.30,-1.18,-0.92,-0.44,0.04,0.48,1.02,1.46,1.84,2.12,2.34,2.56,2.76,2.88,2.92,3.06,3.14,3.12,2.92,2.70,2.50,2.32,2.14,2.06,2.10,2.28,2.02,1.82,1.64,1.52,1.30,1.10,1.04,0.90,0.74,0.56,0.56,0.58,0.58,0.56,0.58,0.64,0.62,0.42,0.40,0.44,0.46,0.32,0.26,0.26,0.26,0.30,0.30,0.22,0.10,-0.08,-0.22,-0.24,-0.24,-0.22,-0.14,-0.22,-0.22,-0.26,-0.36,-0.54,-0.74,-0.90,-1.02,-1.08,-1.14,-1.06,-0.82,-0.42,0.02,0.44,0.80,1.04,1.44,1.80,1.94,1.98,2.08,2.06,2.00,1.94,1.68,1.28,1.16,1.10,0.32,-0.10,0.28,0.14,-0.42,-0.56,-0.34,-0.26,-0.32,-0.44,-0.40,-0.48,-0.82,-1.24,-1.62,-1.78,-1.76,-1.72,-1.66,-1.68,-1.70,-1.82,-2.00,-2.30,-2.58,-2.88,-3.08,-3.34,-3.52,-3.50,-3.44,-3.50,-3.56,-3.62,-3.68,-3.84,-3.98,-4.02,-3.90,-3.90,-3.98,-4.04,-3.88,-3.70,-3.74,-3.94,-4.12,-4.40,-4.64,-4.84,-4.94,-4.72,-4.36,-3.94,-3.50,-2.98,-2.36,-1.86,-1.42,-1.02,-0.78,-0.42,-0.40,-0.36,-0.30,-0.28,-0.38,-0.50,-0.70,-1.00,-1.32,-1.50,-1.70,-1.86,-2.00,-2.20,-2.60,-2.72,-2.96,-3.18,-3.46,-3.70,-4.04,-4.24,-4.32,-4.24,-4.08,-4.04,-3.98,-3.98,-4.10,-4.28,-4.52,-4.72,-4.88,-4.98,-5.02,-4.96,-4.88,-4.82,-4.78,-4.84,-4.88,-4.92,-5.00,-5.02,-5.04,-5.14,-5.10,-4.98,-4.82,-4.64,-4.46,-4.38,-4.52,-4.50,-4.44,-4.48,-4.40,-4.16,-3.84,-3.42,-2.96,-2.44,-1.72,-0.90,-0.26,0.26,0.58,0.70,0.70,0.50,0.24,0.28,0.18,0.14,0.10,0.22,0.26,0.22,0.20,0.10,-0.12,-0.36,-0.50,-0.56,-0.64,-0.72,-0.76,-0.82,-0.88,-0.94,-1.02,-1.00,-1.02,-1.06,-1.18,-1.32,-1.38,-1.48,-1.62,-1.64,-1.60,-1.58,-1.54,-1.42,-1.34,-1.36,-1.44,-1.56,-1.72,-1.86,-1.92,-1.84,-1.58,-1.40,-1.38,-1.24,-1.32,-1.48,-1.64,-1.68,-1.70,-1.74,-1.70,-1.54,-1.42,-1.32,-1.24,-0.98,-0.64,-0.26,0.10,0.50,0.94,1.28,1.60,1.94,2.32,2.58,2.82,2.90,2.80,2.86,2.74,2.68,2.64,2.62,2.52,2.28,2.12,1.96,1.66,1.40,1.20,1.08,0.98,1.04,0.94,0.78,0.78,0.66,0.52,0.52,0.70,0.66,0.50,0.46,0.36,0.22,0.10,0.08,0.00,-0.16,-0.20,-0.16,-0.18,-0.30,-0.32,-0.38,-0.52,-0.82,-0.90,-0.90,-0.86,-0.80,-0.70,-0.68,-0.60,-0.54,-0.40,-0.34,-0.36,-0.38,-0.72,-1.02,-1.20,-1.26,-1.36,-1.12,-0.68,-0.22,0.16,0.48,0.88,1.26,1.64,1.98,2.28,2.48,2.90,2.90,2.88,2.90,3.00,3.02,2.94,2.92,2.86,2.78,2.58,2.36,2.10,1.88,1.54,1.26,0.94,0.56,0.18,-0.12,-0.36,-0.54,-0.78,-0.92,-1.04,-1.14,-1.34,-1.46,-1.58,-1.70,-1.82,-1.88,-1.92,-2.00,-2.04,-2.10,-2.20,-2.26,-2.34,-2.36,-2.34,-2.50,-2.78,-3.00,-3.18,-3.24,-3.26,-3.30,-3.34,-3.20,-3.18,-3.24,-3.34,-3.44,-3.56,-3.66,-3.70,-3.66,-3.54,-3.32,-3.12,-2.90,-2.58,-2.06,-1.52,-1.00,-0.58,-0.32,-0.12,-0.04,-0.08,0.00,0.12,0.16,0.10,0.02,-0.08,-0.22,-0.38,-0.60,-0.74,-0.90,-1.12,-1.46,-1.78,-2.06,-2.32,-2.68,-2.82,-3.00,-3.24,-3.46,-3.58,-3.64,-3.62,-3.60,-3.58,-3.60,-3.68,-3.72,-3.68,-3.64,-3.54,-3.46,-3.40,-3.36,-3.36,-3.36,-3.30,-3.26,-3.22,-3.28,-3.32,-3.22,-3.02,-2.88,-2.74,-2.58,-2.42,-2.46,-2.76,-2.86,-2.92,-3.00,-3.20,-3.18,-2.88,-2.46,-1.94,-1.44,-0.92,-0.50,-0.18,0.12,0.44,0.76,1.02,1.14,1.34,1.46,1.52,1.54,1.56,1.56,1.52,1.32,1.08,0.86,0.62,0.44,0.42,0.40,0.38,0.22,-0.02,-0.20,-0.36,-0.34,-0.26,-0.10,-0.10,-0.16,-0.22,-0.32,-0.34,-0.38,-0.40,-0.38,-0.42,-0.50,-0.64,-0.58,-0.56,-0.58,-0.70,-0.80,-0.86,-0.84,-0.78,-0.68,-0.64,-0.52,-0.50,-0.50,-0.56,-0.64,-0.66,-0.64,-0.76,-0.84,-0.98,-1.04,-1.08,-1.10,-0.96,-0.68,-0.20,0.22,0.68,1.10,1.44,1.60,1.90,2.18,2.50,2.76,3.14,3.50,3.70,3.76,3.90,3.82,3.74,3.50,3.32,3.18,3.00,2.78,2.62,2.66,2.64,2.60,2.48,2.28,2.10,1.88,1.44,1.22,1.14,1.24,1.20,1.08,1.06,1.16,1.16,1.00,0.84,0.68,0.54,0.48,0.34,0.24,0.26,0.34,0.24,0.16,0.14,0.08,-0.08,-0.28,-0.36,-0.40,-0.42,-0.42,-0.34,-0.20,-0.22,-0.24,-0.32,-0.50,-0.76,-0.90,-0.96,-0.98,-0.90,-0.50,0.04,0.66,1.06,1.56,1.92,2.18,2.40,2.64,2.80,2.90,2.90,2.90,2.80,2.78,2.74,2.70,2.56,2.38,2.24,2.06,1.68,1.38,1.22,1.06,0.80,0.56,0.34,0.10,-0.26,-0.60,-0.92,-1.04,-1.16,-1.26,-1.32,-1.26,-1.42,-1.56,-1.78,-2.06,-2.42,-2.66,-2.88,-3.04,-3.24,-3.42,-3.68,-3.82,-3.94,-4.00,-4.14,-4.20,-4.22,-4.22,-4.26,-4.26,-4.24,-4.10,-4.04,-4.06,-4.22,-4.36,-4.66,-4.82,-4.96,-4.88,-4.78,-4.56,-4.26,-3.84,-3.38,-2.86,-2.42,-2.02,-1.70,-1.36,-1.34,-1.40,-1.46,-1.36,-1.48,-1.60,-1.76,-1.80,-1.88,-1.86,-2.00,-2.08,-2.18,-2.20,-2.40,-2.56,-2.86,-3.02,-3.12,-3.26,-3.66,-3.84,-4.02,-4.08,-4.22,-4.18,-4.02,-3.90,-3.82,-3.58,-3.42,-3.30,-3.30,-3.24,-3.18,-3.12,-3.18,-3.08,-2.94,-2.74,-2.68,-2.50,-2.38,-2.26,-2.32,-2.20,-2.36,-2.48,-2.60,-2.56,-2.72,-2.78,-2.64,-2.44,-2.40,-2.44,-2.46,-2.24,-1.94,-1.60,-1.18",
+          "guanEffect": "0",
+          "chiResult": {
+            "t4": "444.000",
+            "t5": "242.000",
+            "t6": "2.7",
+            "part": null,
+            "uniformity": "正常",
+            "freq": "88",
+            "h1": "14.502",
+            "h2": "3.262",
+            "h3": "3.553",
+            "h4": "2.504",
+            "type": 2,
+            "h5": "0.060",
+            "posType": "0",
+            "visitInfoPartId": 152,
+            "slop": "0.257",
+            "pulsePeakPopularDesc": "尺候は下焦にあり、腎と腸は同じく下焦に属する。湿熱や瘀血が下焦に停滞すると、力のある脈が見られ、腰痛や大便の困難が現れることがある。",
+            "pulsePosPopularDesc": "腎気が充足している場合は、浮きも沈みもせず、ちょうど中間にあり、気血が満ちていて、隠されて露出せず、雲が流れるように循環が繰り返される。",
+            "pos": "74.580",
+            "pulsePosGrade": "54.280",
+            "pulseFreq": "数",
+            "id": 455,
+            "pulsePosExplain": "肾气充足，不浮不沉，恰在中取，气血盈盈，藏而不露，行云流水，循环往复。",
+            "fluencyGrade": "60",
+            "tension": "正常",
+            "tensionGrade": "59",
+            "pulsePeakGrade": "75",
+            "ad": "1191798886.400",
+            "pulseFreqExplain": "下焦热，或消渴不止，见口中黏腻、小便黄赤、大便干燥。",
+            "tensionPopularDesc": "脈象は根があり、来去は落ち着いており、陰平陽秘、精神が治まり、陰陽がバランスよく、精神は安和です。",
+            "fluency": "正常",
+            "peak": "14.502",
+            "pulsePos": "正常",
+            "pulseFreqPopularDesc": "下焦の熱が見られると、口中の粘性感、小便の黄赤、小便の疼痛、大便の乾燥などの症状が現れる。",
+            "fluencyPopularDesc": "脈象は根があり、流れは穏やかで、陰平陽秘、精神が治まり、陰陽がバランスを保ち、精神が安和である。",
+            "pulseFreqGrade": "64",
+            "t": "686.667",
+            "pulsePeak": "有力",
+            "pulsePeakExplain": "膀胱水闭而壅，可见便秘、腹胀痛、下肢肿痛、尿赤涩、淋痛。",
+            "w": "111.667",
+            "tensionExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "asValue": "125820.002",
+            "fluencyExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "t1": "91.667"
+          },
+          "visitId": 339,
+          "cunEffect": "0",
+          "cunData": null,
+          "cunResult": {
+            "t4": "420.000",
+            "t5": "270.000",
+            "t6": "0",
+            "part": null,
+            "uniformity": "暂无",
+            "freq": "88",
+            "h1": "4.760",
+            "h2": "2.840",
+            "h3": "3.100",
+            "type": 3,
+            "h4": "2.800",
+            "h5": "0.020",
+            "posType": "0",
+            "visitInfoPartId": 152,
+            "slop": "0.041",
+            "pulsePeakPopularDesc": "心気が不足しており、心にぼんやりとした感じがあり、驚きや動悸、心悸があり、心神は不安定である。",
+            "pulsePosPopularDesc": "心の気が不足している場合や、心陽が足りない場合には、不眠、動悸、息切れといった症状が見られます。",
+            "pos": "158.250",
+            "pulsePosGrade": "77",
+            "pulseFreq": "数",
+            "id": 456,
+            "pulsePosExplain": "心君失相火之助，为心气虚，可见寐差、心慌、气短等症。",
+            "fluencyGrade": "30",
+            "tensionGrade": "70.000",
+            "tension": "弦",
+            "pulsePeakGrade": "32",
+            "ad": "1208056064.000",
+            "pulseFreqExplain": "病热，心胸痛闷，或有喘咳、口疮。新病外感，久病阴虚。",
+            "fluency": "澀",
+            "tensionPopularDesc": "弦脈は多く肝病に関連し、肝病は多く郁滞が見られる。心胸や脇腹に不快感があり、目の充血や目眩が見られる。",
+            "peak": "4.760",
+            "pulseFreqPopularDesc": "病熱があり、心胸に痛みと圧迫感があり、または咳嗽や喘息、口内の潰瘍が見られる。新たな外感病であり、長期間の病気による陰虚である。",
+            "pulsePos": "沈",
+            "fluencyPopularDesc": "渋脈は血液が少なく、精気が損なわれ、左側の寸脈は渋く、心虚に該当し、心痛、動悸、胸の圧迫感や胸痛が見られる。",
+            "pulseFreqGrade": "64",
+            "t": "690.000",
+            "pulsePeak": "無力",
+            "pulsePeakExplain": "心气亏，心中恍惚、惊悸、怔忡。",
+            "w": "220.000",
+            "tensionExplain": "主肝胆痰饮痛，风入体必多头痛，见心胸胁部不适，目赤、眼花。",
+            "asValue": "234580.012",
+            "fluencyExplain": "主血少精伤，心脉火郁而未舒，见心痛、心悸、怔忡等。",
+            "t1": "190.000"
+          },
+          "graphPath": null,
+          "device": null,
+          "guanResult": {
+            "t4": "535.556",
+            "t5": "141.111",
+            "t6": "2.1",
+            "part": null,
+            "uniformity": "正常",
+            "freq": "88",
+            "h1": "9.026",
+            "h2": "2.169",
+            "h3": "2.229",
+            "type": 1,
+            "h4": "1.093",
+            "h5": "0.056",
+            "posType": "0",
+            "visitInfoPartId": 152,
+            "slop": "0.183",
+            "pulsePeakPopularDesc": "力強い脈は実証を示し、肝火による脇の痛み、急躁で怒りっぽく、目が赤く、顔が赤らんでいる。",
+            "pulsePosPopularDesc": "肝血は充足しており、浮かず沈まず、ちょうど中を取っていて、気血は満ち溢れ、隠れていて表には現れず、流れる雲のように循環し続ける。",
+            "pulsePosGrade": "45.400",
+            "pos": "50.580",
+            "pulseFreq": "数",
+            "id": 454,
+            "pulsePosExplain": "肝血充足，不浮不沉，恰在中取，气血盈盈，藏而不露，行云流水，循环往复。",
+            "fluencyGrade": "60",
+            "tension": "正常",
+            "tensionGrade": "59",
+            "ad": "1184052565.333",
+            "pulsePeakGrade": "60",
+            "pulseFreqExplain": "病肝胆热，因而肝火盛而目红，可见面赤、口苦、耳鸣。",
+            "tensionPopularDesc": "脈象は根があり、出入りがゆったりとしており、陰が平らで陽が秘められ、精神は治まり、陰陽のバランスがとれており、精神は安らかである。",
+            "fluency": "正常",
+            "peak": "9.026",
+            "pulseFreqPopularDesc": "肝胆の熱が病んでいるため、肝火が盛んになり、目が赤くなり、顔が赤く、口苦、耳鳴りが見られる。",
+            "fluencyPopularDesc": "特徴が根を持ち、穏やかに流れ、陰陽のバランスが取れ、精神は安定している。",
+            "pulsePos": "正常",
+            "pulseFreqGrade": "64",
+            "t": "677.000",
+            "pulsePeak": "有力",
+            "pulsePeakExplain": "有力则实，肝火胁痛，急躁易怒、目赤、面红等。",
+            "w": "171.000",
+            "tensionExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "asValue": "240738.005",
+            "fluencyExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "t1": "94.000"
+          },
+          "chiEffect": "0"
+        },
+        {
+          "standard": {
+            "thirdMaxPercent": "50",
+            "sixthMax": "60",
+            "createUserId": null,
+            "fourthMin": "0.055",
+            "fifthMax": "80",
+            "pressure": "150",
+            "firstMax": "80",
+            "thirdMax": "180",
+            "fourthMax": "0.06",
+            "secondMax": "9",
+            "thirdMin": "70",
+            "thirdMinPercent": "20",
+            "secondMin": "6",
+            "pressures": [
+              {
+                "gender": "男",
+                "id": 265,
+                "ageId": 14,
+                "value": "200",
+                "age": {
+                  "maxAge": 16,
+                  "createTime": "2023-08-24 16:03:05",
+                  "minAge": 0,
+                  "name": "16岁及以下",
+                  "id": 14
+                }
+              },
+              {
+                "gender": "女",
+                "id": 266,
+                "value": "160",
+                "ageId": 14,
+                "age": {
+                  "maxAge": 16,
+                  "createTime": "2023-08-24 16:03:05",
+                  "minAge": 0,
+                  "name": "16岁及以下",
+                  "id": 14
+                }
+              },
+              {
+                "gender": "男",
+                "id": 267,
+                "ageId": 15,
+                "value": "220",
+                "age": {
+                  "createTime": "2023-08-24 16:03:23",
+                  "maxAge": 70,
+                  "minAge": 17,
+                  "name": "17-70岁",
+                  "id": 15
+                }
+              },
+              {
+                "gender": "女",
+                "id": 268,
+                "value": "180",
+                "ageId": 15,
+                "age": {
+                  "createTime": "2023-08-24 16:03:23",
+                  "maxAge": 70,
+                  "minAge": 17,
+                  "name": "17-70岁",
+                  "id": 15
+                }
+              },
+              {
+                "gender": "男",
+                "id": 269,
+                "value": "180",
+                "ageId": 16,
+                "age": {
+                  "createTime": "2023-08-24 16:03:37",
+                  "maxAge": 200,
+                  "minAge": 71,
+                  "name": "71岁及以上",
+                  "id": 16
+                }
+              },
+              {
+                "gender": "女",
+                "id": 270,
+                "value": "140",
+                "ageId": 16,
+                "age": {
+                  "maxAge": 200,
+                  "createTime": "2023-08-24 16:03:37",
+                  "minAge": 71,
+                  "name": "71岁及以上",
+                  "id": 16
+                }
+              }
+            ],
+            "id": 158,
+            "firstMin": "60",
+            "fifthMin": "60"
+          },
+          "physiqueList": null,
+          "guanData": null,
+          "chiData": null,
+          "part": 1,
+          "standardId": 158,
+          "visitInfoPartId": 153,
+          "graphValue": "8.28,8.94,8.76,7.90,6.98,6.04,5.32,4.74,4.24,3.80,3.38,2.94,2.52,2.02,1.50,0.88,0.20,-0.44,-0.90,-1.26,-1.46,-1.52,-1.46,-1.38,-1.36,-1.42,-1.46,-1.50,-1.58,-1.68,-1.76,-1.90,-2.10,-2.26,-2.34,-2.46,-2.60,-2.68,-2.70,-2.72,-2.80,-2.92,-2.98,-3.10,-3.20,-3.24,-3.24,-3.32,-3.36,-3.38,-3.36,-3.38,-3.40,-3.38,-3.42,-3.56,-3.62,-3.70,-3.70,-3.38,-2.40,-0.86,1.04,2.72,4.74,6.76,8.50,9.26,9.08,8.28,7.32,6.52,5.86,5.44,5.02,4.58,4.12,3.66,3.22,2.72,2.24,1.66,0.86,0.12,-0.56,-0.96,-1.30,-1.52,-1.58,-1.64,-1.64,-1.60,-1.56,-1.52,-1.54,-1.68,-1.82,-2.00,-2.12,-2.26,-2.38,-2.44,-2.60,-2.74,-2.84,-2.92,-3.00,-3.08,-3.12,-3.16,-3.22,-3.26,-3.30,-3.32,-3.32,-3.32,-3.34,-3.42,-3.54,-3.70,-3.80,-3.92,-3.98,-3.98,-3.82,-3.30,-2.12,-0.38,1.42,3.28,5.32,7.46,8.82,9.24,8.70,7.70,6.78,5.98,5.40,4.88,4.40,3.90,3.46,3.06,2.70,2.26,1.72,1.02,0.18,-0.60,-1.26,-1.64,-1.80,-1.90,-1.86,-1.80,-1.72,-1.56,-1.48,-1.40,-1.44,-1.52,-1.70,-1.92,-2.16,-2.40,-2.66,-2.84,-2.98,-3.08,-3.12,-3.14,-3.12,-3.14,-3.14,-3.24,-3.34,-3.38,-3.34,-3.30,-3.32,-3.36,-3.46,-3.62,-3.82,-3.74,-3.82,-3.64,-3.58,-3.30,-2.72,-1.68,-0.22,1.42,3.34,5.48,7.44,8.60,8.78,8.12,7.14,6.12,5.34,4.82,4.30,3.72,3.16,2.64,2.22,1.82,1.34,0.72,0.06,-0.68,-1.34,-1.76,-2.00,-2.10,-2.14,-2.14,-2.22,-2.18,-2.22,-2.20,-2.28,-2.38,-2.50,-2.60,-2.72,-2.86,-2.98,-3.14,-3.32,-3.42,-3.48,-3.54,-3.58,-3.62,-3.70,-3.70,-3.80,-4.00,-3.94,-3.98,-3.96,-3.94,-3.82,-3.76,-3.72,-3.78,-3.88,-3.98,-4.08,-4.08,-3.88,-3.26,-1.90,-0.18,1.70,3.32,5.48,7.30,8.32,8.42,7.70,6.64,5.58,4.78,4.16,3.72,3.30,2.88,2.46,2.00,1.44,0.86,0.16,-0.52,-1.22,-1.66,-1.92,-2.00,-1.96,-1.90,-1.88,-1.72,-1.70,-1.70,-1.72,-1.80,-1.92,-1.96,-2.04,-2.18,-2.32,-2.40,-2.54,-2.68,-2.78,-2.86,-2.98,-3.00,-3.12,-3.16,-3.28,-3.34,-3.42,-3.44,-3.46,-3.56,-3.58,-3.66,-3.76,-3.78,-3.86,-3.94,-4.04,-4.06,-3.98,-3.70,-2.84,-1.34,0.30,1.94,3.56,5.42,6.90,7.72,7.68,6.96,6.02,5.16,4.46,3.90,3.40,2.92,2.46,2.00,1.54,0.98,0.36,-0.30,-0.94,-1.48,-1.86,-2.08,-2.16,-2.14,-2.08,-1.96,-1.90,-1.86,-1.88,-2.02,-2.14,-2.32,-2.46,-2.56,-2.68,-2.74,-2.82,-2.86,-2.96,-3.00,-3.12,-3.20,-3.28,-3.34,-3.40,-3.46,-3.52,-3.54,-3.54,-3.52,-3.52,-3.54,-3.58,-3.70,-3.78,-3.84,-3.84,-3.74,-3.54,-2.86,-1.52,0.12,1.84,3.36,5.12,6.70,7.70,7.82,7.24,6.26,5.22,4.38,3.62,3.18,2.70,2.28,1.90,1.56,1.22,0.82,0.32,-0.30,-0.66,-0.96,-1.12,-1.18,-1.20,-1.22,-1.28,-1.24,-1.22,-1.20,-1.22,-1.26,-1.34,-1.42,-1.52,-1.64,-1.78,-2.04,-2.26,-2.34,-2.40,-2.32,-2.32,-2.30,-2.26,-2.28,-2.30,-2.36,-2.36,-2.34,-2.36,-2.40,-2.46,-2.56,-2.70,-2.68,-2.70,-2.54,-2.18,-1.36,0.02,1.56,2.98,4.14,5.44,6.52,7.14,7.08,6.40,5.40,4.34,3.52,2.88,2.36,1.88,1.50,1.06,0.56,-0.04,-0.68,-1.22,-1.52,-1.72,-1.80,-1.88,-1.86,-1.86,-1.84,-1.86,-1.80,-1.80,-1.80,-1.86,-1.94,-2.02,-2.16,-2.40,-2.54,-2.68,-2.76,-2.78,-2.80,-2.82,-2.74,-2.78,-2.78,-2.84,-2.94,-3.00,-3.12,-3.14,-3.14,-3.14,-3.16,-3.24,-3.30,-3.30,-3.26,-3.30,-3.26,-3.26,-3.12,-2.74,-1.68,-0.12,1.68,3.16,4.78,6.48,7.94,8.50,8.30,7.48,6.40,5.54,4.86,4.32,3.82,3.28,2.82,2.36,1.98,1.60,1.14,0.52,-0.14,-0.74,-1.18,-1.44,-1.54,-1.56,-1.52,-1.48,-1.40,-1.46,-1.42,-1.48,-1.58,-1.66,-1.80,-1.96,-2.12,-2.22,-2.30,-2.36,-2.40,-2.52,-2.54,-2.74,-2.84,-2.98,-3.02,-3.06,-3.10,-3.16,-3.18,-3.22,-3.30,-3.46,-3.54,-3.70,-3.82,-3.82,-3.84,-3.80,-3.40,-2.58,-1.06,0.80,2.56,4.36,6.28,7.98,8.84,8.74,8.10,7.14,6.32,5.60,5.04,4.50,4.02,3.54,3.08,2.60,2.20,1.76,1.22,0.48,-0.28,-0.96,-1.46,-1.74,-1.86,-1.96,-1.98,-2.02,-2.00,-1.98,-1.94,-1.92,-1.94,-1.98,-2.14,-2.36,-2.54,-2.68,-2.84,-2.92,-2.98,-3.06,-3.16,-3.26,-3.38,-3.50,-3.58,-3.66,-3.74,-3.84,-3.88,-3.94,-3.98,-4.04,-4.06,-4.16,-4.28,-4.40,-4.34,-4.10,-3.26,-1.80,0.16,2.04,4.12,6.38,8.16,9.06,8.88,8.08,7.14,6.26,5.66,5.18,4.76,4.28,3.82,3.32,2.78,2.24,1.68,1.08,0.48,-0.22,-0.84,-1.36,-1.70,-1.88,-1.96,-1.96,-1.90,-1.86,-1.84,-1.82,-1.82,-1.92,-1.98,-2.20,-2.38,-2.54,-2.68,-2.86,-2.98,-3.12,-3.24,-3.34,-3.40,-3.44,-3.48,-3.56,-3.58,-3.68,-3.72,-3.78,-3.82,-3.86,-3.84,-3.86,-3.90,-3.98,-4.10,-4.18,-4.16,-4.00,-3.26,-1.86,0.00,1.80,3.86,6.00,7.92,8.76,8.60,7.74,6.70,5.82,5.12,4.50,4.04,3.50,2.98,2.50,1.94,1.66,1.20,0.64,0.00,-0.68,-1.22,-1.56,-1.74,-1.84,-1.76,-1.68,-1.56,-1.50,-1.44,-1.46,-1.52,-1.58,-1.66,-1.72,-1.82,-1.90,-2.00,-2.16,-2.24,-2.40,-2.48,-2.60,-2.72,-2.84,-2.96,-3.02,-3.04,-3.02,-2.90,-2.92,-3.00,-3.12,-3.20,-3.32,-3.38,-3.44,-3.46,-3.42,-3.16,-2.28,-0.82,1.02,2.82,4.76,6.68,8.04,8.42,7.86,6.80,5.70,4.86,4.10,3.58,3.10,2.72,2.30,1.92,1.44,0.88,0.22,-0.44,-1.08,-1.50,-1.72,-1.80,-1.82,-1.80,-1.78,-1.70,-1.66,-1.60,-1.58,-1.58,-1.68,-1.80,-1.98,-2.18,-2.36,-2.50,-2.62,-2.78,-2.90,-3.00,-3.12,-3.26,-3.34,-3.40,-3.48,-3.52,-3.54,-3.54,-3.54,-3.54,-3.62,-3.66,-3.76,-3.88,-3.98,-4.06,-4.12,-4.08,-4.02,-3.62,-2.62,-0.90,0.98,2.90,5.08,7.26,8.52,8.82,8.24,7.16,6.16,5.36,4.78,4.32,3.86,3.40,2.94,2.52,2.06,1.56,0.96,0.34,-0.42,-1.12,-1.62,-1.90,-2.02,-1.98,-1.90,-1.86,-1.82,-1.84,-1.88,-1.94,-2.00,-2.04,-2.20,-2.32,-2.42,-2.70,-2.68,-2.72,-2.86,-2.96,-3.12,-3.22,-3.32,-3.36,-3.42,-3.48,-3.56,-3.64,-3.66,-3.70,-3.72,-3.80,-3.90,-3.94,-4.00,-4.08,-4.20,-4.30,-4.30,-4.14,-3.78,-2.66,-1.02,1.04,3.10,5.62,7.90,9.26,9.36,8.58,7.52,6.54,5.84,5.40,5.02,4.64,4.24,3.74,3.18,2.66,2.10,1.64,1.08,0.38,-0.32,-0.90,-1.34,-1.60,-1.76,-1.80,-1.82,-1.80,-1.78,-1.74,-1.74,-1.72,-1.78,-1.86,-1.96,-2.10,-2.30,-2.46,-2.62,-2.72,-2.84,-2.84,-2.90,-2.94,-3.06,-3.12,-3.26,-3.32,-3.40,-3.44,-3.46,-3.50,-3.54,-3.54,-3.58,-3.58,-3.58,-3.64,-3.76,-3.78,-3.82,-3.60,-2.86,-1.38,0.62,2.66,5.06,7.46,9.22,9.82,9.34,8.40,7.36,6.58,5.96,5.50,5.00,4.60,4.08,3.62,3.06,2.54,1.94,1.36,0.62,-0.10,-0.82,-1.36,-1.68,-1.74,-1.70,-1.70,-1.66,-1.62,-1.56,-1.54,-1.56,-1.66,-1.72,-1.80,-1.98,-2.16,-2.38,-2.50,-2.62,-2.68,-2.74,-2.78,-2.86,-2.92,-3.02,-3.12,-3.18,-3.24,-3.26,-3.30,-3.26,-3.40,-3.50,-3.52,-3.54,-3.56,-3.70,-3.88,-3.88,-3.92,-3.86,-3.38,-2.18,-0.34,1.68;4.12,3.84,3.58,3.38,3.24,3.04,2.86,2.66,2.56,2.38,2.20,2.00,1.86,1.62,1.44,1.16,0.86,0.46,0.02,-0.46,-0.90,-1.08,-1.24,-1.36,-1.38,-1.42,-1.42,-1.52,-1.58,-1.78,-1.88,-2.12,-2.26,-2.42,-2.46,-2.60,-2.62,-2.70,-2.72,-2.80,-2.84,-2.94,-3.02,-3.24,-3.42,-3.56,-3.58,-3.60,-3.58,-3.54,-3.40,-3.36,-3.28,-3.34,-3.36,-3.48,-3.56,-3.72,-3.74,-3.76,-3.66,-3.64,-3.48,-3.14,-2.08,-0.52,1.50,3.06,3.70,3.66,3.50,3.36,3.22,2.98,2.78,2.52,2.24,1.98,1.74,1.44,1.26,0.96,0.82,0.52,0.28,-0.06,-0.48,-0.86,-1.16,-1.36,-1.38,-1.46,-1.48,-1.54,-1.50,-1.52,-1.56,-1.58,-1.52,-1.52,-1.60,-1.62,-1.74,-1.96,-2.00,-2.10,-2.14,-2.30,-2.24,-2.24,-2.24,-2.30,-2.38,-2.58,-2.70,-2.72,-2.72,-2.74,-2.64,-2.62,-2.56,-2.62,-2.70,-2.84,-3.04,-3.22,-3.32,-3.38,-3.32,-3.20,-2.94,-2.22,-0.80,1.24,3.28,4.42,4.66,4.46,4.30,4.08,3.96,3.74,3.58,3.42,3.30,3.14,2.98,2.68,2.40,2.12,1.92,1.60,1.28,0.74,0.40,-0.02,-0.32,-0.60,-0.72,-0.76,-0.80,-0.88,-0.92,-0.94,-0.88,-0.88,-0.90,-1.04,-1.20,-1.40,-1.50,-1.62,-1.66,-1.78,-1.84,-1.88,-1.92,-1.98,-2.06,-2.18,-2.26,-2.36,-2.36,-2.36,-2.30,-2.24,-2.22,-2.32,-2.44,-2.56,-2.64,-2.70,-2.62,-2.64,-2.56,-2.64,-2.64,-2.68,-2.56,-2.22,-1.12,0.68,3.04,4.76,5.30,5.18,4.94,4.72,4.52,4.34,4.16,4.00,3.96,3.80,3.60,3.32,3.06,2.80,2.60,2.38,2.16,1.78,1.46,1.02,0.66,0.36,0.16,-0.10,-0.22,-0.40,-0.48,-0.56,-0.50,-0.48,-0.48,-0.56,-0.62,-0.72,-0.78,-0.94,-1.10,-1.30,-1.50,-1.60,-1.60,-1.60,-1.60,-1.64,-1.64,-1.76,-1.80,-1.86,-1.86,-2.00,-2.06,-2.06,-2.04,-2.18,-2.36,-2.52,-2.58,-2.74,-2.74,-2.78,-2.76,-2.80,-2.60,-2.18,-1.06,0.66,3.02,4.56,5.02,4.88,4.72,4.56,4.46,4.28,4.10,3.88,3.72,3.50,3.26,3.00,2.70,2.40,2.12,1.80,1.46,1.02,0.62,0.20,-0.22,-0.40,-0.58,-0.70,-0.80,-0.92,-0.94,-1.04,-1.04,-1.06,-1.06,-1.20,-1.32,-1.50,-1.62,-1.74,-1.88,-2.02,-2.10,-2.20,-2.26,-2.34,-2.40,-2.48,-2.62,-2.64,-2.70,-2.74,-2.74,-2.74,-2.74,-2.74,-2.76,-2.78,-2.72,-2.70,-2.66,-2.74,-2.80,-2.82,-2.78,-2.78,-2.46,-1.50,0.20,2.34,3.98,4.52,4.44,4.10,3.82,3.52,3.30,3.04,2.88,2.72,2.64,2.48,2.28,2.02,1.82,1.60,1.38,1.02,0.66,0.20,-0.22,-0.50,-0.70,-0.90,-1.02,-1.14,-1.20,-1.20,-1.16,-1.16,-1.14,-1.18,-1.20,-1.30,-1.48,-1.60,-1.72,-1.78,-1.76,-1.78,-1.70,-1.78,-1.86,-2.06,-2.12,-2.20,-2.26,-2.28,-2.22,-2.14,-2.12,-2.20,-2.24,-2.34,-2.40,-2.48,-2.56,-2.56,-2.44,-2.36,-2.22,-1.98,-1.18,0.28,2.30,4.00,4.80,4.74,4.50,4.26,4.00,3.64,3.28,3.06,2.92,2.68,2.54,2.54,2.34,2.02,1.76,1.48,1.14,0.64,0.18,-0.24,-0.48,-0.64,-0.70,-0.74,-0.72,-0.72,-0.80,-0.66,-0.62,-0.66,-0.80,-1.00,-1.20,-1.40,-1.46,-1.54,-1.60,-1.66,-1.68,-1.76,-1.82,-1.94,-2.00,-2.08,-2.14,-2.08,-2.04,-1.98,-2.04,-2.02,-2.04,-2.14,-2.22,-2.30,-2.30,-2.26,-2.36,-2.30,-2.36,-2.42,-2.36,-2.20,-1.54,-0.18,1.92,3.98,5.14,5.42,5.36,5.26,5.16,5.04,4.84,4.66,4.56,4.42,4.22,3.98,3.76,3.54,3.38,3.18,2.96,2.62,2.26,1.80,1.32,1.04,0.80,0.60,0.48,0.38,0.26,0.18,0.10,0.00,-0.06,-0.08,-0.12,-0.18,-0.30,-0.40,-0.50,-0.74,-0.90,-1.10,-1.20,-1.34,-1.42,-1.50,-1.46,-1.52,-1.60,-1.68,-1.78,-1.84,-1.84,-1.90,-1.92,-1.98,-2.02,-2.06,-2.16,-2.24,-2.36,-2.44,-2.36,-2.18,-1.70,-0.60,1.24,3.50,5.00,5.52,5.48,5.32,5.28,5.16,5.04,4.78,4.54,4.34,4.18,3.92,3.62,3.50,3.36,3.12,2.88,2.58,2.14,1.68,1.16,0.68,0.40,0.20,0.06,-0.06,-0.16,-0.20,-0.22,-0.18,-0.18,-0.24,-0.38,-0.56,-0.80,-1.02,-1.36,-1.58,-1.74,-1.90,-2.02,-2.08,-2.08,-2.04,-2.06,-2.12,-2.20,-2.28,-2.34,-2.40,-2.44,-2.50,-2.54,-2.62,-2.76,-2.88,-3.00,-3.08,-3.10,-3.12,-3.06,-2.86,-2.34,-1.22,0.56,2.60,3.80,4.04,3.90,3.80,3.76,3.72,3.66,3.50,3.32,3.12,2.98,2.76,2.56,2.30,2.06,1.74,1.44,1.04,0.56,0.10,-0.34,-0.62,-0.80,-0.94,-1.02,-1.16,-1.28,-1.42,-1.48,-1.56,-1.60,-1.70,-1.78,-1.86,-1.96,-2.06,-2.20,-2.36,-2.40,-2.52,-2.56,-2.60,-2.68,-2.76,-2.82,-2.96,-3.06,-3.16,-3.22,-3.24,-3.22,-3.24,-3.28,-3.28,-3.40,-3.46,-3.54,-3.48,-3.30,-3.02,-2.60,-1.72,-0.18,1.66,3.16,3.74,3.74,3.62,3.54,3.50,3.48,3.38,3.22,3.06,2.96,2.80,2.68,2.50,2.28,2.00,1.66,1.20,0.68,0.16,-0.22,-0.44,-0.58,-0.68,-0.78,-0.86,-0.90,-0.96,-1.00,-1.02,-1.06,-1.12,-1.22,-1.30,-1.40,-1.42,-1.50,-1.60,-1.68,-1.70,-1.78,-1.92,-2.00,-2.12,-2.24,-2.24,-2.26,-2.24,-2.18,-2.14,-2.14,-2.14,-2.20,-2.24,-2.34,-2.44,-2.56,-2.64,-2.62,-2.62,-2.62,-2.48,-2.16,-1.20,0.46,2.62,4.30,4.96,4.98,4.88,4.64,4.50,4.32,4.16,4.14,4.14,4.14,4.12,3.98,3.78,3.48,3.16,2.84,2.52,2.12,1.74,1.38,1.08,0.82,0.58,0.36,0.26,0.14,0.12,0.04,0.06,0.06,0.06,0.00,-0.10,-0.30,-0.44,-0.68,-0.82,-0.94,-0.98,-1.08,-1.12,-1.26,-1.30,-1.38,-1.42,-1.48,-1.54,-1.58,-1.56,-1.60,-1.66,-1.74,-1.82,-1.94,-1.94,-2.04,-1.94,-1.98,-2.00,-2.08,-2.12,-2.02,-1.72,-0.78,0.92,3.14,5.04,5.66,5.64,5.44,5.32,5.10,4.88,4.66,4.56,4.40,4.20,4.02,3.84,3.60,3.34,2.98,2.66,2.36,2.02,1.60,1.12,0.60,0.34,0.14,0.00,-0.16,-0.26,-0.32,-0.38,-0.28,-0.28,-0.32,-0.42,-0.56,-0.74,-1.04,-1.16,-1.42,-1.54,-1.64,-1.64,-1.76,-1.88,-1.88,-1.94,-2.04,-2.18,-2.28,-2.28,-2.34,-2.36,-2.42,-2.36,-2.36,-2.38,-2.50,-2.56,-2.68,-2.76,-2.90,-3.02,-3.02,-3.00,-2.74,-1.98,-0.44,1.68,3.56,4.30,4.26,4.06,3.88,3.82,3.68,3.50,3.36,3.34,3.24,3.14,3.00,2.80,2.48,2.28,1.98,1.68,1.26,0.76,0.22,-0.22,-0.62,-0.90,-1.10,-1.20,-1.24,-1.28,-1.32,-1.32,-1.34,-1.40,-1.52,-1.68,-1.76,-1.82,-1.94,-2.04,-2.22,-2.32,-2.36,-2.40,-2.50,-2.74,-3.06,-3.06,-3.12,-3.12,-3.14,-3.24,-3.32,-3.38,-3.38,-3.50,-3.58,-3.56,-3.56,-3.56,-3.54,-3.54,-3.66,-3.52,-3.30,-2.46,-0.96,1.06,2.58,3.28,3.36,3.28,3.18,3.12,3.04,2.90,2.78,2.66,2.54,2.40,2.14,1.90,1.66,1.40,1.14,0.86,0.50,0.12,-0.24,-0.58,-0.86,-1.08,-1.20,-1.30,-1.40,-1.38,-1.36,-1.30,-1.26,-1.28,-1.30,-1.36,-1.40,-1.48,-1.52,-1.56,-1.64,-1.76,-1.88,-1.98,-2.06,-2.14,-2.22,-2.24,-2.24,-2.22,-2.20,-2.20,-2.24,-2.26,-2.32,-2.36,-2.38,-2.40,-2.50,-2.60,-2.72,-2.72,-2.64,-2.48,-2.02,-0.80,1.16,3.32,4.56,4.94,4.80,4.66,4.52,4.36,4.14,3.94,3.82,3.66,3.50,3.40,3.32,3.16,2.98,2.78,2.48,2.02,1.52,1.02,0.48,0.32,0.02,-0.10,-0.22,-0.22,-0.20;-2.56,-1.98,-1.08,0.06,1.22,2.36,3.40,4.22,5.28,5.84,6.20,6.42,6.44,6.28,6.08,5.74,5.36,4.96,4.62,4.28,3.96,3.56,3.14,2.58,1.98,1.50,1.16,0.80,0.46,0.08,-0.14,-0.34,-0.42,-0.52,-0.54,-0.58,-0.58,-0.62,-0.64,-0.74,-0.90,-1.04,-1.18,-1.32,-1.46,-1.54,-1.72,-1.86,-2.04,-2.16,-2.32,-2.44,-2.58,-2.62,-2.74,-2.78,-2.84,-2.90,-2.98,-3.10,-3.22,-3.30,-3.34,-3.42,-3.52,-3.64,-3.70,-3.78,-3.70,-3.66,-3.62,-3.32,-2.56,-1.48,-0.26,0.92,2.08,3.04,4.00,4.62,4.94,5.10,5.04,4.94,4.70,4.50,4.12,3.76,3.40,3.10,2.66,2.20,1.80,1.42,0.96,0.60,0.22,-0.06,-0.42,-0.70,-0.90,-1.00,-1.06,-1.06,-1.00,-0.90,-0.92,-0.98,-1.04,-1.26,-1.42,-1.46,-1.54,-1.64,-1.72,-1.84,-1.90,-2.04,-2.16,-2.22,-2.32,-2.42,-2.50,-2.62,-2.74,-2.84,-2.90,-2.96,-3.20,-3.06,-3.04,-3.08,-3.08,-3.14,-3.16,-3.26,-3.22,-3.18,-3.10,-2.76,-1.92,-0.92,0.16,1.32,2.40,3.34,4.22,4.78,5.14,5.28,5.14,5.00,4.68,4.36,4.00,3.64,3.28,2.98,2.60,2.10,1.56,1.04,0.58,0.20,-0.06,-0.32,-0.54,-0.64,-0.78,-0.92,-1.08,-1.12,-1.14,-1.10,-1.04,-1.00,-1.00,-1.02,-1.06,-1.16,-1.36,-1.50,-1.58,-1.60,-1.66,-1.72,-1.88,-2.00,-2.14,-2.26,-2.34,-2.38,-2.50,-2.58,-2.72,-2.74,-2.86,-2.92,-2.96,-2.98,-3.00,-3.02,-3.10,-3.14,-3.26,-3.36,-3.46,-3.46,-3.38,-3.22,-2.80,-1.82,-0.80,0.50,1.76,2.86,3.94,4.82,5.54,5.98,6.18,6.20,6.10,5.86,5.62,5.32,4.94,4.54,4.22,3.80,3.40,2.92,2.40,1.84,1.34,0.88,0.58,0.28,0.04,-0.18,-0.36,-0.50,-0.64,-0.74,-0.84,-0.84,-0.86,-0.88,-1.00,-1.10,-1.24,-1.32,-1.40,-1.52,-1.62,-1.74,-1.76,-1.82,-1.86,-2.00,-2.12,-2.26,-2.40,-2.46,-2.50,-2.56,-2.58,-2.60,-2.68,-2.76,-2.86,-2.96,-3.00,-3.06,-3.10,-3.12,-3.14,-3.20,-3.24,-3.30,-3.38,-3.30,-3.12,-2.42,-1.36,-0.26,0.96,2.08,3.18,4.14,4.82,5.26,5.46,5.50,5.42,5.20,4.86,4.56,4.20,3.86,3.50,3.10,2.72,2.30,1.84,1.28,0.78,0.34,-0.10,-0.42,-0.76,-1.04,-1.22,-1.38,-1.46,-1.52,-1.48,-1.46,-1.48,-1.56,-1.62,-1.70,-1.82,-1.94,-1.98,-2.04,-2.10,-2.24,-2.30,-2.38,-2.52,-2.64,-2.82,-2.96,-3.08,-3.18,-3.22,-3.30,-3.44,-3.52,-3.60,-3.62,-3.64,-3.64,-3.70,-3.76,-3.78,-3.86,-3.94,-3.96,-4.00,-4.04,-4.02,-3.98,-3.88,-3.38,-2.44,-1.38,-0.12,1.02,2.06,2.84,3.42,3.80,3.98,4.06,3.96,3.76,3.34,3.20,2.92,2.64,2.34,1.98,1.60,1.24,0.84,0.44,0.00,-0.32,-0.60,-0.80,-0.90,-0.92,-0.98,-0.98,-0.94,-0.90,-0.92,-0.90,-0.90,-0.84,-0.90,-0.90,-0.98,-1.08,-1.14,-1.24,-1.30,-1.42,-1.52,-1.62,-1.76,-1.84,-1.94,-2.04,-2.16,-2.24,-2.30,-2.32,-2.38,-2.42,-2.48,-2.52,-2.54,-2.54,-2.52,-2.52,-2.48,-2.56,-2.68,-2.82,-2.88,-2.86,-2.74,-2.24,-1.34,-0.28,0.92,2.20,3.28,4.28,5.06,5.60,5.84,5.92,5.86,5.62,5.28,4.90,4.48,4.14,3.80,3.42,3.16,2.78,2.38,1.90,1.38,0.94,0.50,0.20,-0.02,-0.18,-0.32,-0.42,-0.50,-0.52,-0.50,-0.48,-0.42,-0.38,-0.28,-0.32,-0.44,-0.54,-0.76,-0.86,-1.04,-1.16,-1.20,-1.22,-1.32,-1.44,-1.68,-1.90,-2.06,-2.16,-2.20,-2.28,-2.24,-2.20,-2.26,-2.26,-2.34,-2.46,-2.62,-2.62,-2.62,-2.62,-2.60,-2.62,-2.70,-2.76,-2.84,-2.84,-2.92,-2.74,-2.46,-1.74,-0.76,0.46,1.72,2.86,3.94,4.92,5.66,6.10,6.30,6.30,6.20,6.04,5.88,5.56,5.22,4.86,4.50,4.18,3.80,3.38,2.88,2.36,1.96,1.54,1.18,0.76,0.38,0.08,-0.06,-0.26,-0.36,-0.42,-0.50,-0.52,-0.56,-0.58,-0.64,-0.72,-0.88,-0.94,-0.98,-1.04,-1.16,-1.30,-1.40,-1.52,-1.64,-1.70,-1.82,-1.90,-1.94,-1.98,-2.12,-2.28,-2.42,-2.48,-2.52,-2.54,-2.58,-2.62,-2.68,-2.72,-2.78,-2.88,-2.96,-3.06,-3.12,-3.18,-3.24,-3.20,-3.10,-2.58,-1.62,-0.52,0.72,1.92,3.04,3.98,4.72,5.24,5.42,5.52,5.42,5.18,4.86,4.50,4.16,3.74,3.18,2.96,2.58,2.20,1.74,1.26,0.78,0.32,-0.06,-0.40,-0.82,-0.94,-1.14,-1.22,-1.28,-1.36,-1.36,-1.42,-1.38,-1.40,-1.44,-1.48,-1.58,-1.62,-1.64,-1.72,-1.90,-1.92,-2.08,-2.18,-2.30,-2.38,-2.54,-2.64,-2.66,-2.74,-2.74,-2.78,-2.86,-2.98,-3.00,-3.04,-3.10,-3.16,-3.20,-3.18,-3.24,-3.32,-3.56,-3.54,-3.70,-3.74,-3.72,-3.54,-3.12,-2.34,-1.30,-0.18,0.94,1.98,2.96,3.72,4.22,4.40,4.46,4.44,4.32,4.08,3.74,3.44,3.10,2.82,2.56,2.24,1.82,1.36,0.94,0.48,0.20,-0.08,-0.38,-0.60,-0.76,-0.88,-1.02,-1.08,-1.14,-1.14,-1.06,-1.02,-1.06,-1.10,-1.18,-1.30,-1.34,-1.38,-1.50,-1.56,-1.64,-1.68,-1.78,-1.88,-1.98,-2.16,-2.24,-2.30,-2.32,-2.36,-2.42,-2.42,-2.48,-2.52,-2.56,-2.64,-2.70,-2.70,-2.72,-2.76,-2.78,-2.86,-2.88,-2.94,-2.98,-2.84,-2.26,-1.30,-0.20,1.06,2.32,3.42,4.34,5.08,5.50,5.78,5.72,5.58,5.32,4.96,4.64,4.26,4.00,3.66,3.24,2.84,2.44,2.00,1.54,1.16,0.80,0.42,0.08,-0.12,-0.30,-0.48,-0.60,-0.68,-0.68,-0.64,-0.64,-0.60,-0.66,-0.70,-0.74,-0.82,-0.94,-1.02,-1.12,-1.20,-1.28,-1.36,-1.46,-1.60,-1.72,-1.80,-1.90,-2.00,-2.00,-2.06,-2.08,-2.10,-2.20,-2.22,-2.32,-2.38,-2.48,-2.48,-2.48,-2.58,-2.66,-2.78,-2.90,-2.92,-2.94,-2.84,-2.54,-1.70,-0.62,0.64,1.92,3.08,4.10,4.96,5.50,5.84,6.04,6.06,6.02,5.72,5.46,5.04,4.64,4.30,3.94,3.46,3.08,2.70,2.28,1.76,1.34,0.90,0.48,0.10,-0.12,-0.28,-0.42,-0.52,-0.60,-0.60,-0.66,-0.66,-0.76,-0.74,-0.82,-0.92,-1.06,-1.10,-1.22,-1.34,-1.50,-1.60,-1.70,-1.82,-2.00,-2.10,-2.18,-2.30,-2.38,-2.48,-2.66,-2.78,-2.92,-2.98,-3.02,-3.04,-3.08,-3.12,-3.14,-3.22,-3.36,-3.48,-3.58,-3.62,-3.62,-3.58,-3.36,-2.70,-1.70,-0.56,0.64,1.74,2.74,3.58,4.26,4.72,4.86,4.82,4.70,4.46,4.22,3.98,3.66,3.28,2.90,2.50,2.08,1.62,1.22,0.78,0.36,0.00,-0.32,-0.62,-0.92,-1.22,-1.46,-1.66,-1.86,-1.60,-1.54,-1.44,-1.42,-1.48,-1.52,-1.64,-1.74,-1.86,-1.90,-1.92,-1.96,-2.06,-2.14,-2.26,-2.36,-2.50,-2.64,-2.70,-2.72,-2.72,-2.74,-2.76,-2.78,-2.82,-2.90,-2.98,-3.00,-3.10,-3.12,-3.22,-3.26,-3.34,-3.28,-3.14,-2.74,-1.84,-0.76,0.42,1.60,2.72,3.64,4.22,4.56,4.68,4.68,4.56,4.38,4.06,3.78,3.42,3.10,2.78,2.46,2.12,1.70,1.24,0.80,0.44,0.00,-0.24,-0.50,-0.66,-0.88,-0.98,-1.02,-1.02,-1.02,-1.00,-1.02,-1.12,-1.16,-1.24,-1.26,-1.30,-1.34,-1.42,-1.48,-1.56,-1.62,-1.78,-1.84,-1.90,-1.96,-2.06,-2.12,-2.16,-2.18,-2.28,-2.34,-2.42,-2.48,-2.56,-2.60,-2.66,-2.66,-2.68,-2.70,-2.78,-2.88,-2.94,-2.90,-2.86,-2.54,-1.64,-0.56,0.70,1.90,3.10,4.14,4.96,5.56,5.88,6.06,6.02,5.86,5.66,5.36,5.02,4.60,4.22,3.88,3.56,3.20,2.76,2.28,1.80,1.36,0.96,0.64,0.42,0.18,0.02,-0.12,-0.26,-0.40,-0.46,-0.40,-0.40,-0.44",
+          "guanEffect": "0",
+          "chiResult": {
+            "t4": "437.143",
+            "t5": "205.714",
+            "t6": "3.8",
+            "part": null,
+            "freq": "88",
+            "uniformity": "正常",
+            "h1": "12.442",
+            "h2": "1.920",
+            "h3": "2.130",
+            "type": 2,
+            "h4": "1.174",
+            "h5": "0.046",
+            "visitInfoPartId": 153,
+            "posType": "1",
+            "slop": "0.180",
+            "pulsePeakPopularDesc": "尺脈は下焦を表し、腎と腸は共に下焦に属します。下焦に湿熱や瘀血が停滞すると、有力な脈が現れ、腰痛や大便の困難が見られることがあります。",
+            "pulsePosPopularDesc": "腎の気が充足しているときは、脈は浮かず沈まず、中庸を保ち、気血が満ちていて隠れることなく、流れるように循環しています。",
+            "pos": "88.060",
+            "pulsePosGrade": "59.280",
+            "pulseFreq": "数",
+            "id": 458,
+            "pulsePosExplain": "肾气充足，不浮不沉，恰在中取，气血盈盈，藏而不露，行云流水，循环往复。",
+            "fluencyGrade": "60",
+            "tensionGrade": "59",
+            "tension": "正常",
+            "ad": "1184204653.714",
+            "pulsePeakGrade": "71",
+            "pulseFreqExplain": "命门热，阳气旺，下焦热，尿频、尿急、尿淋浊、大便干燥等。",
+            "fluency": "正常",
+            "tensionPopularDesc": "脈象には根があり、脈の来去は穏やかで、陰陽が安定し、精神が安らかで、陰陽が平衡に保たれています。",
+            "peak": "12.442",
+            "fluencyPopularDesc": "脈は根があり、流れが穏やかで、陰が平らで陽が秘められ、精神が安定し、陰陽のバランスが取れて、心身ともに安和な状態です。",
+            "pulsePos": "正常",
+            "pulseFreqPopularDesc": "命門（腎）が熱を持ち、陽気が旺盛で下焦に熱がこもると、頻尿、尿の切迫感、排尿痛、大便の乾燥などが見られます。",
+            "pulseFreqGrade": "64",
+            "t": "640.833",
+            "pulsePeak": "有力",
+            "pulsePeakExplain": "尿沥火涩而难出，可见少腹胀痛、小便短赤、经闭带多、大便不畅或干燥。",
+            "w": "90.000",
+            "tensionExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "asValue": "132325.007",
+            "fluencyExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "t1": "104.167"
+          },
+          "cunEffect": "0",
+          "visitId": 339,
+          "cunData": null,
+          "cunResult": {
+            "t4": "495.000",
+            "t5": "205.000",
+            "t6": "2.4",
+            "part": null,
+            "freq": "88",
+            "uniformity": "正常",
+            "h1": "8.771",
+            "h2": "2.269",
+            "h3": "2.391",
+            "type": 3,
+            "h4": "1.520",
+            "h5": "0.075",
+            "posType": "1",
+            "visitInfoPartId": 153,
+            "slop": "0.113",
+            "pulsePeakPopularDesc": "脈象は和らぎがあり、精神はしっかりしていて、充実して流れが良く、過度でも怠惰でもなく、中正で安定し、平和で調和しています。",
+            "pulsePosPopularDesc": "肺の金気が充足し、脈は浮きも沈みもせず、ちょうど中を取っており、気血が満ち満ち、隠れたところにあり、行き来はゆったりとして、陰陽が平和であり、精神が安和である。",
+            "pulsePosGrade": "41.260",
+            "pos": "39.400",
+            "pulseFreq": "数",
+            "id": 459,
+            "pulsePosExplain": "肺金充足，不浮不沉，恰在中取，气血盈盈，藏而不露，行云流水，循环往复。",
+            "fluencyGrade": "60",
+            "tensionGrade": "59",
+            "tension": "正常",
+            "ad": "1184925440.000",
+            "pulsePeakGrade": "58.480",
+            "pulseFreqExplain": "病热，或有喘咳，咽喉疼痛或不适。新病外感，久病阴虚。",
+            "fluency": "正常",
+            "tensionPopularDesc": "脈象は根があり、来去は落ち着いており、陰平陽秘、精神が治まり、陰陽がバランスよく、精神は安和です。",
+            "peak": "8.771",
+            "pulseFreqPopularDesc": "肺に燥熱があり、咳嗽や呼吸困難、咽喉の痛みや不快感があることがあります。新しい病は外感によるもので、長期の病は陰虚によるものです。",
+            "fluencyPopularDesc": "脈象は根があり、来去は落ち着いており、陰平陽秘、精神が治まり、陰陽のバランスが取れ、精神が安和です。",
+            "pulsePos": "正常",
+            "pulseFreqGrade": "64",
+            "t": "705.455",
+            "pulsePeak": "正常",
+            "pulsePeakExplain": "脉象和缓有神，充盈流畅，不冲不怠，中正安舒，平和协调。",
+            "w": "150.000",
+            "tensionExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "asValue": "79180.004",
+            "fluencyExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "t1": "130.909"
+          },
+          "graphPath": null,
+          "guanResult": {
+            "t4": "498.333",
+            "t5": "178.333",
+            "t6": "2.5",
+            "part": null,
+            "uniformity": "正常",
+            "freq": "88",
+            "h1": "7.625",
+            "h2": "1.524",
+            "h3": "1.588",
+            "type": 1,
+            "h4": "1.003",
+            "h5": "0.083",
+            "visitInfoPartId": 153,
+            "posType": "1",
+            "slop": "0.179",
+            "pulsePeakPopularDesc": "脈象は和やかで神があり、充盈して流れが良く、勢いもなく怠慢でもなく、調和が取れて安定しています。",
+            "pulsePosPopularDesc": "胃気が充足しており、脈は浮きもせず沈みもせず、ちょうど中間を取っており、気血が盈満し、隠れて露出せず、行云流水のごとく循環しています。",
+            "pos": "50.930",
+            "pulsePosGrade": "45.520",
+            "pulseFreq": "数",
+            "id": 457,
+            "pulsePosExplain": "胃气充足，不浮不沉，恰在中取，气血盈盈，藏而不露，行云流水，循环往复。",
+            "fluencyGrade": "60",
+            "tensionGrade": "59",
+            "tension": "正常",
+            "pulsePeakGrade": "50.840",
+            "ad": "1186491648.000",
+            "pulseFreqExplain": "病脾胃热，因而胃火旺而口渴，可见口臭、牙宣、呕逆、渴饮或不欲饮。",
+            "fluency": "正常",
+            "tensionPopularDesc": "脈象は根があり、来去は落ち着いており、陰平陽秘、精神が治まり、陰陽がバランスよく、精神は安和です。",
+            "peak": "7.625",
+            "fluencyPopularDesc": "脈象は根があり、来去は落ち着いており、陰平陽秘、精神が治まり、陰陽がバランスよく、精神は安和です。",
+            "pulseFreqPopularDesc": "脾胃に熱があり、胃火が旺盛な場合、口臭、逆流して酸を吐く、悪心、嘔吐、口渇などが見られます。",
+            "pulsePos": "正常",
+            "pulseFreqGrade": "64",
+            "t": "665.833",
+            "pulsePeak": "正常",
+            "pulsePeakExplain": "脉象和缓有神，充盈流畅，不冲不怠，中正安舒，平和协调。",
+            "w": "164.167",
+            "tensionExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "asValue": "112848.338",
+            "fluencyExplain": "脉象有根，来去从容，阴平阳秘，精神乃治，阴阳平衡，精神安和。",
+            "t1": "82.500"
+          },
+          "device": null,
+          "chiEffect": "0"
+        }
+      ],
+      "pulseResultTrit": "221110",
+      "pulseResult": "沈澀、弦数、有力",
+      "id": 339,
+      "projectName": "脉诊仪",
+      "user": null,
+      "projectVersion": "3.0.7"
+    },
+    "qrcodeUrl": null,
+    "healthPlan": {
+      "dailyLife": "要舒畅情志，宽松衣着，适当社会交往，以放松身心，和畅气血，减少怫郁。",
+      "traditionalExercises": "传统功法：八段锦1-2遍，或练习太极拳、武当玉环桩。可练习冥想，注意调整呼吸。",
+      "physiqueList": null,
+      "sleepAdvice": "避免熬夜，晚上22时前睡觉，保持充足的睡眠。",
+      "dietDesc": "节制饮食，不暴饮暴食，荤素搭配、营养均衡，可常饮用陈皮、菊花、玫瑰茶。",
+      "modernMovement": "可跑步、游泳、球类等。注意适量，防止运动损伤。",
+      "exercise": null,
+      "guidingPrinciples": "保持良好的运动习惯，可选择中、高强度运动，规律进行。",
+      "life": null,
+      "inspectionGuide": "需戒烟酒，避免不良的生活习惯。避免寒冷刺激。",
+      "acupointList": [
+        {
+          "images": [
+            {
+              "path": "material/2024/11/22/7a3563e1d8bc7f9a0a60064b7796c083.png",
+              "createTime": "2022-11-03 13:33:52",
+              "name": "神門",
+              "main": null,
+              "id": 126
+            }
+          ],
+          "belong": "手少陰心経",
+          "createTime": "2022-04-20 15:45:01",
+          "effect": "常用于心痛、惊悸、健忘、失眠、痴呆等心与神志病症，高血压、胸胁痛等病症。",
+          "name": "神門",
+          "videos": [
+            {
+              "mediaUri720": null,
+              "coverImgPath": null,
+              "length": "24120",
+              "about": "",
+              "mediaUri480": null,
+              "title": "神门",
+              "hit": null,
+              "filename": "神门.mp4",
+              "createTime": "2022-11-18 15:56:48",
+              "masterMediaUri": "/video/2022/11/18/d28565101ae100808b87b2dba5e34fe5_master.m3u8",
+              "mediaUri1080": null,
+              "mediaUriOrigin": null,
+              "id": 825,
+              "sourcePath": null,
+              "status": "published"
+            }
+          ],
+          "id": 1,
+          "position": "手首の前面、手掌側の遠端横紋の尺側端、尺側腕屈筋腱の橈側の縁に位置する。",
+          "type": "穴位",
+          "projectName": "脉诊仪3C版",
+          "operation": "親指の先端で1〜3分間押し揉む。",
+          "effectList": [
+            {
+              "baseAcupointId": 1,
+              "gender": "全部",
+              "effect": "胸の圧迫感、胸痛、不安、失眠、記憶力の低下などの心や精神の病症、また高血圧、胸脇の痛みなどの病症に一般的に使用されます。",
+              "id": 313,
+              "ageId": 3,
+              "age": {
+                "createTime": null,
+                "maxAge": null,
+                "minAge": null,
+                "name": "15-60岁",
+                "id": 3
+              }
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "path": "material/2024/11/22/42af4c8b34b0c68e5e437333306ee49a.png",
+              "createTime": "2022-11-03 13:34:13",
+              "name": "太冲",
+              "main": null,
+              "id": 129
+            }
+          ],
+          "belong": "足厥陰肝経",
+          "createTime": "2022-04-20 15:45:01",
+          "effect": "常用于头痛、眩晕、耳鸣、目赤肿痛、咽痛等肝经风热等病症，胁痛、口苦、黄疸、腹胀等肝胃病症以及妇科病症。",
+          "name": "太冲",
+          "videos": [
+            {
+              "mediaUri720": null,
+              "coverImgPath": null,
+              "length": "27960",
+              "about": "",
+              "mediaUri480": null,
+              "title": "太冲",
+              "hit": null,
+              "filename": "太冲.mp4",
+              "mediaUri1080": null,
+              "createTime": "2022-11-18 15:58:27",
+              "masterMediaUri": "/video/2022/11/18/8f93ac52c7e39fa589af4723dc217fa4_master.m3u8",
+              "mediaUriOrigin": null,
+              "id": 826,
+              "sourcePath": null,
+              "status": "published"
+            }
+          ],
+          "position": "足背側、第1中足骨間隙の後方の凹みに位置する。すなわち、大脚趾の趾蹼の後方の凹みにある。",
+          "id": 9,
+          "type": "穴位",
+          "projectName": "脉诊仪3C版",
+          "operation": "親指の先端で1〜3分間押し揉む。",
+          "effectList": [
+            {
+              "baseAcupointId": 9,
+              "gender": "女",
+              "effect": "頭痛、眩暈、耳鳴り、眼の充血、咽喉の痛みなどの肝経の風熱の病症、両脇の痛み、口の苦さ、黄疸、腹部の膨満感などの肝胃の病症、月経不順、痛経、異常な白帯などの婦人科の病症に一般的に使用されます。",
+              "id": 210,
+              "ageId": 3,
+              "age": {
+                "maxAge": null,
+                "createTime": null,
+                "minAge": null,
+                "name": "15-60岁",
+                "id": 3
+              }
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "path": "material/2024/11/22/0cc1312eb1b2f994968facef1fb4760c.png",
+              "createTime": "2022-11-04 11:00:02",
+              "name": "血海",
+              "main": null,
+              "id": 149
+            }
+          ],
+          "belong": "足太陰脾経",
+          "createTime": "2022-04-20 15:45:01",
+          "effect": "常用于月经不调、痛经等妇科病症，湿疹、丹毒等血热性皮肤病症，膝股内侧痛，为保健常用穴。",
+          "name": "血海",
+          "videos": [
+            {
+              "mediaUri720": null,
+              "coverImgPath": null,
+              "about": "",
+              "length": "38280",
+              "mediaUri480": null,
+              "title": "血海",
+              "hit": null,
+              "filename": "血海.mp4",
+              "masterMediaUri": "/video/2022/11/18/c6257330218d0aa3cc1fd94390ea5963_master.m3u8",
+              "createTime": "2022-11-18 16:20:21",
+              "mediaUri1080": null,
+              "mediaUriOrigin": null,
+              "id": 830,
+              "sourcePath": null,
+              "status": "published"
+            }
+          ],
+          "id": 10,
+          "position": "膝を屈曲した状態で、大腿の内側、膝蓋骨の内側端の上2寸、股四頭筋の内側頭の隆起部分に位置する。膝を屈曲し、手のひらで膝を押さえ、指を膝の上に伸ばし、親指を膝の内側に約45度の角度で斜めに置くと、指の先端に穴がある。",
+          "type": "穴位",
+          "projectName": "脉诊仪3C版",
+          "operation": "親指の先端で1〜3分間押し揉む。",
+          "effectList": [
+            {
+              "baseAcupointId": 10,
+              "gender": "女",
+              "effect": "月経不順、痛経などの婦人科の病症、湿疹、丹毒などの血熱性の皮膚病症、膝の内側の痛みに一般的に使用され、保健のための常用穴です。",
+              "id": 232,
+              "ageId": 3,
+              "age": {
+                "maxAge": null,
+                "createTime": null,
+                "minAge": null,
+                "name": "15-60岁",
+                "id": 3
+              }
+            }
+          ]
+        }
+      ],
+      "cpmList": null,
+      "dietList": null,
+      "name": "沉涩、弦数有力",
+      "pulse": "沈澀、弦数、有力",
+      "diet": null,
+      "state": null,
+      "id": 330,
+      "pulseId": 242
+    }
+  }

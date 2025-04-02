@@ -54,7 +54,6 @@ class _QrcodeGetNewDataState extends State<QrcodeGetNewData> {
                       final List<Barcode> barcodes = capture.barcodes;
                       if (barcodes.isNotEmpty) {
                         final barcodeValue = barcodes.first.displayValue;
-                        console([barcodeValue]);
                         if (barcodeValue != null && barcodeValue.isNotEmpty) {
                           pauseCamera();
                           setState(() {

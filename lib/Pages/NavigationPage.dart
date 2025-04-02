@@ -1,25 +1,42 @@
+import 'package:pulse_diagnosis/Pages/HomePage.dart';
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Pages/ProfilePage.dart';
+import 'package:pulse_diagnosis/Pages/PulseHistoryPage.dart';
+import 'package:pulse_diagnosis/Pages/About_Pulse.dart';
+import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_For_SignIn.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class Navigationpage extends StatefulWidget {
+  const Navigationpage({super.key, required this.selectedIndex});
+  final int selectedIndex ;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Navigationpage> createState() => _NavigationpageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _NavigationpageState extends State<Navigationpage> {
   FirebaseAuth auth = FirebaseAuth.instance;
   List<dynamic> allData = [];
   String number = '';
+  int _selectedIndex = 0;
+  final List<Widget> _pages = [
+    MyHomePage(),
+    PulseHistory(),
+    QrcodeForSignin(),
+    AboutPulse(),
+    Profilepage(),
+  ];
 
   @override
   void initState() {
+    setState(() {
+      _selectedIndex = widget.selectedIndex;
+    });
     getUserUid();
     getVisitDataByDate();
     super.initState();
@@ -43,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Login_Page()));
     }
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index; // Update the selected index
+    });
   }
 
   Future<void> logOutConfirmationDialogue(
@@ -98,32 +121,41 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     globalData.updateS_Size(MediaQuery.of(context).size);
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-            mini: true,
-            onPressed: () {
-              signOut();
-            },
-            child: Icon(Icons.logout)),
-        body: Column(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-
-          Container(
-            color: const Color.fromARGB(255, 247, 250, 249),
-            width: MediaQuery.of(context).size.width,
-            height: 300,
-            child: Padding(
-                padding: EdgeInsets.all(35),
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: MediaQuery.sizeOf(context).width * 0.5,
-                  height: 100,
-                  fit: BoxFit.fitWidth,
-                )),
-          ),
-          Image.asset('assets/images/login.png',
-              width: MediaQuery.of(context).size.width * 0.7,
-              fit: BoxFit.fitWidth)
-        ]));
+        body: _pages[_selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'home'.tr(),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.storage),
+              label: 'history'.tr(),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.troubleshoot),
+              label: 'fetch pulse'.tr(),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.question_mark),
+              label: 'body score'.tr(),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'user info'.tr(),
+            ),
+          ],
+          elevation: 0,
+          backgroundColor: Colors.white,
+          iconSize: 35,
+          currentIndex: _selectedIndex, // Keep track of selected index
+          selectedItemColor: const Color.fromARGB(255, 0, 168, 154),
+          unselectedItemColor: const Color.fromARGB(255, 85, 85, 85),
+          unselectedFontSize: 14,
+          selectedFontSize: 14,
+          showUnselectedLabels: true,
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
+        ));
   }
 }

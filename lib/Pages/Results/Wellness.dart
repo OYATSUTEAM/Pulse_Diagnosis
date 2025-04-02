@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
-import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
@@ -18,6 +17,7 @@ class _WellnessState extends State<Wellness> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -35,7 +35,6 @@ class _WellnessState extends State<Wellness> {
 
   @override
   Widget build(BuildContext context) {
-    console([wellnessList.length]);
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -48,26 +47,33 @@ class _WellnessState extends State<Wellness> {
               var item = wellnessList[index];
               var imageUrl = item["images"][0]["path"];
               return Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      if (imageUrl != null)
-                        Image.network(
-                            'http://mzy-jp.dajingtcm.com/double-ja/$imageUrl',
-                            fit: BoxFit.cover),
-                      Text(item["type"],
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 5),
-                      Text("${item["bodyPart"]}",
-                          style: TextStyle(fontSize: 14)),
-                      SizedBox(height: 5),
-                      Text(item["content"], style: TextStyle(fontSize: 14)),
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (imageUrl != null)
+                      Image.network(
+                        'http://mzy-jp.dajingtcm.com/double-ja/$imageUrl',
+                        fit: BoxFit.cover,
+                        loadingBuilder: (context, child, progress) {
+                          return progress == null
+                              ? child
+                              : Center(child: CircularProgressIndicator());
+                        },
+                        errorBuilder: (context, error, stackTrace) {
+                          return Icon(Icons.error);
+                        },
+                      ),
+                    Text(item["type"],
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
+                    SizedBox(height: 5),
+                    Text("${item["bodyPart"]}", style: TextStyle(fontSize: 14)),
+                    SizedBox(height: 5),
+                    Text(item["content"], style: TextStyle(fontSize: 14)),
+                    SizedBox(height: 10),
+                  ],
+                ),
               );
             },
           )),

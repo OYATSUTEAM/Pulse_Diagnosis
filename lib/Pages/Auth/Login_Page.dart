@@ -1,11 +1,9 @@
-import 'package:pulse_diagnosis/Pages/Auth/SignIntoPulse.dart';
 import 'package:pulse_diagnosis/Pages/Auth/SignUp_Page.dart';
-import 'package:pulse_diagnosis/Pages/Results/About_Pulse.dart';
+import 'package:pulse_diagnosis/Pages/NavigationPage.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Services/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pulse_diagnosis/Services/otp_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -33,7 +31,6 @@ class _Login_Page extends State<Login_Page> {
   bool emailFormVisibility = true;
   bool otpVisibilty = false;
   String? emailError;
-  String? _verificationCode;
   String? passError;
 
   // =========================================================  Password Visibility function ===========================================
@@ -48,12 +45,14 @@ class _Login_Page extends State<Login_Page> {
 
   Future<void> saveEmail(String email) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('saved_email', email);
+    if (mounted) {
+      await prefs.setString('saved_email_pulse', email);
+    }
   }
 
   Future<String?> getSavedEmail() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getString('saved_email');
+    return prefs.getString('saved_email_pulse');
   }
 
   // =========================================================  Login Function ======================================================
@@ -74,7 +73,9 @@ class _Login_Page extends State<Login_Page> {
       showDialog(
           context: context,
           builder: (context) => Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: const Color.fromARGB(255, 0, 168, 154),
+                ),
               ));
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.toString(),
@@ -86,72 +87,34 @@ class _Login_Page extends State<Login_Page> {
       }
       isEmailVerified();
     } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        Navigator.pop(context);
+      }
       if (e.code == 'invalid-email') {
         const emailError = 'Enter valid email ID';
-        ScaffoldMessenger.of(context)
-            .showSnackBar(const SnackBar(content: Text(emailError)));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text(textAlign: TextAlign.center, emailError)));
       }
       if (e.code == 'wrong-password') {
         const passError = 'Enter correct password';
-        ScaffoldMessenger.of(context)
-            .showSnackBar(const SnackBar(content: Text(passError)));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text(textAlign: TextAlign.center, passError)));
       }
       if (e.code == 'user-not-found') {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("You are not registed. Sign Up now")),
+          const SnackBar(
+              content: Text(
+                  textAlign: TextAlign.center,
+                  "You are not registed. Sign Up now")),
         );
       }
       if (e.code == 'invalid-credential') {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(const SnackBar(content: Text("正しいパスワードを入力してください。")));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text(textAlign: TextAlign.center, "正しいパスワードを入力してください。")));
       }
     }
     setState(() {});
   }
-  // =========================================================  Login Using phone number ==============================================
-
-  signinphone() async {
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: phone.text.toString(),
-      verificationCompleted: (PhoneAuthCredential credential) async {
-        await FirebaseAuth.instance.signInWithCredential(credential).then((
-          value,
-        ) async {
-          if (value.user != null) {
-            firstLogin();
-          }
-        });
-      },
-      verificationFailed: (FirebaseAuthException e) {
-        console([e]);
-        if (e.code == 'invalid-phone-number') {
-          const SnackBar(
-            content: Text('The provided phone number is not valid.'),
-          );
-        }
-      },
-      codeSent: (String? verificationId, int? resendToken) async {
-        setState(() {
-          otpVisibilty = true;
-          _verificationCode = verificationId;
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return OTPPage(
-              id: _verificationCode,
-              phone: phone.text.toString(),
-            );
-          }));
-        });
-      },
-      codeAutoRetrievalTimeout: (String verificationId) {
-        setState(() {
-          _verificationCode = verificationId;
-        });
-      },
-    );
-  }
-
-  // =========================================================  Login Using Google function ==============================================
-
   // =========================================================  Checking if email is verified =======================================
 
   void isEmailVerified() {
@@ -180,13 +143,13 @@ class _Login_Page extends State<Login_Page> {
             userData['name'],
             userData['address'],
             userData['gender'],
-            userData['birth'],
+            userData['age'],
             userData['phone']);
-        bool isSignin = await isSignIntoPulse(user.uid);
+
         if (mounted) {
           Navigator.pop(context);
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return isSignin ? AboutPulse() : SignIn_to_Pulse();
+            return Navigationpage(selectedIndex: 0);
           }));
         }
       }
@@ -243,16 +206,16 @@ class _Login_Page extends State<Login_Page> {
         resizeToAvoidBottomInset: false,
         body: GestureDetector(
             onTap: () {
-              FocusScope.of(context)
-                  .unfocus(); // Hide keyboard when tapping outside
+              FocusScope.of(context).unfocus();
             },
             child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(children: [
                   const SizedBox(height: 40),
                   Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Image.asset('assets/images/login.png'),
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Image.asset('assets/images/login.png',
+                        width: MediaQuery.of(context).size.width * 0.5),
                   ),
                   Padding(
                       padding: const EdgeInsets.symmetric(
@@ -314,6 +277,8 @@ class _Login_Page extends State<Login_Page> {
 
 // =========================================================  Password ==============================================
                                 TextFormField(
+                                  style: TextStyle(
+                                      letterSpacing: notvisible ? 2 : 1),
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
                                       return "Password cannot be empty".tr();
@@ -321,7 +286,7 @@ class _Login_Page extends State<Login_Page> {
                                       return "Password must be more than 6 characters"
                                           .tr();
                                     }
-                                    return null; // Validation passed
+                                    return null;
                                   },
                                   obscureText: notvisible,
                                   decoration: InputDecoration(
@@ -348,34 +313,6 @@ class _Login_Page extends State<Login_Page> {
                             ),
                           ),
                         ),
-
-// =========================================================  Phone Number ==============================================
-                        Visibility(
-                          visible: !emailFormVisibility,
-                          child: Form(
-                            child: TextFormField(
-                              decoration: InputDecoration(
-                                labelText: 'phone number'.tr(),
-                                prefixIcon: const Icon(
-                                  Icons.phone_android_rounded,
-                                  color: Colors.grey,
-                                ),
-                                suffixIcon: IconButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      emailFormVisibility =
-                                          !emailFormVisibility;
-                                    });
-                                  },
-                                  icon:
-                                      const Icon(Icons.alternate_email_rounded),
-                                ),
-                              ),
-                              controller: phone,
-                            ),
-                          ),
-                        ),
-
                         const SizedBox(height: 13),
 
 // =========================================================  Forgot Password ==============================================
@@ -388,10 +325,9 @@ class _Login_Page extends State<Login_Page> {
                                     child: Text(
                                       'forgot password'.tr(),
                                       style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w800,
-                                        color: Colors.indigo,
-                                      ),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w800,
+                                          color: Colors.blue),
                                     ),
                                     onTap: () {
                                       Navigator.push(context,
@@ -411,6 +347,10 @@ class _Login_Page extends State<Login_Page> {
                               if (_formKey.currentState!.validate()) login();
                             },
                             style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 247, 250, 249),
+                              foregroundColor:
+                                  const Color.fromARGB(255, 0, 168, 154),
                               minimumSize: const Size.fromHeight(45),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
@@ -418,7 +358,9 @@ class _Login_Page extends State<Login_Page> {
                             ),
                             child: Center(
                               child: Text('login'.tr(),
-                                  style: TextStyle(fontSize: 15)),
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
                             ),
                           ),
                         ),
@@ -442,7 +384,7 @@ class _Login_Page extends State<Login_Page> {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
-                                        color: Colors.indigo),
+                                        color: Colors.blue),
                                   ),
                                   onTap: () {
                                     Navigator.pushReplacement(context,

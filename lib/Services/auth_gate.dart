@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
-import 'package:pulse_diagnosis/Pages/Results/About_Pulse.dart';
+import 'package:pulse_diagnosis/Pages/NavigationPage.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -12,7 +12,7 @@ class AuthGate extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return AboutPulse();
+          return Navigationpage(selectedIndex: 0,);
         } else {
           return Login_Page();
         }

@@ -78,7 +78,7 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                         globalData.email,
                         globalData.name,
                         globalData.gender,
-                        globalData.birth,
+                        globalData.age,
                         globalData.phone,
                         globalData.address);
                     if (mounted) {

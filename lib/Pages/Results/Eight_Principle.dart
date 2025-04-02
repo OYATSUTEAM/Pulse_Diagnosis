@@ -15,8 +15,10 @@ class _EightPrincipleState extends State<EightPrinciple> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
+  List principleListImages = [];
   getDate() async {
     while (globalData.pulseResult.isEmpty) {
       await Future.delayed(Duration(milliseconds: 100));
@@ -30,6 +32,7 @@ class _EightPrincipleState extends State<EightPrinciple> {
       if (mounted) {
         setState(() {
           principleList = globalData.pulseResult['principleList'];
+          principleListImages = ['ri.png', 'ji.png', 'yon.png', 'jang.png'];
         });
       }
     }
@@ -43,68 +46,67 @@ class _EightPrincipleState extends State<EightPrinciple> {
           TitleWidget(title: widget.title),
           SizedBox(
               height: MediaQuery.of(context).size.height - 150,
-                child: 
-                    
-                    ListView.builder(
-                        physics: AlwaysScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: principleList.length,
-                        itemBuilder: (context, index) {
-                          String name = principleList[index]['name'];
-                          String desc = principleList[index]['desc'];
-                          // List<dynamic> imageList =
-                          //     principleList[index]['images'];
-                          return Container(
-                              margin: EdgeInsets.only(bottom: 16),
-                              padding: EdgeInsets.all(20),
-                              child: Column(
+              child: ListView.builder(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: principleList.length,
+                  itemBuilder: (context, index) {
+                    String name = principleList[index]['name'];
+                    String desc = principleList[index]['desc'];
+                    // List<dynamic> imageList =
+                    //     principleList[index]['images'];
+                    return Container(
+                        margin: EdgeInsets.only(bottom: 16),
+                        padding: EdgeInsets.all(20),
+                        child: Column(
+                          children: [
+                            // Padding(
+                            //     padding:
+                            //         EdgeInsets.symmetric(vertical: 10),
+                            //     child: Row(
+                            //       mainAxisAlignment:
+                            //           MainAxisAlignment.center,
+                            //       children: imageList.map((image) {
+                            //         final imageUrl =
+                            //             "http://mzy-jp.dajingtcm.com/double-ja/${image['path']}";
+                            //         return Image.network(
+                            //             imageUrl,
+                            //             fit: BoxFit.cover);
+                            //       }).toList(),
+                            //     )),
+                            Image.asset('assets/images/${principleListImages[index]}'),
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(color: Colors.black),
                                 children: [
-                                  // Padding(
-                                  //     padding:
-                                  //         EdgeInsets.symmetric(vertical: 10),
-                                  //     child: Row(
-                                  //       mainAxisAlignment:
-                                  //           MainAxisAlignment.center,
-                                  //       children: imageList.map((image) {
-                                  //         final imageUrl =
-                                  //             "http://mzy-jp.dajingtcm.com/double-ja/${image['path']}";
-                                  //         return Image.network(
-                                  //             imageUrl,
-                                  //             fit: BoxFit.cover);
-                                  //       }).toList(),
-                                  //     )),
-                                  RichText(
-                                    text: TextSpan(
-                                      style: TextStyle(color: Colors.black),
-                                      children: [
-                                        TextSpan(
-                                          text: name,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  RichText(
-                                    text: TextSpan(
-                                      style: TextStyle(color: Colors.black),
-                                      children: [
-                                        TextSpan(
-                                          text: desc,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.normal),
-                                        ),
-                                      ],
-                                    ),
+                                  TextSpan(
+                                    text: name,
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ],
-                              ));
-                        })
-                //   ],
-                // ),
+                              ),
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                style: TextStyle(color: Colors.black),
+                                children: [
+                                  TextSpan(
+                                    text: desc,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ));
+                  })
+              //   ],
+              // ),
               )
-              
-              // )
+
+          // )
         ],
       ),
     );

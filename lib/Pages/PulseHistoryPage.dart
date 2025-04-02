@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Pages/PulseResultPage.dart';
+import 'package:pulse_diagnosis/Pages/Results/PulseResultPage.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -22,6 +22,7 @@ class _PulseHistoryState extends State<PulseHistory> {
   void initState() {
     getUserUid();
     getVisitDataByDate();
+    super.initState();
   }
 
   Future<void> getVisitDataByDate() async {
@@ -39,6 +40,7 @@ class _PulseHistoryState extends State<PulseHistory> {
   Future<void> getUserUid() async {
     Map<String, dynamic>? userData = await getUserData();
     User? user = FirebaseAuth.instance.currentUser;
+
     if (user != null) {
       if (userData != null) {
         await globalData.updatePatientDetail(
@@ -47,7 +49,7 @@ class _PulseHistoryState extends State<PulseHistory> {
             userData['name'],
             userData['address'],
             userData['gender'],
-            userData['birth'],
+            userData['age'],
             userData['phone']);
       }
     }
@@ -57,8 +59,9 @@ class _PulseHistoryState extends State<PulseHistory> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 100,
-        foregroundColor: const Color.fromARGB(255, 211, 162, 57),
+        foregroundColor: const Color.fromARGB(255, 0, 168, 154),
         centerTitle: true,
         title: Text(
           'History of previous measurements'.tr(),
@@ -87,7 +90,6 @@ class _PulseHistoryState extends State<PulseHistory> {
                                   onPressed: () async {
                                     showDialog(
                                         context: context,
-                                        barrierDismissible: false,
                                         builder: (context) {
                                           return Center(
                                               child:
@@ -100,7 +102,6 @@ class _PulseHistoryState extends State<PulseHistory> {
                                       await globalData
                                           .updatePulseResult(visitData);
                                     }
-                                    console([visitData]);
                                     if (mounted) {
                                       Navigator.pop(context);
                                       Navigator.of(context).push(
@@ -112,7 +113,9 @@ class _PulseHistoryState extends State<PulseHistory> {
                                   child: Text(
                                     visitDate,
                                     style: TextStyle(
-                                        fontSize: 22, color: Colors.blue),
+                                        fontSize: 22,
+                                        color: const Color.fromARGB(
+                                            255, 0, 168, 154)),
                                   ))
                             ],
                           ),

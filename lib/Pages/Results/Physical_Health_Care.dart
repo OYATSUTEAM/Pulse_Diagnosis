@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 
@@ -19,6 +18,7 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -29,7 +29,6 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -121,11 +120,9 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                                                 borderRadius:
                                                     BorderRadius.circular(4)),
                                             padding: EdgeInsets.all(6),
-                                            child: Text(
-                                              name,
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            )))
+                                            child: Text(name,
+                                                style: TextStyle(
+                                                    color: Colors.white))))
                                   ],
                                 );
                               }).toList(),
@@ -205,7 +202,7 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                                         String name = images[imgIndex]['name'];
                                         String imagePath =
                                             "http://mzy-jp.dajingtcm.com/double-ja/${images[imgIndex]['path']}";
-                                            // "http://mzy-jp.dajingtcm.com/double-ja/material/2024/11/21/8ba1f08b1acd0320f556c49087fccd14.png";
+                                        // "http://mzy-jp.dajingtcm.com/double-ja/material/2024/11/21/8ba1f08b1acd0320f556c49087fccd14.png";
                                         return Stack(
                                           clipBehavior: Clip.none,
                                           alignment: Alignment.bottomCenter,
@@ -273,7 +270,6 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                                             color: Colors
                                                 .black), // Default text style
                                         children: [
-                                          
                                           TextSpan(
                                             text: '• 効果： ',
                                             style: TextStyle(
@@ -296,7 +292,6 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                                             color: Colors
                                                 .black), // Default text style
                                         children: [
-                                          
                                           TextSpan(
                                             text: '• 注意事項： ',
                                             style: TextStyle(
@@ -319,7 +314,6 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                                             color: Colors
                                                 .black), // Default text style
                                         children: [
-                                          
                                           TextSpan(
                                             text: '• 禁忌症： ',
                                             style: TextStyle(
@@ -345,9 +339,6 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
                 },
               ),
             ])))
-     
-     
-     
       ],
     ));
   }

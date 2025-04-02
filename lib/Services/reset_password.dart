@@ -8,11 +8,11 @@ class RESETpasswordPage extends StatefulWidget {
 
 class _RESETpassword extends State<RESETpasswordPage> {
   @override
-  var email = TextEditingController();
+  var emailController = TextEditingController();
 
   resetPassword() async {
     await FirebaseAuth.instance
-        .sendPasswordResetEmail(email: email.text.toString());
+        .sendPasswordResetEmail(email: emailController.text.toString());
 
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: TextButton(
@@ -64,7 +64,7 @@ class _RESETpassword extends State<RESETpasswordPage> {
                 alignment: Alignment.centerRight,
                 child: Form(
                     child: TextFormField(
-                  controller: email,
+                  controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                       icon: Icon(Icons.alternate_email_rounded,

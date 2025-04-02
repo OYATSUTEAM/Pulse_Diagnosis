@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
@@ -15,6 +14,7 @@ class _FoodListState extends State<FoodList> {
   @override
   void initState() {
     getDate();
+    super.initState();
   }
 
   getDate() async {
@@ -25,7 +25,6 @@ class _FoodListState extends State<FoodList> {
       setState(() {});
     }
     if (globalData.pulseResult.isEmpty) {
-      console(['']);
     } else {
       if (mounted) {
         setState(() {
@@ -46,6 +45,7 @@ class _FoodListState extends State<FoodList> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    Image.asset('assets/images/food.png'),
                     ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
