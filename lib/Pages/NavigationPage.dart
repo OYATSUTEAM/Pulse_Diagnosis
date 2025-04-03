@@ -13,7 +13,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 class Navigationpage extends StatefulWidget {
   const Navigationpage({super.key, required this.selectedIndex});
-  final int selectedIndex ;
+  final int selectedIndex;
 
   @override
   State<Navigationpage> createState() => _NavigationpageState();
@@ -120,42 +120,44 @@ class _NavigationpageState extends State<Navigationpage> {
   @override
   Widget build(BuildContext context) {
     globalData.updateS_Size(MediaQuery.of(context).size);
-    return Scaffold(
-        body: _pages[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'home'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.storage),
-              label: 'history'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.troubleshoot),
-              label: 'fetch pulse'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.question_mark),
-              label: 'body score'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'user info'.tr(),
-            ),
-          ],
-          elevation: 0,
-          backgroundColor: Colors.white,
-          iconSize: 35,
-          currentIndex: _selectedIndex, // Keep track of selected index
-          selectedItemColor: const Color.fromARGB(255, 0, 168, 154),
-          unselectedItemColor: const Color.fromARGB(255, 85, 85, 85),
-          unselectedFontSize: 14,
-          selectedFontSize: 14,
-          showUnselectedLabels: true,
-          onTap: _onItemTapped,
-          type: BottomNavigationBarType.fixed,
-        ));
+    return SafeArea(
+        child: Scaffold(
+            body: _pages[_selectedIndex],
+            bottomNavigationBar: 
+                BottomNavigationBar(
+                  items: <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home),
+                      label: 'home'.tr(),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.storage),
+                      label: 'history'.tr(),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.troubleshoot),
+                      label: 'fetch pulse'.tr(),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.question_mark),
+                      label: 'body score'.tr(),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.person),
+                      label: 'user info'.tr(),
+                    ),
+                  ],
+                  elevation: 0,
+                  backgroundColor: Colors.white,
+                  iconSize: 35,
+                  currentIndex: _selectedIndex, // Keep track of selected index
+                  selectedItemColor: const Color.fromARGB(255, 0, 168, 154),
+                  unselectedItemColor: const Color.fromARGB(255, 85, 85, 85),
+                  unselectedFontSize: 14,
+                  selectedFontSize: 14,
+                  showUnselectedLabels: true,
+                  onTap: _onItemTapped,
+                  type: BottomNavigationBarType.fixed,
+                )));
   }
 }

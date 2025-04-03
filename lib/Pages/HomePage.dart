@@ -141,22 +141,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       fit: BoxFit.fitWidth,
                     )),
               ),
-              Container(
-                  height: MediaQuery.sizeOf(context).height * 0.66 - 70,
-                  child: Center(
-                      child: GestureDetector(
-                          onTapDown: (_) {
-                            _startTimer();
-                          },
-                          onTapUp: (_) {
-                            _stopTimer();
-                          },
-                          onTapCancel: () {
-                            _stopTimer();
-                          },
-                          child: Image.asset('assets/images/login.png',
-                              width: MediaQuery.of(context).size.width * 0.7,
-                              fit: BoxFit.fitWidth))))
+              Expanded(
+                      child: Center(
+                          child: GestureDetector(
+                              onTapDown: (_) {
+                                _startTimer();
+                              },
+                              onTapUp: (_) {
+                                _stopTimer();
+                              },
+                              onTapCancel: () {
+                                _stopTimer();
+                              },
+                              child: Image.asset('assets/images/login.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.7,
+                                  fit: BoxFit.fitWidth))))
             ]));
   }
 }
