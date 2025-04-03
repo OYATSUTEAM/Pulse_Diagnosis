@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:developer';
 
@@ -11,7 +12,7 @@ void console(List<dynamic> params) {
     log('$param =========================================');
   }
 }
-
+String dd = 'Megahoshi';
 //=====================================================================              get number         =============================================================
 Future<String> getNumber() async {
   try {
@@ -99,6 +100,18 @@ Future<bool> addPatient(String number, String token, String email, String name,
   } catch (e) {
     return false;
   }
+}
+
+void onLongPressComplete(BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (context) => Center(
+            child: AlertDialog(title: Text('こんにちは。\nこのアプリは、開発者の$ddさんとMYAKKOU.CO.LTD.の共同開発によるものです。', style: TextStyle(fontSize: 14),)),
+          ));
+  // Define your action here when long press is complete after 10 seconds
+  // ScaffoldMessenger.of(context).showSnackBar(
+  //   SnackBar(content: Text("こんにちは。このアプリは、開発者のMegahoshiさんとMYAKKOU.CO.LTD.の共同開発によるものです。")),
+  // );
 }
 
 Future<int> getAll(String token, String email) async {

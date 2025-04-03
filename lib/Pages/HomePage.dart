@@ -94,6 +94,27 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  Timer? _timer;
+  int _seconds = 0;
+
+  void _startTimer() {
+    _seconds = 0;
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_seconds < 10) {
+        _seconds++;
+      } else {
+        onLongPressComplete(context);
+        _timer?.cancel();
+      }
+    });
+  }
+
+  void _stopTimer() {
+    _timer?.cancel();
+    _seconds = 0;
+    print("Timer stopped");
+  }
+
   @override
   Widget build(BuildContext context) {
     globalData.updateS_Size(MediaQuery.of(context).size);
@@ -105,25 +126,37 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             child: Icon(Icons.logout)),
         body: Column(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-
-          Container(
-            color: const Color.fromARGB(255, 247, 250, 249),
-            width: MediaQuery.of(context).size.width,
-            height: 300,
-            child: Padding(
-                padding: EdgeInsets.all(35),
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: MediaQuery.sizeOf(context).width * 0.5,
-                  height: 100,
-                  fit: BoxFit.fitWidth,
-                )),
-          ),
-          Image.asset('assets/images/login.png',
-              width: MediaQuery.of(context).size.width * 0.7,
-              fit: BoxFit.fitWidth)
-        ]));
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: const Color.fromARGB(255, 247, 250, 249),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.sizeOf(context).height * 0.33,
+                child: Padding(
+                    padding: EdgeInsets.all(35),
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      width: MediaQuery.sizeOf(context).width * 0.5,
+                      height: 100,
+                      fit: BoxFit.fitWidth,
+                    )),
+              ),
+              Container(
+                  height: MediaQuery.sizeOf(context).height * 0.66 - 70,
+                  child: Center(
+                      child: GestureDetector(
+                          onTapDown: (_) {
+                            _startTimer();
+                          },
+                          onTapUp: (_) {
+                            _stopTimer();
+                          },
+                          onTapCancel: () {
+                            _stopTimer();
+                          },
+                          child: Image.asset('assets/images/login.png',
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              fit: BoxFit.fitWidth))))
+            ]));
   }
 }
