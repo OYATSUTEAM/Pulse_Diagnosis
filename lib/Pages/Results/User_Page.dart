@@ -66,6 +66,7 @@ class _UserPageState extends State<UserPage> {
 
 //-------------------------    physiqueList   -------------------------------
   List physiqueList = [];
+  String pulseResult = '';
   @override
   void initState() {
     getDate();
@@ -88,7 +89,7 @@ class _UserPageState extends State<UserPage> {
           pulseExplain = globalData.pulseResult['pulseExplain'][0]['name'];
           gender = patient['gender'];
           visitTime = globalData.pulseResult['visitInfo']['visitTime'];
-
+          pulseResult = globalData.pulseResult['visitInfo']['pulseResult'];
 //-------------------------    healthAssessments   -------------------------------
 
           healthAssessments0 = physiqueList[0]['healthAssessments'];
@@ -195,17 +196,15 @@ class _UserPageState extends State<UserPage> {
                                       Icons.description_outlined,
                                       color: Colors.black,
                                     ),
-                                    Text('  脈象の説明 :  $pulseExplain'),
+                                    Text('  脈象の説明 :  $pulseResult'),
                                   ],
                                 ),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    Image.asset(
-                                      'assets/images/earthquake.png',
-                                      width: 24,
-                                    ),
+                                    Image.asset('assets/images/earthquake.png',
+                                        width: 24),
                                     Text('  脈拍数 :  60回/分')
                                   ],
                                 )

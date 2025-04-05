@@ -53,7 +53,7 @@ class _RESETpassword extends State<RESETpasswordPage> {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "ご心配なく！アカウントに関連付けられた住所を入力してください。",
+                  "ユーザーIDとして登録されたメールアドレスを入力してください。",
                   style: const TextStyle(fontSize: 16, color: Colors.grey),
                 ),
               ),
@@ -71,9 +71,7 @@ class _RESETpassword extends State<RESETpasswordPage> {
                           color: Colors.grey)),
                 )),
               ),
-              SizedBox(
-                height: 40,
-              ),
+              SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () {
                   resetPassword();
@@ -83,10 +81,11 @@ class _RESETpassword extends State<RESETpasswordPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 child: const Center(
-                    child: Text(
-                  "リセット",
-                  style: TextStyle(fontSize: 15),
-                )),
+                    child: Text("リセット",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 0, 168, 154),
+                        ))),
               ),
             ],
           ),

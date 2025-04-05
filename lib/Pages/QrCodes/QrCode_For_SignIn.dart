@@ -3,7 +3,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:pulse_diagnosis/Pages/Results/PulseResultPage.dart';
 import 'package:pulse_diagnosis/Services/getData.dart';
-import 'dart:async'; // Import Timer
+import 'dart:async'; 
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:easy_localization/easy_localization.dart';
 
