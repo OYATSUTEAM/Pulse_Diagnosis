@@ -84,6 +84,7 @@ class _RESETpassword extends State<RESETpasswordPage> {
                     child: Text("リセット",
                         style: TextStyle(
                           fontSize: 15,
+                          fontWeight: FontWeight.bold,
                           color: Color.fromARGB(255, 0, 168, 154),
                         ))),
               ),

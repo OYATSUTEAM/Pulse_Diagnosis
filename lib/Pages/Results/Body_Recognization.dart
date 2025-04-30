@@ -41,7 +41,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height - 170,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -132,6 +132,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                   ],
                 ),
               ))
+        ,SizedBox(height: 10,)
         ],
       ),
     );

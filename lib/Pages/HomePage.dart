@@ -94,27 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Timer? _timer;
-  int _seconds = 0;
-
-  void _startTimer() {
-    _seconds = 0;
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
-      if (_seconds < 10) {
-        _seconds++;
-      } else {
-        onLongPressComplete(context);
-        _timer?.cancel();
-      }
-    });
-  }
-
-  void _stopTimer() {
-    _timer?.cancel();
-    _seconds = 0;
-    print("Timer stopped");
-  }
-
   @override
   Widget build(BuildContext context) {
     globalData.updateS_Size(MediaQuery.of(context).size);
@@ -142,21 +121,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     )),
               ),
               Expanded(
-                      child: Center(
-                          child: GestureDetector(
-                              onTapDown: (_) {
-                                _startTimer();
-                              },
-                              onTapUp: (_) {
-                                _stopTimer();
-                              },
-                              onTapCancel: () {
-                                _stopTimer();
-                              },
-                              child: Image.asset('assets/images/login.png',
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.7,
-                                  fit: BoxFit.fitWidth))))
+                  child: Center(
+                      child: Image.asset('assets/images/login.png',
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          fit: BoxFit.fitWidth)))
             ]));
   }
 }

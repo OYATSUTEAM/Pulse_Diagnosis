@@ -90,7 +90,7 @@ class _HealthAssessmentState extends State<HealthAssessment> {
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height - 170,
               child: SingleChildScrollView(
                   child: Padding(
                 padding: EdgeInsets.all(20),

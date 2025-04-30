@@ -18,7 +18,7 @@ class _UserPageState extends State<UserPage> {
   String gender = '男';
   String pulseExplain = '沈滑有力';
   String visitTime = '2020-1-2';
-
+  String cunResultFreq = '';
 //-------------------------    bodyRecognization   -------------------------------
 
   List healthAssessments0 = [];
@@ -90,6 +90,8 @@ class _UserPageState extends State<UserPage> {
           gender = patient['gender'];
           visitTime = globalData.pulseResult['visitInfo']['visitTime'];
           pulseResult = globalData.pulseResult['visitInfo']['pulseResult'];
+          cunResultFreq = globalData.pulseResult['visitInfo']['parts'][0]
+              ['cunResult']['freq'];
 //-------------------------    healthAssessments   -------------------------------
 
           healthAssessments0 = physiqueList[0]['healthAssessments'];
@@ -151,7 +153,7 @@ class _UserPageState extends State<UserPage> {
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height - 170,
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -173,7 +175,7 @@ class _UserPageState extends State<UserPage> {
                           children: [
                             Text('氏名： ${patient['name']}'),
                             Text('性別：$gender'),
-                            Text('年齢：$age'),
+                            Text('年齢：$age歳'),
                             Text('位置：左手、右手'),
                             Text('時間：$visitTime'),
                           ],
@@ -205,7 +207,7 @@ class _UserPageState extends State<UserPage> {
                                   children: [
                                     Image.asset('assets/images/earthquake.png',
                                         width: 24),
-                                    Text('  脈拍数 :  60回/分')
+                                    Text('  脈拍数 :  $cunResultFreq回/分')
                                   ],
                                 )
                               ],
@@ -360,7 +362,10 @@ class _UserPageState extends State<UserPage> {
                         )),
                   ],
                 ),
-              ))
+              )),
+          SizedBox(
+            height: 20,
+          )
         ],
       ),
     ));

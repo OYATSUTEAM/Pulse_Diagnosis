@@ -42,7 +42,7 @@ class _ExerciseListState extends State<ExerciseList> {
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height - 170,
               child: SingleChildScrollView(
                 child: Column(
                   children: [

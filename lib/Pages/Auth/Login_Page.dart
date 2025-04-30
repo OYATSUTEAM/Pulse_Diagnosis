@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
 
 // ignore: camel_case_types
 class Login_Page extends StatefulWidget {
@@ -198,6 +199,26 @@ class _Login_Page extends State<Login_Page> {
     }
   }
 
+  Timer? _timer;
+  int _seconds = 0;
+
+  void _startTimer() {
+    _seconds = 0;
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_seconds < 10) {
+        _seconds++;
+      } else {
+        onLongPressComplete(context);
+        _timer?.cancel();
+      }
+    });
+  }
+
+  void _stopTimer() {
+    _timer?.cancel();
+    _seconds = 0;
+    print("Timer stopped");
+  }
   // ================================================Building The Screen ===================================================
   @override
   Widget build(BuildContext context) {
@@ -213,10 +234,20 @@ class _Login_Page extends State<Login_Page> {
                 child: Column(children: [
                   const SizedBox(height: 40),
                   Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Image.asset('assets/images/login.png',
-                        width: MediaQuery.of(context).size.width * 0.5),
-                  ),
+                      padding: const EdgeInsets.only(top: 8),
+                      child: GestureDetector(
+                         onTapDown: (_) {
+                                _startTimer();
+                              },
+                              onTapUp: (_) {
+                                _stopTimer();
+                              },
+                              onTapCancel: () {
+                                _stopTimer();
+                              },
+                        child: Image.asset('assets/images/login.png',
+                            width: MediaQuery.of(context).size.width * 0.5),
+                      )),
                   Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 30.0, vertical: 10),

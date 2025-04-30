@@ -42,7 +42,7 @@ class _MeridiansAnalysisState extends State<MeridiansAnalysis> {
         children: [
           TitleWidget(title: widget.title),
           SizedBox(
-              height: MediaQuery.of(context).size.height - 150,
+              height: MediaQuery.of(context).size.height - 170,
               child: SingleChildScrollView(
                 child: Column(
                   children: [

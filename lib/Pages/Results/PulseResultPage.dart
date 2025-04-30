@@ -182,7 +182,8 @@ class _PulseresultpageState extends State<Pulseresultpage>
                 EightPrinciple(title: '八綱辨証'),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 0,)
         ],
       ),
     ));
