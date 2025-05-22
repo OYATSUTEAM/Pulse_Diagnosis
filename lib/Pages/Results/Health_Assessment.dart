@@ -89,84 +89,87 @@ class _HealthAssessmentState extends State<HealthAssessment> {
       child: Column(
         children: [
           TitleWidget(title: widget.title),
-          SizedBox(
-              height: MediaQuery.of(context).size.height - 170,
-              child: SingleChildScrollView(
-                  child: Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
+          Expanded(
+              child: SizedBox(
+                  height: MediaQuery.of(context).size.height - 170,
+                  child: SingleChildScrollView(
+                      child: Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Column(
                       children: [
-                        Column(
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(height: 40),
-                            healthAssessmentsCard(symptom0),
-                            healthAssessmentsCard(symptom1),
-                            healthAssessmentsCard(symptom2),
+                            Column(
+                              children: [
+                                SizedBox(height: 40),
+                                healthAssessmentsCard(symptom0),
+                                healthAssessmentsCard(symptom1),
+                                healthAssessmentsCard(symptom2),
+                              ],
+                            ),
+                            Padding(
+                                padding: EdgeInsets.all(20),
+                                child: Image.network(
+                                    'http://mzy-jp.dajingtcm.com/double-ja/$imageUrl',
+                                    fit: BoxFit.contain,
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 0.2,
+                                    loadingBuilder: (context, child, progress) {
+                                  return progress == null
+                                      ? child
+                                      : Center(
+                                          child: CircularProgressIndicator());
+                                }, errorBuilder: (context, error, stackTrace) {
+                                  return Icon(Icons.error);
+                                })),
+                            Column(
+                              children: [
+                                healthAssessmentsCard(symptom3),
+                                healthAssessmentsCard(symptom4),
+                                healthAssessmentsCard(symptom5),
+                              ],
+                            ),
                           ],
                         ),
-                        Padding(
-                            padding: EdgeInsets.all(20),
-                            child: Image.network(
-                                'http://mzy-jp.dajingtcm.com/double-ja/$imageUrl',
-                                fit: BoxFit.contain,
-                                width: MediaQuery.sizeOf(context).width * 0.2,
-                                loadingBuilder: (context, child, progress) {
-                              return progress == null
-                                  ? child
-                                  : Center(child: CircularProgressIndicator());
-                            }, errorBuilder: (context, error, stackTrace) {
-                              return Icon(Icons.error);
-                            })),
-                        Column(
-                          children: [
-                            healthAssessmentsCard(symptom3),
-                            healthAssessmentsCard(symptom4),
-                            healthAssessmentsCard(symptom5),
-                          ],
-                        ),
+                        RichText(
+                            text: TextSpan(
+                          text: '発生する可能性のある、または発生するリスクには次のようなものがあります：',
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                        )),
+                        ListView.builder(
+                            physics: NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            itemCount: symptoms.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                  title: RichText(
+                                      text: TextSpan(
+                                          style: TextStyle(color: Colors.black),
+                                          children: [
+                                    TextSpan(
+                                        text: '• ',
+                                        style: TextStyle(
+                                            color: Colors.blueAccent,
+                                            fontSize: 30)),
+                                    WidgetSpan(
+                                        child: Padding(
+                                            padding: EdgeInsets.only(bottom: 5),
+                                            child: Text('${symptoms[index]}',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    textBaseline: TextBaseline
+                                                        .alphabetic)))),
+                                    TextSpan(
+                                        text: '\n${descs[index]}',
+                                        style: TextStyle(fontSize: 14)),
+                                  ])));
+                            }),
                       ],
                     ),
-                    RichText(
-                        text: TextSpan(
-                      text: '発生する可能性のある、または発生するリスクには次のようなものがあります：',
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                    )),
-                    ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: symptoms.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                              title: RichText(
-                                  text: TextSpan(
-                                      style: TextStyle(color: Colors.black),
-                                      children: [
-                                TextSpan(
-                                    text: '• ',
-                                    style: TextStyle(
-                                        color: Colors.blueAccent,
-                                        fontSize: 30)),
-                                WidgetSpan(
-                                    child: Padding(
-                                        padding: EdgeInsets.only(bottom: 5),
-                                        child: Text('${symptoms[index]}',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                textBaseline:
-                                                    TextBaseline.alphabetic)))),
-                                TextSpan(
-                                    text: '\n${descs[index]}',
-                                    style: TextStyle(fontSize: 14)),
-                              ])));
-                        }),
-                  ],
-                ),
-              )))
+                  ))))
         ],
       ),
     );
