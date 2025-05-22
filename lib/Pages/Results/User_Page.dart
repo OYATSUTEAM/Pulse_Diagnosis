@@ -152,219 +152,220 @@ class _UserPageState extends State<UserPage> {
       body: Column(
         children: [
           TitleWidget(title: widget.title),
-          SizedBox(
-              height: MediaQuery.of(context).size.height - 170,
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CircleAvatar(
-                            radius: 50,
-                            backgroundColor:
-                                const Color.fromARGB(213, 255, 255, 255),
-                            foregroundImage: AssetImage(
-                              gender == '男'
-                                  ? 'assets/images/man.png'
-                                  : 'assets/images/woman.png',
-                            )),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('氏名： ${patient['name']}'),
-                            Text('性別：$gender'),
-                            Text('年齢：$age歳'),
-                            Text('位置：左手、右手'),
-                            Text('時間：$visitTime'),
-                          ],
-                        ),
-                      ],
-                    ),
-                    CategoryWidget(title: '総合結果'),
-                    Image.asset('assets/images/description.png',
-                        width: MediaQuery.of(context).size.width),
-                    Padding(
-                        padding: EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.description_outlined,
-                                      color: Colors.black,
-                                    ),
-                                    Text('  脈象の説明 :  $pulseResult'),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Image.asset('assets/images/earthquake.png',
-                                        width: 24),
-                                    Text('  脈拍数 :  $cunResultFreq回/分')
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        )),
-                    CategoryWidget(title: '健康状態'),
-                    Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                    'assets/images/body_recognization.png',
-                                    width: 20),
-                                Expanded(
-                                    child: RichText(
-                                        text: TextSpan(
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                            children: [
-                                      TextSpan(
-                                          text: '【体質認識】\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      TextSpan(
-                                        text:
-                                            '$bodyRecognization0_name (${bodyRecognization0_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})　、\n',
+          Expanded(
+            child: SizedBox(
+                height: MediaQuery.of(context).size.height - 170,
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          CircleAvatar(
+                              radius: 50,
+                              backgroundColor:
+                                  const Color.fromARGB(213, 255, 255, 255),
+                              foregroundImage: AssetImage(
+                                gender == '男'
+                                    ? 'assets/images/man.png'
+                                    : 'assets/images/woman.png',
+                              )),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('氏名： ${patient['name']}'),
+                              Text('性別：$gender'),
+                              Text('年齢：$age歳'),
+                              Text('位置：左手、右手'),
+                              Text('時間：$visitTime'),
+                            ],
+                          ),
+                        ],
+                      ),
+                      CategoryWidget(title: '総合結果'),
+                      Image.asset('assets/images/description.png',
+                          width: MediaQuery.of(context).size.width),
+                      Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.description_outlined,
+                                        color: Colors.black,
                                       ),
-                                      TextSpan(
-                                        text:
-                                            '$bodyRecognization1_name (${bodyRecognization1_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})',
-                                      ),
-                                    ])))
-                              ],
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                    'assets/images/health_assessment.png',
-                                    width: 20),
-                                Expanded(
-                                    child: RichText(
-                                        text: TextSpan(
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                            children: [
-                                      TextSpan(
-                                          text: '【健康評価】\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      TextSpan(
-                                        text:
-                                            '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$symptom0　、$symptom1　、$symptom2　、$symptom3　、$symptom4　、$symptom5　',
-                                      ),
-                                    ])))
-                              ],
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset('assets/images/eigth_category.png',
-                                    width: 20),
-                                Expanded(
-                                    child: RichText(
-                                        text: TextSpan(
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                            children: [
-                                      TextSpan(
-                                          text: '【八綱弁証】\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      principleList0_note != ''
-                                          ? TextSpan(
-                                              text:
-                                                  '$principleList0_name ($principleList0_note)　',
-                                            )
-                                          : TextSpan(),
-                                      principleList1_note != ''
-                                          ? TextSpan(
-                                              text:
-                                                  '、\n$principleList1_name ($principleList1_note)　',
-                                            )
-                                          : TextSpan(),
-                                      principleList2_note != ''
-                                          ? TextSpan(
-                                              text:
-                                                  '、\n$principleList2_name ($principleList2_note)　',
-                                            )
-                                          : TextSpan(),
-                                      principleList3_note != ''
-                                          ? TextSpan(
-                                              text:
-                                                  '、\n$principleList3_name ($principleList3_note)　',
-                                            )
-                                          : TextSpan(),
-                                    ])))
-                              ],
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                    'assets/images/meridian_analysis.png',
-                                    width: 20),
-                                Expanded(
-                                    child: RichText(
-                                        text: TextSpan(
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                            children: [
-                                      TextSpan(
-                                          text: '【経絡解析】\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      TextSpan(
-                                        text: '現在、異常が考えられる経絡は次の通りです：\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$jingluoListV0_name$jingluoListV0_note、\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$jingluoListV1_name$jingluoListV1_note、\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$jingluoListV2_name$jingluoListV2_note、\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$jingluoListV3_name$jingluoListV3_note、\n',
-                                      ),
-                                      TextSpan(
-                                        text:
-                                            '$jingluoListV4_name$jingluoListV4_note\n',
-                                      ),
-                                    ])))
-                              ],
-                            ),
-                          ],
-                        )),
-                  ],
-                ),
-              )),
-          SizedBox(
-            height: 20,
+                                      Text('  脈象の説明 :  $pulseResult'),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image.asset(
+                                          'assets/images/earthquake.png',
+                                          width: 24),
+                                      Text('  脈拍数 :  $cunResultFreq回/分')
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ],
+                          )),
+                      CategoryWidget(title: '健康状態'),
+                      Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                      'assets/images/body_recognization.png',
+                                      width: 20),
+                                  Expanded(
+                                      child: RichText(
+                                          text: TextSpan(
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                              children: [
+                                        TextSpan(
+                                            text: '【体質認識】\n',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(
+                                          text:
+                                              '$bodyRecognization0_name (${bodyRecognization0_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})　、\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$bodyRecognization1_name (${bodyRecognization1_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})',
+                                        ),
+                                      ])))
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                      'assets/images/health_assessment.png',
+                                      width: 20),
+                                  Expanded(
+                                      child: RichText(
+                                          text: TextSpan(
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                              children: [
+                                        TextSpan(
+                                            text: '【健康評価】\n',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(
+                                          text:
+                                              '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$symptom0　、$symptom1　、$symptom2　、$symptom3　、$symptom4　、$symptom5　',
+                                        ),
+                                      ])))
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                      'assets/images/eigth_category.png',
+                                      width: 20),
+                                  Expanded(
+                                      child: RichText(
+                                          text: TextSpan(
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                              children: [
+                                        TextSpan(
+                                            text: '【八綱弁証】\n',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        principleList0_note != ''
+                                            ? TextSpan(
+                                                text:
+                                                    '$principleList0_name ($principleList0_note)　',
+                                              )
+                                            : TextSpan(),
+                                        principleList1_note != ''
+                                            ? TextSpan(
+                                                text:
+                                                    '、\n$principleList1_name ($principleList1_note)　',
+                                              )
+                                            : TextSpan(),
+                                        principleList2_note != ''
+                                            ? TextSpan(
+                                                text:
+                                                    '、\n$principleList2_name ($principleList2_note)　',
+                                              )
+                                            : TextSpan(),
+                                        principleList3_note != ''
+                                            ? TextSpan(
+                                                text:
+                                                    '、\n$principleList3_name ($principleList3_note)　',
+                                              )
+                                            : TextSpan(),
+                                      ])))
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                      'assets/images/meridian_analysis.png',
+                                      width: 20),
+                                  Expanded(
+                                      child: RichText(
+                                          text: TextSpan(
+                                              style: TextStyle(
+                                                  color: Colors.black),
+                                              children: [
+                                        TextSpan(
+                                            text: '【経絡解析】\n',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        TextSpan(
+                                          text: '現在、異常が考えられる経絡は次の通りです：\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$jingluoListV0_name$jingluoListV0_note、\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$jingluoListV1_name$jingluoListV1_note、\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$jingluoListV2_name$jingluoListV2_note、\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$jingluoListV3_name$jingluoListV3_note、\n',
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              '$jingluoListV4_name$jingluoListV4_note\n',
+                                        ),
+                                      ])))
+                                ],
+                              ),
+                            ],
+                          )),
+                    ],
+                  ),
+                )),
           )
         ],
       ),
