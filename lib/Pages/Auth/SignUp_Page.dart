@@ -87,7 +87,7 @@ class _SignUp_Page extends State<SignUp_Page> {
               sendVerificationEmail();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  backgroundColor: Colors.grey[700],
+                    backgroundColor: Colors.grey[700],
                     duration: Duration(days: 1),
                     content: Column(
                       children: [
@@ -190,25 +190,25 @@ class _SignUp_Page extends State<SignUp_Page> {
                                     ),
                                   ),
 // =========================================================  Language Dropdown Button =========================================
-                                  DropdownButtonHideUnderline(
-                                    child: DropdownButton<String>(
-                                      value: selectedLanguage,
-                                      onChanged: (value) {
-                                        if (value != null) {
-                                          setLanguage(value);
-                                        }
-                                      },
-                                      items: [
-                                        DropdownMenuItem<String>(
-                                            value: "ja", child: Text("日本語")),
-                                        DropdownMenuItem<String>(
-                                            value: "en",
-                                            child: Text("English")),
-                                        DropdownMenuItem<String>(
-                                            value: "ch", child: Text("中文")),
-                                      ],
-                                    ),
-                                  ),
+                                  // DropdownButtonHideUnderline(
+                                  //   child: DropdownButton<String>(
+                                  //     value: selectedLanguage,
+                                  //     onChanged: (value) {
+                                  //       if (value != null) {
+                                  //         setLanguage(value);
+                                  //       }
+                                  //     },
+                                  //     items: [
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "ja", child: Text("日本語")),
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "en",
+                                  //           child: Text("English")),
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "ch", child: Text("中文")),
+                                  //     ],
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),

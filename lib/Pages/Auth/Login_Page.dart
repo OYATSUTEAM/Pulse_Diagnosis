@@ -219,6 +219,7 @@ class _Login_Page extends State<Login_Page> {
     _seconds = 0;
     print("Timer stopped");
   }
+
   // ================================================Building The Screen ===================================================
   @override
   Widget build(BuildContext context) {
@@ -236,15 +237,15 @@ class _Login_Page extends State<Login_Page> {
                   Padding(
                       padding: const EdgeInsets.only(top: 8),
                       child: GestureDetector(
-                         onTapDown: (_) {
-                                _startTimer();
-                              },
-                              onTapUp: (_) {
-                                _stopTimer();
-                              },
-                              onTapCancel: () {
-                                _stopTimer();
-                              },
+                        onTapDown: (_) {
+                          _startTimer();
+                        },
+                        onTapUp: (_) {
+                          _stopTimer();
+                        },
+                        onTapCancel: () {
+                          _stopTimer();
+                        },
                         child: Image.asset('assets/images/login.png',
                             width: MediaQuery.of(context).size.width * 0.5),
                       )),
@@ -266,23 +267,23 @@ class _Login_Page extends State<Login_Page> {
                                         fontWeight: FontWeight.w700,
                                         fontFamily: 'Poppins'),
                                   ),
-                                  DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                          value: selectedLanguage,
-                                          onChanged: (value) {
-                                            if (value != null) {
-                                              setLanguage(value);
-                                            }
-                                          },
-                                          items: [
-                                        DropdownMenuItem<String>(
-                                            value: "ja", child: Text("日本語")),
-                                        DropdownMenuItem<String>(
-                                            value: "en",
-                                            child: Text("English")),
-                                        DropdownMenuItem<String>(
-                                            value: "ch", child: Text("中文")),
-                                      ]))
+                                  // DropdownButtonHideUnderline(
+                                  //     child: DropdownButton<String>(
+                                  //         value: selectedLanguage,
+                                  //         onChanged: (value) {
+                                  //           if (value != null) {
+                                  //             setLanguage(value);
+                                  //           }
+                                  //         },
+                                  //         items: [
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "ja", child: Text("日本語")),
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "en",
+                                  //           child: Text("English")),
+                                  //       DropdownMenuItem<String>(
+                                  //           value: "ch", child: Text("中文")),
+                                  //     ]))
                                 ])),
 
                         const SizedBox(height: 10),
