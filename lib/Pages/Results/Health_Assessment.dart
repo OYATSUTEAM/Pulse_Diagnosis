@@ -130,6 +130,12 @@ class _HealthAssessmentState extends State<HealthAssessment> {
                         ),
                       ],
                     ),
+                    RichText(
+                        text: TextSpan(
+                      text: '発生する可能性のある、または発生するリスクには次のようなものがあります：',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                    )),
                     ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
