@@ -51,7 +51,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Explanation on why the camera access is needed.</string>
+	<string>QRコードスキャンのためにカメラの使用を許可してください。</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Explanation on why the microphone access is needed.</string>
 	<key>NSMotionUsageDescription</key>
