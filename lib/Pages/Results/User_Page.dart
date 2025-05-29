@@ -82,6 +82,7 @@ class _UserPageState extends State<UserPage> {
     }
     if (globalData.pulseResult.isEmpty) {
     } else {
+      console([globalData.pulseResult]);
       if (mounted) {
         setState(() {
           physiqueList = globalData.pulseResult['physiqueList'];
