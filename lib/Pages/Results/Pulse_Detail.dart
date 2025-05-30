@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';

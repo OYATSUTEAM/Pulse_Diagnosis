@@ -1,13 +1,17 @@
 import 'package:pulse_diagnosis/Pages/Auth/SignUp_Page.dart';
 import 'package:pulse_diagnosis/Pages/NavigationPage.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
+import 'package:pulse_diagnosis/Services/getLocalData.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
+import 'dart:convert';
+import 'package:pulse_diagnosis/Model/UserData.dart';
+import 'dart:developer' as developer;
 
 // ignore: camel_case_types
 class Login_Page extends StatefulWidget {
@@ -33,6 +37,32 @@ class _Login_Page extends State<Login_Page> {
   bool otpVisibilty = false;
   String? emailError;
   String? passError;
+  UserData userData = UserData(
+      email: '',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
+
+  @override
+  void initState() {
+    // initLanguage();
+    _getInitailData();
+
+    super.initState();
+  }
+
+  _getInitailData() async {
+    UserData? _userData = await getUserData();
+    if (_userData != null) {
+      setState(() {
+        userData = _userData;
+      });
+    }
+    _loadSavedEmail();
+  }
 
   // =========================================================  Password Visibility function ===========================================
 
@@ -44,16 +74,15 @@ class _Login_Page extends State<Login_Page> {
     }
   }
 
-  Future<void> saveEmail(String email) async {
+  // Add a method to get user data
+  Future<UserData?> getUserDataFromPrefs() async {
     final prefs = await SharedPreferences.getInstance();
-    if (mounted) {
-      await prefs.setString('saved_email_pulse', email);
+    final jsonString = prefs.getString('user_data');
+    if (jsonString != null) {
+      final Map<String, dynamic> jsonMap = jsonDecode(jsonString);
+      return UserData.fromJson(jsonMap);
     }
-  }
-
-  Future<String?> getSavedEmail() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getString('saved_email_pulse');
+    return null;
   }
 
   // =========================================================  Login Function ======================================================
@@ -82,12 +111,17 @@ class _Login_Page extends State<Login_Page> {
         email: emailController.text.toString(),
         password: password.text.toString(),
       );
+      print('=================================');
+      developer.log('================');
 
       if (mounted) {
         Navigator.pop(context);
       }
       isEmailVerified();
     } on FirebaseAuthException catch (e) {
+      print('=================================');
+      print(e);
+      developer.log('================');
       if (mounted) {
         Navigator.pop(context);
       }
@@ -120,32 +154,36 @@ class _Login_Page extends State<Login_Page> {
 
   void isEmailVerified() {
     User user = FirebaseAuth.instance.currentUser!;
-    if (user.emailVerified) {
-      saveEmail(emailController.text.trim());
+    // saveEmail(emailController.text.trim());
+    firstLogin();
+    // if (user.emailVerified) {
 
-      firstLogin();
-    } else {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Email is not verified.')));
-    }
+    // } else {
+    //   ScaffoldMessenger.of(
+    //     context,
+    //   ).showSnackBar(SnackBar(content: Text('Email is not verified.')));
+    // }
   }
 
   // =========================================================  Checking First time login ===============================================
 
   void firstLogin() async {
-    Map<String, dynamic>? userData = await getUserData();
+    Map<String, dynamic>? userData = await getUserDataFromFirebase();
+    console([userData]);
     User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       if (userData != null) {
-        await globalData.updatePatientDetail(
-            userData['uid'],
-            userData['email'],
-            userData['name'],
-            userData['address'],
-            userData['gender'],
-            userData['age'],
-            userData['phone']);
+        final _userData = UserData(
+          email: userData['email'],
+          uid: userData['uid'],
+          name: userData['name'],
+          password: userData['password'],
+          phone: userData['phone'],
+          gender: userData['gender'],
+          age: userData['age'],
+        );
+
+        await saveUserData(_userData);
 
         if (mounted) {
           Navigator.pop(context);
@@ -158,45 +196,38 @@ class _Login_Page extends State<Login_Page> {
   }
 
   //==========================================================  locailization  =====================================================
-  setLanguage(String? value) async {
-    setState(() {
-      selectedLanguage = value!;
-    });
-    globalData.updateCurrentLocal(value!);
-    Locale newLocale;
-    if (value == 'ja') {
-      newLocale = const Locale('ja', 'JP');
-    } else if (value == 'en') {
-      newLocale = const Locale('en', 'US');
-    } else if (value == 'ch') {
-      newLocale = const Locale('zh', 'CN');
-    } else {
-      return;
-    }
-    await context.setLocale(newLocale);
-  }
-
-  @override
-  void initState() {
-    initLanguage();
-    _loadSavedEmail();
-
-    super.initState();
-  }
+  // setLanguage(String? value) async {
+  //   setState(() {
+  //     selectedLanguage = value!;
+  //   });
+  //   globalData.updateCurrentLocal(value!);
+  //   Locale newLocale;
+  //   if (value == 'ja') {
+  //     newLocale = const Locale('ja', 'JP');
+  //   } else if (value == 'en') {
+  //     newLocale = const Locale('en', 'US');
+  //   } else if (value == 'ch') {
+  //     newLocale = const Locale('zh', 'CN');
+  //   } else {
+  //     return;
+  //   }
+  //   await context.setLocale(newLocale);
+  // }
 
   initLanguage() async {
     setState(() {
-      selectedLanguage = globalData.currentLocal;
+      // selectedLanguage = globalData.currentLocal;
     });
   }
 
   void _loadSavedEmail() async {
-    String? savedEmail = await getSavedEmail();
-    if (savedEmail != null) {
-      setState(() {
-        emailController.text = savedEmail;
-      });
-    }
+    // String? savedEmail = await getSavedEmail();
+    // if (savedEmail != null) {
+    setState(() {
+      emailController.text = userData.email;
+      console([userData.email]);
+    });
+    // }
   }
 
   Timer? _timer;

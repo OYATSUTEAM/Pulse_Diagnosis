@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'package:pulse_diagnosis/Pages/Results/PulseResultPage.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
-import 'dart:async'; 
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
+import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 
 class QrcodeForSignin extends StatefulWidget {
@@ -23,6 +24,14 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
   int pulseResult = 500;
   Timer? timer; // Timer to control progress updates
   bool isAdded = false;
+  UserData userData = UserData(
+      email: '',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
   void pauseCamera() async {
     await controller.pause();
   }
@@ -34,7 +43,17 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
 
   @override
   void initState() {
+    _getInitialData();
     super.initState();
+  }
+
+  _getInitialData() async {
+    UserData? _userData = await getUserData();
+    if (_userData != null) {
+      setState(() {
+        userData = _userData;
+      });
+    }
   }
 
   @override
@@ -97,12 +116,11 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                             final _isAdd = await addPatient(
                                 barcodeValue,
                                 token,
-                                globalData.email,
-                                globalData.name,
-                                globalData.gender,
-                                globalData.age,
-                                globalData.phone,
-                                globalData.address);
+                                userData.email,
+                                userData.name,
+                                userData.gender,
+                                userData.age,
+                                userData.phone);
 
                             setState(() {
                               isAdded = _isAdd;
@@ -154,18 +172,20 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                     child: Text('fetch new data'.tr(),
                         style: TextStyle(fontSize: 16, color: Colors.blue)),
                   ),
-                 visitDate != ''? TextButton(
-                    child: Text(visitDate,
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 0, 168, 154),
-                            fontSize: 24)),
-                    onPressed: () {
-                      if (mounted) {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Pulseresultpage()));
-                      }
-                    },
-                  ):Text(''),
+                  visitDate != ''
+                      ? TextButton(
+                          child: Text(visitDate,
+                              style: TextStyle(
+                                  color: const Color.fromARGB(255, 0, 168, 154),
+                                  fontSize: 24)),
+                          onPressed: () {
+                            if (mounted) {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Pulseresultpage()));
+                            }
+                          },
+                        )
+                      : Text(''),
                 ],
               )
           ],

@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Services/getLocalData.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 
 class Profilepage extends StatefulWidget {
   @override
@@ -28,6 +30,14 @@ class _Profilepage extends State<Profilepage> {
   TextEditingController adressController = TextEditingController();
   final _formKey1 = GlobalKey<FormState>();
   final _formKey2 = GlobalKey<FormState>();
+  UserData userData = UserData(
+      email: 'default',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
 
   Future<void> _selectDate(BuildContext context) async {
     DateTime? pickedDate = await showDatePicker(
@@ -57,24 +67,24 @@ class _Profilepage extends State<Profilepage> {
     user.sendEmailVerification();
   }
 
-  setLanguage(String? value) async {
-    setState(() {
-      selectedLanguage = value!;
-    });
-    Locale newLocale;
-    await globalData.updateCurrentLocal(value!);
-    if (value == 'en') {
-      newLocale = const Locale('en', 'US');
-    } else if (value == 'ja') {
-      newLocale = const Locale('ja', 'JP');
-    } else if (value == 'ch') {
-      newLocale = const Locale('zh', 'CN');
-    } else {
-      return;
-    }
+  // setLanguage(String? value) async {
+  //   setState(() {
+  //     selectedLanguage = value!;
+  //   });
+  //   Locale newLocale;
+  //   await globalData.updateCurrentLocal(value!);
+  //   if (value == 'en') {
+  //     newLocale = const Locale('en', 'US');
+  //   } else if (value == 'ja') {
+  //     newLocale = const Locale('ja', 'JP');
+  //   } else if (value == 'ch') {
+  //     newLocale = const Locale('zh', 'CN');
+  //   } else {
+  //     return;
+  //   }
 
-    await context.setLocale(newLocale);
-  }
+  //   await context.setLocale(newLocale);
+  // }
 
   setGender(String? value) async {
     setState(() {
@@ -109,7 +119,7 @@ class _Profilepage extends State<Profilepage> {
             );
           });
       Future.delayed(Duration(seconds: 1));
-    await EmailAuthProvider.credential(
+      await EmailAuthProvider.credential(
         email: user.email!,
         password: currentPassword,
       );
@@ -159,7 +169,7 @@ class _Profilepage extends State<Profilepage> {
             );
           });
 
-      updateUserData(name, gender, age);
+      updateUserData(userData);
       if (mounted) {
         Navigator.pop(context);
         // showDialog(
@@ -180,23 +190,15 @@ class _Profilepage extends State<Profilepage> {
   }
 
   Future<void> setInitValue() async {
-    Map<String, dynamic>? userData = await getUserData();
+    UserData? _userData = await getUserData();
     User? user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      if (userData != null) {
-        await globalData.updatePatientDetail(
-            userData['uid'],
-            userData['email'],
-            userData['name'],
-            userData['address'],
-            userData['gender'],
-            userData['age'],
-            userData['phone']);
-      }
+
+    if (_userData != null) {
       setState(() {
-        selectedGender = globalData.gender;
-        nameController.text = globalData.name;
-        ageController.text = globalData.age;
+        userData = _userData;
+        selectedGender = _userData.gender;
+        nameController.text = _userData.name;
+        ageController.text = _userData.age;
       });
     }
   }
@@ -239,26 +241,26 @@ class _Profilepage extends State<Profilepage> {
                                   ),
                                 ),
 // =========================================================  Language Dropdown Button =========================================
-                                DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    dropdownColor: const Color.fromARGB(
-                                        255, 247, 250, 249),
-                                    value: selectedLanguage,
-                                    onChanged: (value) {
-                                      if (value != null) {
-                                        setLanguage(value);
-                                      }
-                                    },
-                                    items: [
-                                      DropdownMenuItem<String>(
-                                          value: "ja", child: Text("日本語")),
-                                      DropdownMenuItem<String>(
-                                          value: "en", child: Text("English")),
-                                      DropdownMenuItem<String>(
-                                          value: "ch", child: Text("中文")),
-                                    ],
-                                  ),
-                                ),
+                                //   DropdownButtonHideUnderline(
+                                //     child: DropdownButton<String>(
+                                //       dropdownColor: const Color.fromARGB(
+                                //           255, 247, 250, 249),
+                                //       value: selectedLanguage,
+                                //       onChanged: (value) {
+                                //         if (value != null) {
+                                //           setLanguage(value);
+                                //         }
+                                //       },
+                                //       items: [
+                                //         DropdownMenuItem<String>(
+                                //             value: "ja", child: Text("日本語")),
+                                //         DropdownMenuItem<String>(
+                                //             value: "en", child: Text("English")),
+                                //         DropdownMenuItem<String>(
+                                //             value: "ch", child: Text("中文")),
+                                //       ],
+                                //     ),
+                                //   ),
                               ],
                             ),
                           ),
@@ -303,7 +305,7 @@ class _Profilepage extends State<Profilepage> {
                                           child: DropdownButton<String>(
                                             dropdownColor: const Color.fromARGB(
                                                 255, 247, 250, 249),
-                                            value: selectedGender,
+                                            value: userData.gender,
                                             onChanged: (value) {
                                               if (value != null) {
                                                 setGender(value);

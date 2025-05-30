@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'package:pulse_diagnosis/Pages/Auth/Login_Page.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -17,24 +18,41 @@ class _MyHomePageState extends State<MyHomePage> {
   FirebaseAuth auth = FirebaseAuth.instance;
   List<dynamic> allData = [];
   String number = '';
-
+  UserData userData = UserData(
+      email: 'default',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
   @override
   void initState() {
-    getUserUid();
-    getVisitDataByDate();
+    _getInitialData();
+    // getVisitDataByDate();
     super.initState();
   }
 
   Future<void> getVisitDataByDate() async {
-    while (globalData.uid == 'default') {
+    while (userData.uid == 'default') {
       await Future.delayed(Duration(milliseconds: 100));
     }
-    final _allData = await getVisitDates(globalData.uid);
+    final _allData = await getVisitDates(userData.uid);
     if (mounted) {
       setState(() {
         allData = _allData;
       });
     }
+  }
+
+  _getInitialData() async {
+    UserData? _userdata = await getUserData();
+    if (_userdata != null) {
+      setState(() {
+        userData = _userdata;
+      });
+    }
+    getVisitDataByDate();
   }
 
   signOut() async {
@@ -77,26 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> getUserUid() async {
-    Map<String, dynamic>? userData = await getUserData();
-    User? user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      if (userData != null) {
-        await globalData.updatePatientDetail(
-            userData['uid'],
-            userData['email'],
-            userData['name'],
-            userData['address'],
-            userData['gender'],
-            userData['age'],
-            userData['phone']);
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    globalData.updateS_Size(MediaQuery.of(context).size);
+    final size = MediaQuery.of(context).size;
     return Scaffold(
         floatingActionButton: FloatingActionButton(
             mini: true,
@@ -109,22 +110,24 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 color: const Color.fromARGB(255, 247, 250, 249),
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.sizeOf(context).height * 0.33,
+                width: size.width,
+                height: size.height * 0.33,
                 child: Padding(
                     padding: EdgeInsets.all(35),
                     child: Image.asset(
                       'assets/images/logo.png',
-                      width: MediaQuery.sizeOf(context).width * 0.5,
+                      width: size.width * 0.5,
                       height: 100,
                       fit: BoxFit.fitWidth,
                     )),
               ),
               Expanded(
                   child: Center(
-                      child: Image.asset('assets/images/login.png',
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          fit: BoxFit.fitWidth)))
+                      child: Image.asset(
+                'assets/images/login.png',
+                width: size.width * 0.7,
+                fit: BoxFit.fitWidth,
+              )))
             ]));
   }
 }

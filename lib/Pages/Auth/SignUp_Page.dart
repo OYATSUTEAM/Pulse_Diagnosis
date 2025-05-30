@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'Login_Page.dart';
 // import 'package:open_mail/open_mail.dart';
@@ -41,7 +42,7 @@ class _SignUp_Page extends State<SignUp_Page> {
     user.sendEmailVerification();
   }
 
-  void createUser() {
+  void createUser() async {
     if (passwordController.text.trim() ==
         passwordConfirmController.text.trim()) {
       try {
@@ -72,29 +73,28 @@ class _SignUp_Page extends State<SignUp_Page> {
               .createUserWithEmailAndPassword(
                   email: emailController.text.toString().trim(),
                   password: passwordController.text.toString().trim())
-              .whenComplete(() {
+              .whenComplete(() async {
             String email = emailController.text.toString().trim();
             String password = passwordController.text.toString().trim();
             if (FirebaseAuth.instance.currentUser?.uid != null) {
-              String address = adressController.text.toString().trim();
               String name = nameController.text.toString().trim();
               String gender = selectedGender;
               String phone = phoneController.text.toString().trim();
               String age = ageController.text.toString().trim();
               String uid = FirebaseAuth.instance.currentUser!.uid;
-              initUserData(
-                  email, uid, name, password, phone, address, gender, age);
-              sendVerificationEmail();
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                    backgroundColor: Colors.grey[700],
-                    duration: Duration(days: 1),
-                    content: Column(
-                      children: [
-                        Text('confirmation email'.tr()),
-                      ],
-                    )),
-              );
+              await initUserData(
+                  email, uid, name, password, phone, gender, age);
+              // sendVerificationEmail();
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //   SnackBar(
+              //       backgroundColor: Colors.grey[700],
+              //       duration: Duration(days: 1),
+              //       content: Column(
+              //         children: [
+              //           Text('confirmation email'.tr()),
+              //         ],
+              //       )),
+              // );
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) {
                 return Login_Page();

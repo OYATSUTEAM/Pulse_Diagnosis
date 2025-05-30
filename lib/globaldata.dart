@@ -19,24 +19,23 @@ class GlobalData {
       gender = '',
       age = '',
       phone = '';
-  updatePulseResult(Map<String, dynamic> _pulseResult) async {
-    pulseResult = _pulseResult;
-  }
+  // updatePulseResult(Map<String, dynamic> _pulseResult) async {
+  //   pulseResult = _pulseResult;
+  // }
 
   updateCurrentLocal(String _local) async {
     currentLocal = _local;
   }
 
-  updatePatientResult(Map<String, dynamic> _patientResult) async {
-    patientResult = _patientResult;
-  }
+  // updatePatientResult(Map<String, dynamic> _patientResult) async {
+  //   patientResult = _patientResult;
+  // }
 
-  updatePatientDetail(String _uid, String _email, String _name, String _address,
-      String _gender, String _age, String _phone) async {
+  updatePatientDetail(String _uid, String _email, String _name, String _gender,
+      String _age, String _phone) async {
     uid = _uid;
     email = _email;
     name = _name;
-    address = _address;
     gender = _gender;
     age = _age;
     phone = _phone;

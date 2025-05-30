@@ -3,16 +3,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:developer';
+import 'package:pulse_diagnosis/Model/UserData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
+// import 'dart:developer';
+import 'dart:developer' as developer;
 
 import 'package:pulse_diagnosis/globaldata.dart';
 
 void console(List<dynamic> params) {
   for (var param in params) {
-    log('$param =========================================');
+    developer.log('$param =========================================');
   }
 }
-String dd = 'Megahoshi';
+
+String dd = 'OYATSUTEAM';
 //=====================================================================              get number         =============================================================
 Future<String> getNumber() async {
   try {
@@ -78,8 +82,15 @@ String convertAgeToBirthDate(String age) {
   return birthDate;
 }
 
-Future<bool> addPatient(String number, String token, String email, String name,
-    String gender, String birth, String phone, String address) async {
+Future<bool> addPatient(
+  String number,
+  String token,
+  String email,
+  String name,
+  String gender,
+  String birth,
+  String phone,
+) async {
   try {
     final headers = {
       "token": token,
@@ -87,7 +98,7 @@ Future<bool> addPatient(String number, String token, String email, String name,
     };
 
     final data =
-        '{"number": "$number", "email": "$email", "name": "$name", "gender": "$gender", "birth": "${convertAgeToBirthDate(birth)}", "phone": "$phone", "address": "$address"}';
+        '{"number": "$number", "email": "$email", "name": "$name", "gender": "$gender", "birth": "${convertAgeToBirthDate(birth)}", "phone": "$phone", "address": ""}';
 
     final url = Uri.parse(
         'http://mzy-jp.dajingtcm.com/double-ja/business/qrcode/patient/add');
@@ -106,7 +117,11 @@ void onLongPressComplete(BuildContext context) {
   showDialog(
       context: context,
       builder: (context) => Center(
-            child: AlertDialog(title: Text('こんにちは。\nこのアプリは、開発者の$ddさんとMYAKKOU.CO.LTD.の共同開発によるものです。', style: TextStyle(fontSize: 14),)),
+            child: AlertDialog(
+                title: Text(
+              'こんにちは。\nこのアプリは、開発者の$ddさんとMYAKKOU.CO.LTD.の共同開発によるものです。',
+              style: TextStyle(fontSize: 14),
+            )),
           ));
   // Define your action here when long press is complete after 10 seconds
   // ScaffoldMessenger.of(context).showSnackBar(
@@ -133,7 +148,7 @@ Future<int> getAll(String token, String email) async {
     if (status != 200) throw Exception('http.post error: statusCode= $status');
 
     final jsonResponse = jsonDecode(res.body) as Map<String, dynamic>;
-    await globalData.updatePatientResult(jsonResponse);
+    await updatePatientResult(jsonResponse);
     List pulseResult = jsonResponse['data']['records'];
     return pulseResult.isNotEmpty ? 0 : 500;
   } catch (e) {
@@ -158,57 +173,25 @@ Future<String> getDetails(int id, String token) async {
     if (status != 200) throw Exception('http.post error: statusCode= $status');
 
     final jsonResponse = jsonDecode(res.body) as Map<String, dynamic>;
-    await globalData.updatePulseResult(jsonResponse['data']);
+    await updatePulseResult(jsonResponse['data'], '');
     const encoder = JsonEncoder.withIndent('  ');
-    log(encoder.convert(jsonResponse));
+    developer.log(encoder.convert(jsonResponse));
     return jsonResponse['msg'];
   } catch (e) {
     return e.toString();
   }
 }
 
-Future<void> initUserData(
-    String email,
-    String uid,
-    String name,
-    String password,
-    String phone,
-    String address,
-    String gender,
-    String age) async {
-  FirebaseFirestore database = FirebaseFirestore.instance;
-  try {
-    await globalData.updatePatientDetail(
-        uid, email, name, address, gender, age, phone);
-    final auth = FirebaseAuth.instance;
-    await database.collection("Users").doc(auth.currentUser?.uid).set({
-      "uid": auth.currentUser?.uid,
-      "email": email,
-      "name": name,
-      "password": password,
-      "phone": phone,
-      "address": address,
-      "gender": gender,
-      "age": AggregateQuerySnapshot,
-      'registered': false,
-    }, SetOptions(merge: true));
-    return;
-  } on FirebaseAuthException {
-    return null;
-  } catch (e) {
-    return null;
-  }
-}
-
-Future<void> updateUserData(String name, String gender, String age) async {
-  globalData.updateProfile(name, age, gender);
+Future<void> updateUserData(UserData _userdata) async {
+  // globalData.updateProfile(name, age, gender);
+  saveUserData(_userdata);
   FirebaseFirestore database = FirebaseFirestore.instance;
   try {
     final auth = FirebaseAuth.instance;
     await database.collection("Users").doc(auth.currentUser?.uid).set({
-      "name": name,
-      "gender": gender,
-      "age": age,
+      "name": _userdata.name,
+      "gender": _userdata.gender,
+      "age": _userdata.age,
     }, SetOptions(merge: true));
     return;
   } on FirebaseAuthException {
@@ -233,7 +216,7 @@ Future<void> updatePassword(String password) async {
   }
 }
 
-Future<Map<String, dynamic>?> getUserData() async {
+Future<Map<String, dynamic>?> getUserDataFromFirebase() async {
   try {
     FirebaseFirestore database = FirebaseFirestore.instance;
     final auth = FirebaseAuth.instance;
@@ -359,20 +342,5 @@ Future<String> addDataToFirebase(String token) async {
   } else {
     // Handle the case when 'data' does not exist
     return '';
-  }
-}
-
-Future<String> getUserPassword(String uid) async {
-  final DocumentSnapshot documentSnapshot;
-  try {
-    documentSnapshot =
-        await FirebaseFirestore.instance.collection("Users").doc(uid).get();
-    if (documentSnapshot.exists && documentSnapshot.data() != null) {
-      return documentSnapshot.get('password');
-    }
-    return '123456';
-  } catch (e) {
-    print("Error fetching document: $e");
-    return '123456';
   }
 }

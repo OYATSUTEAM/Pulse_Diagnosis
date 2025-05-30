@@ -23,13 +23,13 @@ class TableExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double s_width = MediaQuery.of(context).size.width;
+    final size = MediaQuery.of(context).size;
 
     return Table(
       border: TableBorder.all(),
       columnWidths: <int, TableColumnWidth>{
-        0: FixedColumnWidth(s_width * 0.2 - 1),
-        1: FixedColumnWidth(s_width * 0.8 - 1),
+        0: FixedColumnWidth(size.width * 0.2 - 1),
+        1: FixedColumnWidth(size.width * 0.8 - 1),
       },
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
       children: <TableRow>[

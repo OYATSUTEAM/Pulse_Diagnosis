@@ -1,3 +1,4 @@
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'package:pulse_diagnosis/Pages/HomePage.dart';
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,8 +8,8 @@ import 'package:pulse_diagnosis/Pages/ProfilePage.dart';
 import 'package:pulse_diagnosis/Pages/PulseHistoryPage.dart';
 import 'package:pulse_diagnosis/Pages/About_Pulse.dart';
 import 'package:pulse_diagnosis/Pages/QrCodes/QrCode_For_SignIn.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class Navigationpage extends StatefulWidget {
@@ -31,22 +32,39 @@ class _NavigationpageState extends State<Navigationpage> {
     AboutPulse(),
     Profilepage(),
   ];
-
+  UserData userData = UserData(
+      email: 'default',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
   @override
   void initState() {
     setState(() {
       _selectedIndex = widget.selectedIndex;
     });
-    getUserUid();
-    getVisitDataByDate();
+    _getInitialData();
+    // getVisitDataByDate();
     super.initState();
   }
 
+  _getInitialData() async {
+    UserData? _userData = await getUserData();
+    if (_userData != null) {
+      setState(() {
+        userData = _userData;
+      });
+      getVisitDataByDate();
+    }
+  }
+
   Future<void> getVisitDataByDate() async {
-    while (globalData.uid == 'default') {
+    while (userData.uid == 'default') {
       await Future.delayed(Duration(milliseconds: 100));
     }
-    final _allData = await getVisitDates(globalData.uid);
+    final _allData = await getVisitDates(userData.uid);
     if (mounted) {
       setState(() {
         allData = _allData;
@@ -100,64 +118,45 @@ class _NavigationpageState extends State<Navigationpage> {
     }
   }
 
-  Future<void> getUserUid() async {
-    Map<String, dynamic>? userData = await getUserData();
-    User? user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      if (userData != null) {
-        await globalData.updatePatientDetail(
-            userData['uid'],
-            userData['email'],
-            userData['name'],
-            userData['address'],
-            userData['gender'],
-            userData['age'],
-            userData['phone']);
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    globalData.updateS_Size(MediaQuery.of(context).size);
     return SafeArea(
         child: Scaffold(
             body: _pages[_selectedIndex],
-            bottomNavigationBar: 
-                BottomNavigationBar(
-                  items: <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
-                      label: 'home'.tr(),
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.storage),
-                      label: 'history'.tr(),
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.troubleshoot),
-                      label: 'fetch pulse'.tr(),
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.question_mark),
-                      label: 'body score'.tr(),
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.person),
-                      label: 'user info'.tr(),
-                    ),
-                  ],
-                  elevation: 0,
-                  backgroundColor: Colors.white,
-                  iconSize: 35,
-                  currentIndex: _selectedIndex, // Keep track of selected index
-                  selectedItemColor: const Color.fromARGB(255, 0, 168, 154),
-                  unselectedItemColor: const Color.fromARGB(255, 85, 85, 85),
-                  unselectedFontSize: 14,
-                  selectedFontSize: 14,
-                  showUnselectedLabels: true,
-                  onTap: _onItemTapped,
-                  type: BottomNavigationBarType.fixed,
-                )));
+            bottomNavigationBar: BottomNavigationBar(
+              items: <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'home'.tr(),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.storage),
+                  label: 'history'.tr(),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.troubleshoot),
+                  label: 'fetch pulse'.tr(),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.question_mark),
+                  label: 'body score'.tr(),
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'user info'.tr(),
+                ),
+              ],
+              elevation: 0,
+              backgroundColor: Colors.white,
+              iconSize: 35,
+              currentIndex: _selectedIndex, // Keep track of selected index
+              selectedItemColor: const Color.fromARGB(255, 0, 168, 154),
+              unselectedItemColor: const Color.fromARGB(255, 85, 85, 85),
+              unselectedFontSize: 14,
+              selectedFontSize: 14,
+              showUnselectedLabels: true,
+              onTap: _onItemTapped,
+              type: BottomNavigationBarType.fixed,
+            )));
   }
 }

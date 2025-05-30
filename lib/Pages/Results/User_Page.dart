@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pulse_diagnosis/Services/getData.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
+import 'dart:developer' as developer;
 
 class UserPage extends StatefulWidget {
   const UserPage({super.key, required this.title});
@@ -70,10 +71,14 @@ class _UserPageState extends State<UserPage> {
   @override
   void initState() {
     getDate();
+    // console(['this user page is called']);
+    developer.log('sfsdfsdf================');
+    print('user page is called ');
     super.initState();
   }
 
   getDate() async {
+    console(['params']);
     while (globalData.pulseResult.isEmpty) {
       await Future.delayed(Duration(milliseconds: 100));
     }
@@ -86,6 +91,7 @@ class _UserPageState extends State<UserPage> {
       if (mounted) {
         setState(() {
           physiqueList = globalData.pulseResult['physiqueList'];
+          print(physiqueList);
           patient = globalData.pulseResult['visitInfo']['patient'];
           pulseExplain = globalData.pulseResult['pulseExplain'][0]['name'];
           gender = patient['gender'];

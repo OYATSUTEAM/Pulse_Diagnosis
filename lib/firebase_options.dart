@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyABOTuHVv9-jA6SU8-een1YEJFaoIg-XkQ',
-    appId: '1:321183967840:android:2cc1ac6f483d9a990d3105',
+    appId: '1:321183967840:android:33c3e460c03c23e50d3105',
     messagingSenderId: '321183967840',
     projectId: 'pulse-diagnosis',
     storageBucket: 'pulse-diagnosis.firebasestorage.app',
@@ -59,10 +59,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCGJXwkvgYc1gzwVtDJKCIWQUDWLto0O8M',
-    appId: '1:321183967840:ios:41651c18aaf4705c0d3105',
+    appId: '1:321183967840:ios:29a3cfb8244abfe80d3105',
     messagingSenderId: '321183967840',
     projectId: 'pulse-diagnosis',
     storageBucket: 'pulse-diagnosis.firebasestorage.app',
-    iosBundleId: 'com.example.pulseDiagnosis',
+    iosBundleId: 'com.example.pulseDiagnosis.RunnerTests',
   );
+
 }
