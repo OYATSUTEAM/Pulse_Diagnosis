@@ -181,7 +181,9 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                           onPressed: () {
                             if (mounted) {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => Pulseresultpage()));
+                                  builder: (context) => Pulseresultpage(
+                                        visitDate: visitDate,
+                                      )));
                             }
                           },
                         )

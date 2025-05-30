@@ -13,8 +13,8 @@ import 'package:pulse_diagnosis/Pages/Results/Wellness.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class Pulseresultpage extends StatefulWidget {
-  const Pulseresultpage({super.key});
-
+  const Pulseresultpage({super.key, required this.visitDate});
+  final String visitDate;
   @override
   State<Pulseresultpage> createState() => _PulseresultpageState();
 }
@@ -170,20 +170,52 @@ class _PulseresultpageState extends State<Pulseresultpage>
                 });
               },
               children: [
-                UserPage(title: '総合結果'),
-                BodyRecognization(title: '体質スコア分析'),
-                HealthAssessment(title: '健康評価'),
-                Physical_Health_Care(title: '理療保健'),
-                FoodList(title: '飲食アドバイス'),
-                ExerciseList(title: '運動アドバイス'),
-                Wellness(title: '養生アドバイス'),
-                PulseDetail(title: '脈象詳細'),
-                MeridiansAnalysis(title: '経絡解析'),
-                EightPrinciple(title: '八綱辨証'),
+                UserPage(
+                  title: '総合結果',
+                  visitDate: widget.visitDate,
+                ),
+                BodyRecognization(
+                  title: '体質スコア分析',
+                  visitDate: widget.visitDate,
+                ),
+                HealthAssessment(
+                  title: '健康評価',
+                  visitDate: widget.visitDate,
+                ),
+                Physical_Health_Care(
+                  title: '理療保健',
+                  visitDate: widget.visitDate,
+                ),
+                FoodList(
+                  title: '飲食アドバイス',
+                  visitDate: widget.visitDate,
+                ),
+                ExerciseList(
+                  title: '運動アドバイス',
+                  visitDate: widget.visitDate,
+                ),
+                Wellness(
+                  title: '養生アドバイス',
+                  visitDate: widget.visitDate,
+                ),
+                PulseDetail(
+                  title: '脈象詳細',
+                  visitDate: widget.visitDate,
+                ),
+                MeridiansAnalysis(
+                  title: '経絡解析',
+                  visitDate: widget.visitDate,
+                ),
+                EightPrinciple(
+                  title: '八綱辨証',
+                  visitDate: widget.visitDate,
+                ),
               ],
             ),
           ),
-          SizedBox(height: 0,)
+          SizedBox(
+            height: 0,
+          )
         ],
       ),
     ));
@@ -201,8 +233,10 @@ class TabCard extends StatelessWidget {
       required this.path});
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return SizedBox(
-        width: 77,
+        width: size.width > 770 ? size.width / 10 : 77,
         child: Container(
             decoration: BoxDecoration(
               color: isSelected

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 import 'dart:developer' as developer;
 
 class UserPage extends StatefulWidget {
-  const UserPage({super.key, required this.title});
+  const UserPage({super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
   @override
   State<UserPage> createState() => _UserPageState();
 }
@@ -20,6 +23,14 @@ class _UserPageState extends State<UserPage> {
   String pulseExplain = '沈滑有力';
   String visitTime = '2020-1-2';
   String cunResultFreq = '';
+  UserData userData = UserData(
+      email: '',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
 //-------------------------    bodyRecognization   -------------------------------
 
   List healthAssessments0 = [];
@@ -27,43 +38,20 @@ class _UserPageState extends State<UserPage> {
   List symptoms0 = [];
   List symptoms1 = [];
   String healthAssessments_overview = '';
-  String symptom0 = '';
-  String symptom1 = '';
-  String symptom2 = '';
-  String symptom3 = '';
-  String symptom4 = '';
-  String symptom5 = '';
+  List<String> allSymptoms = [];
 //-------------------------    bodyRecognization   -------------------------------
-  String bodyRecognization0_name = '';
-  String bodyRecognization0_note = '';
-  String bodyRecognization1_name = '';
-  String bodyRecognization1_note = '';
+  List<Map<String, String>> bodyRecognitions = [];
 
 //-------------------------    principleList   -------------------------------
 
   List principleList = [];
-  String principleList0_name = '';
-  String principleList1_name = '';
-  String principleList2_name = '';
-  String principleList3_name = '';
-  String principleList0_note = '';
-  String principleList1_note = '';
-  String principleList2_note = '';
-  String principleList3_note = '';
+  List<Map<String, String>> principles = [];
 
 //-------------------------    jingluoListV2   -------------------------------
 
   List jingluoListV2 = [];
-  String jingluoListV0_name = '';
-  String jingluoListV1_name = '';
-  String jingluoListV2_name = '';
-  String jingluoListV3_name = '';
-  String jingluoListV4_name = '';
-  String jingluoListV0_note = '';
-  String jingluoListV1_note = '';
-  String jingluoListV2_note = '';
-  String jingluoListV3_note = '';
-  String jingluoListV4_note = '';
+
+  List<Map<String, String>> jingluoItems = [];
 
 //-------------------------    physiqueList   -------------------------------
   List physiqueList = [];
@@ -71,82 +59,95 @@ class _UserPageState extends State<UserPage> {
   @override
   void initState() {
     getDate();
-    // console(['this user page is called']);
-    developer.log('sfsdfsdf================');
-    print('user page is called ');
     super.initState();
   }
 
   getDate() async {
-    console(['params']);
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
+    final _pulseResult = await getPulseResult(widget.visitDate);
+    UserData? _userData = await getUserData();
+    if (_userData != null) {
+      setState(() {
+        userData = _userData;
+      });
     }
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
     } else {
-      console([globalData.pulseResult]);
       if (mounted) {
         setState(() {
-          physiqueList = globalData.pulseResult['physiqueList'];
-          print(physiqueList);
-          patient = globalData.pulseResult['visitInfo']['patient'];
-          pulseExplain = globalData.pulseResult['pulseExplain'][0]['name'];
+          physiqueList = _pulseResult['physiqueList'];
+          patient = _pulseResult['visitInfo']['patient'];
+          pulseExplain = _pulseResult['pulseExplain'][0]['name'];
           gender = patient['gender'];
-          visitTime = globalData.pulseResult['visitInfo']['visitTime'];
-          pulseResult = globalData.pulseResult['visitInfo']['pulseResult'];
-          cunResultFreq = globalData.pulseResult['visitInfo']['parts'][0]
-              ['cunResult']['freq'];
+          visitTime = _pulseResult['visitInfo']['visitTime'];
+          pulseResult = _pulseResult['visitInfo']['pulseResult'];
+          cunResultFreq =
+              _pulseResult['visitInfo']['parts'][0]['cunResult']['freq'];
 //-------------------------    healthAssessments   -------------------------------
 
           healthAssessments0 = physiqueList[0]['healthAssessments'];
-          healthAssessments1 = physiqueList[1]['healthAssessments'];
           healthAssessments_overview = healthAssessments0[0]['overview'];
           symptoms0 = healthAssessments0[0]['symptoms'];
-          symptoms1 = healthAssessments1[0]['symptoms'];
-          symptom0 = symptoms0[0]['symptom'];
-          symptom1 = symptoms0[1]['symptom'];
-          symptom2 = symptoms0[2]['symptom'];
-          symptom3 = symptoms1[0]['symptom'];
-          symptom4 = symptoms1[1]['symptom'];
-          symptom5 = symptoms1[2]['symptom'];
+
+          // Clear previous symptoms
+          allSymptoms.clear();
+
+          // Process all physique items
+          for (var physique in physiqueList) {
+            if (physique['healthAssessments'] != null &&
+                physique['healthAssessments'].isNotEmpty) {
+              var healthAssessments = physique['healthAssessments'][0];
+              if (healthAssessments['symptoms'] != null) {
+                for (var symptom in healthAssessments['symptoms']) {
+                  if (symptom['rank'] < 4) {
+                    allSymptoms.add(symptom['symptom']);
+                  }
+                }
+              }
+            }
+          }
 //-------------------------    bodyRecognization   -------------------------------
 
-          bodyRecognization0_name = physiqueList[0]['images'][0]['name'];
-          bodyRecognization1_name = physiqueList[1]['images'][0]['name'];
-          bodyRecognization0_note = physiqueList[0]['note'];
-          bodyRecognization1_note = physiqueList[1]['note'];
+          // Process body recognitions dynamically
+          bodyRecognitions.clear();
+          for (var physique in physiqueList) {
+            if (physique['images'] != null && physique['images'].isNotEmpty) {
+              bodyRecognitions.add({
+                'name': physique['images'][0]['name'],
+                'note': physique['note']
+              });
+            }
+          }
 
 //-------------------------    principleList   -------------------------------
 
-          principleList = globalData.pulseResult['principleList'];
-          principleList0_name = principleList[0]['name'];
-          principleList1_name = principleList[1]['name'];
-          principleList2_name = principleList[2]['name'];
-          principleList3_name = principleList[3]['name'];
+          principleList = _pulseResult['principleList'];
 
-          principleList0_note = principleList[0]['note'];
-          principleList1_note = principleList[1]['note'];
-          principleList2_note = principleList[2]['note'];
-          principleList3_note = principleList[3]['note'];
+          // Process principles dynamically
+          principles.clear();
+          for (var principle in principleList) {
+            if (principle['name'] != null && principle['note'] != null) {
+              if (principle['note'] != '') {
+                principles.add(
+                    {'name': principle['name'], 'note': principle['note']});
+              }
+            }
+          }
 
 //-------------------------    jingluoListV2   -------------------------------
-          jingluoListV2 = globalData.pulseResult['jingluoListV2'];
-          jingluoListV0_name = jingluoListV2[0]['main'];
-          jingluoListV1_name = jingluoListV2[1]['main'];
-          jingluoListV2_name = jingluoListV2[2]['main'];
-          jingluoListV3_name = jingluoListV2[3]['main'];
-          jingluoListV4_name = jingluoListV2[4]['main'];
-          jingluoListV0_note = jingluoListV2[0]['mainNote'];
-          jingluoListV1_note = jingluoListV2[1]['mainNote'];
-          jingluoListV2_note = jingluoListV2[2]['mainNote'];
-          jingluoListV3_note = jingluoListV2[3]['mainNote'];
-          jingluoListV4_note = jingluoListV2[4]['mainNote'];
-
-          age = globalData.age;
-          // patient = visitInfo['patient'];
+          jingluoListV2 = _pulseResult['jingluoListV2'];
+          jingluoItems.clear();
+          for (var jingluo in jingluoListV2) {
+            if (jingluo['main'] != null && jingluo['mainNote'] != null) {
+              if (jingluo['mainNote'] != '') {
+                // if (jingluo['rank'] > 3)
+                jingluoItems.add(
+                    {'name': jingluo['main'], 'note': jingluo['mainNote']});
+              }
+            }
+          }
         });
       }
     }
@@ -183,7 +184,7 @@ class _UserPageState extends State<UserPage> {
                             children: [
                               Text('氏名： ${patient['name']}'),
                               Text('性別：$gender'),
-                              Text('年齢：$age歳'),
+                              Text('年齢：${userData.age}歳'),
                               Text('位置：左手、右手'),
                               Text('時間：$visitTime'),
                             ],
@@ -245,14 +246,17 @@ class _UserPageState extends State<UserPage> {
                                             text: '【体質認識】\n',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold)),
-                                        TextSpan(
-                                          text:
-                                              '$bodyRecognization0_name (${bodyRecognization0_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})　、\n',
-                                        ),
-                                        TextSpan(
-                                          text:
-                                              '$bodyRecognization1_name (${bodyRecognization1_note.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})',
-                                        ),
+                                        ...bodyRecognitions
+                                            .asMap()
+                                            .entries
+                                            .map((entry) {
+                                          final index = entry.key;
+                                          final recognition = entry.value;
+                                          return TextSpan(
+                                            text:
+                                                '${recognition['name']} (${recognition['note']?.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')})${index < bodyRecognitions.length - 1 ? '　、\n' : ''}',
+                                          );
+                                        }).toList(),
                                       ])))
                                 ],
                               ),
@@ -277,8 +281,7 @@ class _UserPageState extends State<UserPage> {
                                               '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
                                         ),
                                         TextSpan(
-                                          text:
-                                              '$symptom0　、$symptom1　、$symptom2　、$symptom3　、$symptom4　、$symptom5　',
+                                          text: allSymptoms.join('　、'),
                                         ),
                                       ])))
                                 ],
@@ -299,30 +302,17 @@ class _UserPageState extends State<UserPage> {
                                             text: '【八綱弁証】\n',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold)),
-                                        principleList0_note != ''
-                                            ? TextSpan(
-                                                text:
-                                                    '$principleList0_name ($principleList0_note)　',
-                                              )
-                                            : TextSpan(),
-                                        principleList1_note != ''
-                                            ? TextSpan(
-                                                text:
-                                                    '、\n$principleList1_name ($principleList1_note)　',
-                                              )
-                                            : TextSpan(),
-                                        principleList2_note != ''
-                                            ? TextSpan(
-                                                text:
-                                                    '、\n$principleList2_name ($principleList2_note)　',
-                                              )
-                                            : TextSpan(),
-                                        principleList3_note != ''
-                                            ? TextSpan(
-                                                text:
-                                                    '、\n$principleList3_name ($principleList3_note)　',
-                                              )
-                                            : TextSpan(),
+                                        ...principles
+                                            .asMap()
+                                            .entries
+                                            .map((entry) {
+                                          final index = entry.key;
+                                          final principle = entry.value;
+                                          return TextSpan(
+                                            text:
+                                                '${principle['name']} (${principle['note']})${index < principles.length - 1 ? '　、\n' : ''}',
+                                          );
+                                        }).toList(),
                                       ])))
                                 ],
                               ),
@@ -345,26 +335,17 @@ class _UserPageState extends State<UserPage> {
                                         TextSpan(
                                           text: '現在、異常が考えられる経絡は次の通りです：\n',
                                         ),
-                                        TextSpan(
-                                          text:
-                                              '$jingluoListV0_name$jingluoListV0_note、\n',
-                                        ),
-                                        TextSpan(
-                                          text:
-                                              '$jingluoListV1_name$jingluoListV1_note、\n',
-                                        ),
-                                        TextSpan(
-                                          text:
-                                              '$jingluoListV2_name$jingluoListV2_note、\n',
-                                        ),
-                                        TextSpan(
-                                          text:
-                                              '$jingluoListV3_name$jingluoListV3_note、\n',
-                                        ),
-                                        TextSpan(
-                                          text:
-                                              '$jingluoListV4_name$jingluoListV4_note\n',
-                                        ),
+                                        ...jingluoItems
+                                            .asMap()
+                                            .entries
+                                            .map((entry) {
+                                          final index = entry.key;
+                                          final jingluo = entry.value;
+                                          return TextSpan(
+                                            text:
+                                                '${jingluo['name']}${jingluo['note']}${index < jingluoItems.length - 1 ? '、\n' : '\n'}',
+                                          );
+                                        }).toList(),
                                       ])))
                                 ],
                               ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class FoodList extends StatefulWidget {
-  const FoodList({super.key, required this.title});
+  const FoodList({super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
   @override
   State<FoodList> createState() => _FoodListState();
 }
@@ -18,17 +20,15 @@ class _FoodListState extends State<FoodList> {
   }
 
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
     } else {
       if (mounted) {
         setState(() {
-          physiquePlanList = globalData.pulseResult['physiquePlanList'];
+          physiquePlanList = _pulseResult['physiquePlanList'];
         });
       }
     }

@@ -94,18 +94,23 @@ class _PulseHistoryState extends State<PulseHistory> {
                                                   CircularProgressIndicator());
                                         });
                                     final visitData = await getVisitData(
-                                        userData.uid, visitDate);
+                                      userData.uid,
+                                      visitDate,
+                                    );
 
                                     if (visitData != null) {
                                       await updatePulseResult(
-                                          visitData, visitDate);
+                                        visitData,
+                                        visitDate,
+                                      );
                                     }
                                     if (mounted) {
                                       Navigator.pop(context);
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Pulseresultpage()));
+                                                  Pulseresultpage(
+                                                      visitDate: visitDate)));
                                     }
                                   },
                                   child: Text(

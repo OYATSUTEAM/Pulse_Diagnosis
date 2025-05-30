@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class BodyRecognization extends StatefulWidget {
-  const BodyRecognization({super.key, required this.title});
+  const BodyRecognization(
+      {super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
   @override
   State<BodyRecognization> createState() => _BodyRecognizationState();
 }
@@ -18,17 +21,15 @@ class _BodyRecognizationState extends State<BodyRecognization> {
   }
 
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
     } else {
       if (mounted) {
         setState(() {
-          physiqueList = globalData.pulseResult['physiqueList'];
+          physiqueList = _pulseResult['physiqueList'];
         });
       }
     }

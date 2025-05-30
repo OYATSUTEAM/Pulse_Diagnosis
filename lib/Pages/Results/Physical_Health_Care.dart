@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class Physical_Health_Care extends StatefulWidget {
+  const Physical_Health_Care(
+      {super.key, required this.title, required this.visitDate});
   final String title;
-  const Physical_Health_Care({super.key, required this.title});
+  final String visitDate;
 
   @override
   State<Physical_Health_Care> createState() => _Physical_Health_CareState();
@@ -22,20 +25,16 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
   }
 
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
     } else {
       if (mounted) {
         setState(() {
-          healthPlanResult =
-              globalData.pulseResult['healthPlan']['acupointList'];
-          physiotherapyCareList =
-              globalData.pulseResult['physiotherapyCareListV2'];
+          healthPlanResult = _pulseResult['healthPlan']['acupointList'];
+          physiotherapyCareList = _pulseResult['physiotherapyCareListV2'];
         });
       }
     }

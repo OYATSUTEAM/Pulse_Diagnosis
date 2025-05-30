@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class EightPrinciple extends StatefulWidget {
-  const EightPrinciple({super.key, required this.title});
+  const EightPrinciple(
+      {super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
   @override
   State<EightPrinciple> createState() => _EightPrincipleState();
 }
@@ -20,18 +23,16 @@ class _EightPrincipleState extends State<EightPrinciple> {
 
   List principleListImages = [];
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
       console(['']);
     } else {
       if (mounted) {
         setState(() {
-          principleList = globalData.pulseResult['principleList'];
+          principleList = _pulseResult['principleList'];
           principleListImages = ['ri.png', 'ji.png', 'yon.png', 'jang.png'];
         });
       }

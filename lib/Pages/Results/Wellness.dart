@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class Wellness extends StatefulWidget {
-  const Wellness({super.key, required this.title});
+  const Wellness({super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
 
   @override
   State<Wellness> createState() => _WellnessState();
@@ -21,13 +23,11 @@ class _WellnessState extends State<Wellness> {
   }
 
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
-      if (globalData.pulseResult.isNotEmpty) {
+      if (_pulseResult != null) {
         setState(() {
-          wellnessList = globalData.pulseResult['wellnessListV2'];
+          wellnessList = _pulseResult['wellnessListV2'];
         });
       }
     }

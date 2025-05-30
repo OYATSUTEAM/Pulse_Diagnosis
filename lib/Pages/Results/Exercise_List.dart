@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
+import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 import 'package:pulse_diagnosis/globaldata.dart';
 
 class ExerciseList extends StatefulWidget {
-  const ExerciseList({super.key, required this.title});
+  const ExerciseList({super.key, required this.title, required this.visitDate});
   final String title;
+  final String visitDate;
   @override
   State<ExerciseList> createState() => _ExerciseListState();
 }
@@ -19,17 +21,15 @@ class _ExerciseListState extends State<ExerciseList> {
   }
 
   getDate() async {
-    while (globalData.pulseResult.isEmpty) {
-      await Future.delayed(Duration(milliseconds: 100));
-    }
+    final _pulseResult = await getPulseResult(widget.visitDate);
     if (mounted) {
       setState(() {});
     }
-    if (globalData.pulseResult.isEmpty) {
+    if (_pulseResult == null) {
     } else {
       if (mounted) {
         setState(() {
-          physiquePlanList = globalData.pulseResult['physiquePlanList'];
+          physiquePlanList = _pulseResult['physiquePlanList'];
         });
       }
     }
