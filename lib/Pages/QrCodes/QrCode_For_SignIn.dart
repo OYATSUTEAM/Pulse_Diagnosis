@@ -36,6 +36,10 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
     await controller.pause();
   }
 
+  void stopCamera() async {
+    await controller.stop();
+  }
+
   void playCamera() async {
     await controller.stop();
     await controller.start();
@@ -48,7 +52,7 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
   }
 
   _getInitialData() async {
-    UserData? _userData = await getUserData();
+    UserData? _userData = await getUserDataFromLocal();
     if (_userData != null) {
       setState(() {
         userData = _userData;
@@ -112,6 +116,7 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                           final barcodeValue = barcodes.first.displayValue;
                           if (barcodeValue != null && barcodeValue.isNotEmpty) {
                             pauseCamera();
+                            stopCamera();
                             String token = await getToken(barcodeValue);
                             final _isAdd = await addPatient(
                                 barcodeValue,
@@ -121,10 +126,11 @@ class _QrcodeForSigninState extends State<QrcodeForSignin> {
                                 userData.gender,
                                 userData.age,
                                 userData.phone);
-
-                            setState(() {
-                              isAdded = _isAdd;
-                            });
+                            if (mounted) {
+                              setState(() {
+                                isAdded = _isAdd;
+                              });
+                            }
                           }
                         }
                       },

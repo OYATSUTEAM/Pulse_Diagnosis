@@ -46,13 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _getInitialData() async {
-    UserData? _userdata = await getUserData();
+    UserData? _userdata = await getUserDataFromLocal();
     if (_userdata != null) {
       setState(() {
         userData = _userdata;
       });
     }
-    getVisitDataByDate();
+    await saveUserDataToLocal(await getUserDataFromFirebase());
+    // getVisitDataByDate();
   }
 
   signOut() async {
@@ -63,9 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> logOutConfirmationDialogue(
-    BuildContext context,
-  ) async {
+  Future<void> logOutConfirmationDialogue(BuildContext context) async {
     final shouldDelete = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -102,7 +101,9 @@ class _MyHomePageState extends State<MyHomePage> {
         floatingActionButton: FloatingActionButton(
             mini: true,
             onPressed: () {
-              signOut();
+              logOutConfirmationDialogue(context);
+
+              // signOut();
             },
             child: Icon(Icons.logout)),
         body: Column(

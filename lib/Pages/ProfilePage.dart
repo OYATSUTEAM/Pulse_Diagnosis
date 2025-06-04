@@ -39,20 +39,20 @@ class _Profilepage extends State<Profilepage> {
       gender: '',
       age: '');
 
-  Future<void> _selectDate(BuildContext context) async {
-    DateTime? pickedDate = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(1900),
-      lastDate: DateTime.now(),
-    );
+  // Future<void> _selectDate(BuildContext context) async {
+  //   DateTime? pickedDate = await showDatePicker(
+  //     context: context,
+  //     initialDate: DateTime.now(),
+  //     firstDate: DateTime(1900),
+  //     lastDate: DateTime.now(),
+  //   );
 
-    if (pickedDate != null) {
-      setState(() {
-        ageController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
-      });
-    }
-  }
+  //   if (pickedDate != null) {
+  //     setState(() {
+  //       ageController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
+  //     });
+  //   }
+  // }
 
   void passwordVisibility() {
     if (notVisiblePassword) {
@@ -110,13 +110,10 @@ class _Profilepage extends State<Profilepage> {
         );
         return;
       }
-
       showDialog(
           context: context,
           builder: (context) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return const Center(child: CircularProgressIndicator());
           });
       Future.delayed(Duration(seconds: 1));
       await EmailAuthProvider.credential(
@@ -124,11 +121,12 @@ class _Profilepage extends State<Profilepage> {
         password: currentPassword,
       );
       // Re-authenticate
-      updatePassword(passwordConfirmController.text.trim());
+      updatePasswordInFirebase(passwordConfirmController.text.trim());
       user.updatePassword(newPasswordController.text.trim());
       if (mounted) {
-        Navigator.pop(context);
-
+        if (Navigator.canPop(context)) {
+          Navigator.pop(context);
+        }
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(
             'password has changed'.tr(),
@@ -161,6 +159,17 @@ class _Profilepage extends State<Profilepage> {
       String gender = selectedGender;
       String age = ageController.text.toString().trim();
 
+      // Update userData with new values
+      userData = UserData(
+        email: userData.email,
+        uid: userData.uid,
+        name: name,
+        password: userData.password,
+        phone: userData.phone,
+        gender: gender,
+        age: age,
+      );
+
       showDialog(
           context: context,
           builder: (context) {
@@ -169,20 +178,18 @@ class _Profilepage extends State<Profilepage> {
             );
           });
 
-      updateUserData(userData);
+      // Update both local storage and Firebase
+      await updateUserData(userData);
+
       if (mounted) {
         Navigator.pop(context);
-        // showDialog(
-        //     context: context,
-        //     builder: (context) => AlertDialog(
-        //           content: Text('user info has changed'.tr(), textAlign: TextAlign.center, style: TextStyle(color: const Color.fromARGB(255, 249, 168, 37), fontSize: 20),),
-        //         ));
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(
             'user info has changed'.tr(),
             textAlign: TextAlign.center,
             style: TextStyle(
-                color: const Color.fromARGB(255, 249, 168, 37), fontSize: 20),
+              color: const Color.fromARGB(255, 249, 168, 37),
+            ),
           ),
         ));
       }
@@ -190,7 +197,7 @@ class _Profilepage extends State<Profilepage> {
   }
 
   Future<void> setInitValue() async {
-    UserData? _userData = await getUserData();
+    UserData? _userData = await getUserDataFromLocal();
     User? user = FirebaseAuth.instance.currentUser;
 
     if (_userData != null) {
@@ -305,7 +312,7 @@ class _Profilepage extends State<Profilepage> {
                                           child: DropdownButton<String>(
                                             dropdownColor: const Color.fromARGB(
                                                 255, 247, 250, 249),
-                                            value: userData.gender,
+                                            value: selectedGender,
                                             onChanged: (value) {
                                               if (value != null) {
                                                 setGender(value);

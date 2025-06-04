@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 
 class BodyRecognization extends StatefulWidget {
   const BodyRecognization(
@@ -21,7 +21,7 @@ class _BodyRecognizationState extends State<BodyRecognization> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
+    final _pulseResult = await getPulseResult();
     if (mounted) {
       setState(() {});
     }
@@ -53,9 +53,16 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                             shrinkWrap: true,
                             itemCount: physiqueList.length,
                             itemBuilder: (context, index) {
+                              String name = physiqueList[index]['name'];
+                              console([name]);
                               String body = physiqueList[index]['body'];
                               String mental = physiqueList[index]['mental'];
-                              String jianJia = physiqueList[index]['jianJia'];
+                              String jianJia = '';
+                              final _jianJia = physiqueList[index]['jianJia'];
+                              if (_jianJia is String) {
+                                jianJia = _jianJia;
+                              }
+                              // console([physiqueList]);
                               String performance =
                                   physiqueList[index]['performance'];
                               List<dynamic> imageList =
@@ -93,6 +100,13 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                                           )),
                                       RichText(
                                         text: TextSpan(
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 20),
+                                            text: '【$name】'),
+                                      ),
+                                      RichText(
+                                        text: TextSpan(
                                           style: TextStyle(color: Colors.black),
                                           children: [
                                             TextSpan(
@@ -117,19 +131,23 @@ class _BodyRecognizationState extends State<BodyRecognization> {
                                           ],
                                         ),
                                       ),
-                                      RichText(
-                                        text: TextSpan(
-                                          style: TextStyle(color: Colors.black),
-                                          children: [
-                                            TextSpan(
-                                              text: '• 兼挟み体質： ',
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            TextSpan(text: '$jianJia'),
-                                          ],
-                                        ),
-                                      ),
+                                      name != '平和質'
+                                          ? RichText(
+                                              text: TextSpan(
+                                                style: TextStyle(
+                                                    color: Colors.black),
+                                                children: [
+                                                  TextSpan(
+                                                    text: '• 兼挟み体質： ',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  TextSpan(text: '$jianJia'),
+                                                ],
+                                              ),
+                                            )
+                                          : Text(''),
                                     ],
                                   ));
                             })

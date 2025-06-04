@@ -28,13 +28,13 @@ class _PulseHistoryState extends State<PulseHistory> {
 
   @override
   void initState() {
-    _getUserData();
+    _getUserDataFromLocal();
     // getVisitDataByDate();
     super.initState();
   }
 
-  Future<void> _getUserData() async {
-    UserData? _userdata = await getUserData();
+  Future<void> _getUserDataFromLocal() async {
+    UserData? _userdata = await getUserDataFromLocal();
     setState(() {
       userData = _userdata!;
     });
@@ -101,7 +101,7 @@ class _PulseHistoryState extends State<PulseHistory> {
                                     if (visitData != null) {
                                       await updatePulseResult(
                                         visitData,
-                                        visitDate,
+                                        // visitDate,
                                       );
                                     }
                                     if (mounted) {

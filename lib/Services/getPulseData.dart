@@ -4,11 +4,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pulse_diagnosis/Model/UserData.dart';
+import 'package:pulse_diagnosis/Pages/Results/PulseResultPage.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 // import 'dart:developer';
 import 'dart:developer' as developer;
-
-import 'package:pulse_diagnosis/globaldata.dart';
 
 void console(List<dynamic> params) {
   for (var param in params) {
@@ -173,9 +172,8 @@ Future<String> getDetails(int id, String token) async {
     if (status != 200) throw Exception('http.post error: statusCode= $status');
 
     final jsonResponse = jsonDecode(res.body) as Map<String, dynamic>;
-    await updatePulseResult(jsonResponse['data'], '');
+    await updatePulseResult(jsonResponse['data']);
     const encoder = JsonEncoder.withIndent('  ');
-    developer.log(encoder.convert(jsonResponse));
     return jsonResponse['msg'];
   } catch (e) {
     return e.toString();
@@ -183,8 +181,7 @@ Future<String> getDetails(int id, String token) async {
 }
 
 Future<void> updateUserData(UserData _userdata) async {
-  // globalData.updateProfile(name, age, gender);
-  saveUserData(_userdata);
+  saveUserDataToLocal(_userdata);
   FirebaseFirestore database = FirebaseFirestore.instance;
   try {
     final auth = FirebaseAuth.instance;
@@ -201,7 +198,7 @@ Future<void> updateUserData(UserData _userdata) async {
   }
 }
 
-Future<void> updatePassword(String password) async {
+Future<void> updatePasswordInFirebase(String password) async {
   FirebaseFirestore database = FirebaseFirestore.instance;
   try {
     final auth = FirebaseAuth.instance;
@@ -216,30 +213,45 @@ Future<void> updatePassword(String password) async {
   }
 }
 
-Future<Map<String, dynamic>?> getUserDataFromFirebase() async {
+Future<UserData> getUserDataFromFirebase() async {
+  UserData userData = UserData(
+      email: '',
+      uid: '',
+      name: '',
+      password: '',
+      phone: '',
+      gender: '',
+      age: '');
   try {
     FirebaseFirestore database = FirebaseFirestore.instance;
     final auth = FirebaseAuth.instance;
 
     String? userId = auth.currentUser?.uid;
-
     if (userId == null) {
       print("No user is currently logged in.");
-      return null;
+      return userData;
     }
 
     DocumentSnapshot snapshot =
         await database.collection("Users").doc(userId).get();
 
     if (snapshot.exists) {
-      return snapshot.data() as Map<String, dynamic>;
+      final _userData = snapshot.data() as Map<String, dynamic>;
+      return UserData(
+          email: _userData['email'],
+          uid: _userData['uid'],
+          name: _userData['name'],
+          password: _userData['password'],
+          phone: _userData['phone'],
+          gender: _userData['gender'],
+          age: _userData['age']);
     } else {
       print("No user data found for this UID.");
-      return null;
+      return userData;
     }
   } catch (e) {
     print("Error getting user data: $e");
-    return null;
+    return userData;
   }
 }
 
@@ -266,20 +278,43 @@ Future<bool> SignIntoPulse(String uid) async {
   }
 }
 
-Future<void> saveVisitData(
+Future<String> saveVisitData(
     String uid, String visitDate, Map<String, dynamic> pulsedata) async {
   try {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
+    String baseDocId = visitDate;
+    String docId = '$baseDocId-1'; // Start with -1 suffix
+    int counter =
+        2; // Start counter from 2 since we're using -1 for first entry
+
+    // Check if document exists and find next available number
+    while (true) {
+      DocumentSnapshot doc = await firestore
+          .collection('Users')
+          .doc(uid)
+          .collection('data')
+          .doc(docId)
+          .get();
+
+      if (!doc.exists) {
+        break;
+      }
+      docId = '$baseDocId-$counter';
+      counter++;
+    }
+
+    // Save with the new document ID
     await firestore
         .collection('Users')
-        .doc(uid) // Replace with the user's UID
+        .doc(uid)
         .collection('data')
-        .doc(visitDate) // Use the visit date as document ID
+        .doc(docId)
         .set(pulsedata, SetOptions(merge: true));
-
-    print("Data saved successfully!");
+    print("Data saved successfully with ID: $docId");
+    return docId;
   } catch (e) {
     print("Error saving data: $e");
+    return '';
   }
 }
 
@@ -325,20 +360,32 @@ Future<Map<String, dynamic>?> getVisitData(String uid, String visitDate) async {
 }
 
 Future<int> isPulseFinished(String token) async {
-  final status = await getAll(token, globalData.email);
-  // final status = await getAll(token, "ddd@ddd");
-  return status;
+  UserData? _userData = await getUserDataFromLocal();
+  if (_userData != null) {
+    final status = await getAll(token, _userData.email);
+    return status;
+  }
+  return 500;
 }
 
 Future<String> addDataToFirebase(String token) async {
-  List recordResult = globalData.patientResult['data']['records'];
+  Map<String, dynamic>? patientResult = await getPatientResult();
+  UserData? userData = await getUserDataFromLocal();
+  if (patientResult == null || userData == null) {
+    return '';
+  }
+
+  List recordResult = patientResult['data']['records'];
   if (recordResult.isNotEmpty) {
-    int id = await globalData.patientResult['data']['records'][0]['id'];
+    int id = await patientResult['data']['records'][0]['id'];
     await getDetails(id, token);
-    String visitDate =
-        globalData.pulseResult["visitInfo"]["visitTime"].split(" ")[0];
-    await saveVisitData(globalData.uid, visitDate, globalData.pulseResult);
-    return visitDate;
+    Map<String, dynamic>? pulseResult = await getPulseResult();
+    if (pulseResult == null) return '';
+    String visitDate = pulseResult["visitInfo"]["visitTime"].split(" ")[0];
+    final _visitDate =
+        await saveVisitData(userData.uid, visitDate, pulseResult);
+    // await saveVisitData(userData.uid, visitDate, patientResult);
+    return _visitDate;
   } else {
     // Handle the case when 'data' does not exist
     return '';

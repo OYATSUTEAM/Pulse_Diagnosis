@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
+import 'package:pulse_diagnosis/Model/UserData.dart';
 import 'Login_Page.dart';
 // import 'package:open_mail/open_mail.dart';
 
@@ -37,7 +37,7 @@ class _SignUp_Page extends State<SignUp_Page> {
     }
   }
 
-  void sendVerificationEmail() {
+  void sendVerificationEmail() async {
     User user = FirebaseAuth.instance.currentUser!;
     user.sendEmailVerification();
   }
@@ -67,78 +67,90 @@ class _SignUp_Page extends State<SignUp_Page> {
           ));
           return;
         }
+        String email = emailController.text.toString().trim();
+        String password = passwordController.text.toString().trim();
+        String name = nameController.text.toString().trim();
+        String gender = selectedGender;
+        String phone = phoneController.text.toString().trim();
+        String age = ageController.text.toString().trim();
+        showDialog(
+            context: context,
+            builder: (context) => Center(
+                  child: CircularProgressIndicator(
+                    color: const Color.fromARGB(255, 0, 168, 154),
+                  ),
+                ));
+        await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
 
-        try {
-          FirebaseAuth.instance
-              .createUserWithEmailAndPassword(
-                  email: emailController.text.toString().trim(),
-                  password: passwordController.text.toString().trim())
-              .whenComplete(() async {
-            String email = emailController.text.toString().trim();
-            String password = passwordController.text.toString().trim();
-            if (FirebaseAuth.instance.currentUser?.uid != null) {
-              String name = nameController.text.toString().trim();
-              String gender = selectedGender;
-              String phone = phoneController.text.toString().trim();
-              String age = ageController.text.toString().trim();
-              String uid = FirebaseAuth.instance.currentUser!.uid;
-              await initUserData(
-                  email, uid, name, password, phone, gender, age);
-              // sendVerificationEmail();
-              // ScaffoldMessenger.of(context).showSnackBar(
-              //   SnackBar(
-              //       backgroundColor: Colors.grey[700],
-              //       duration: Duration(days: 1),
-              //       content: Column(
-              //         children: [
-              //           Text('confirmation email'.tr()),
-              //         ],
-              //       )),
-              // );
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return Login_Page();
-              }));
-            }
-          });
-        } catch (e) {
-          console([e]);
+        if (FirebaseAuth.instance.currentUser?.uid != null) {
+          String uid = FirebaseAuth.instance.currentUser!.uid;
+          sendVerificationEmail();
+          final userData = UserData(
+            email: email,
+            uid: uid,
+            name: name,
+            password: password,
+            phone: phone,
+            gender: gender,
+            age: age,
+          );
+          await saveUserDataToLocal(userData);
+          if (Navigator.canPop(context)) {
+            Navigator.pop(context);
+          }
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+                duration: Duration(seconds: 5),
+                content: Column(children: [
+                  Text('confirmation email'.tr()),
+                ])),
+          );
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return Login_Page();
+          }));
         }
-      } catch (e) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(e.toString())));
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return SignUp_Page();
-        }));
+        // }
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'email-already-in-use') {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text('The email is already in use.'.tr()),
+            duration: Duration(seconds: 5),
+          ));
+        }
       }
     } else {
       showDialog(
           context: context,
           builder: (context) {
             return AlertDialog(
-                content: Text('The passwords do not match'.tr()));
+                content: Text(
+              'The passwords do not match.'.tr(),
+              textAlign: TextAlign.center,
+            ));
           });
     }
   }
 
-  setLanguage(String? value) async {
-    setState(() {
-      selectedLanguage = value!;
-    });
-    Locale newLocale;
-    await globalData.updateCurrentLocal(value!);
-    if (value == 'en') {
-      newLocale = const Locale('en', 'US');
-    } else if (value == 'ja') {
-      newLocale = const Locale('ja', 'JP');
-    } else if (value == 'ch') {
-      newLocale = const Locale('zh', 'CN');
-    } else {
-      return;
-    }
+  // setLanguage(String? value) async {
+  //   setState(() {
+  //     selectedLanguage = value!;
+  //   });
+  //   Locale newLocale;
+  //   await globalData.updateCurrentLocal(value!);
+  //   if (value == 'en') {
+  //     newLocale = const Locale('en', 'US');
+  //   } else if (value == 'ja') {
+  //     newLocale = const Locale('ja', 'JP');
+  //   } else if (value == 'ch') {
+  //     newLocale = const Locale('zh', 'CN');
+  //   } else {
+  //     return;
+  //   }
 
-    await context.setLocale(newLocale);
-  }
+  //   await context.setLocale(newLocale);
+  // }
 
   setGender(String? value) async {
     setState(() {

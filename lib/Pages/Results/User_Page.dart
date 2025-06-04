@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Model/UserData.dart';
+import 'package:pulse_diagnosis/Pages/Results/PulseResultPage.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 import 'dart:developer' as developer;
 
 class UserPage extends StatefulWidget {
@@ -52,10 +52,12 @@ class _UserPageState extends State<UserPage> {
   List jingluoListV2 = [];
 
   List<Map<String, String>> jingluoItems = [];
-
+  List<dynamic> parts = [];
 //-------------------------    physiqueList   -------------------------------
   List physiqueList = [];
   String pulseResult = '';
+  String leftHand = '';
+  String rightHand = '';
   @override
   void initState() {
     getDate();
@@ -63,8 +65,10 @@ class _UserPageState extends State<UserPage> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
-    UserData? _userData = await getUserData();
+    // final _pulseResult = await getPatientResult();
+    final _pulseResult = await getPulseResult();
+
+    UserData? _userData = await getUserDataFromLocal();
     if (_userData != null) {
       setState(() {
         userData = _userData;
@@ -77,6 +81,12 @@ class _UserPageState extends State<UserPage> {
     } else {
       if (mounted) {
         setState(() {
+          parts = _pulseResult['visitInfo']['parts'];
+
+          for (var part in parts) {
+            if (part['part'] == 0) leftHand = '左手';
+            if (part['part'] == 1) rightHand = '右手';
+          }
           physiqueList = _pulseResult['physiqueList'];
           patient = _pulseResult['visitInfo']['patient'];
           pulseExplain = _pulseResult['pulseExplain'][0]['name'];
@@ -101,7 +111,7 @@ class _UserPageState extends State<UserPage> {
               var healthAssessments = physique['healthAssessments'][0];
               if (healthAssessments['symptoms'] != null) {
                 for (var symptom in healthAssessments['symptoms']) {
-                  if (symptom['rank'] < 4) {
+                  if (symptom['rank'] < 4 && symptom['symtom'] is String) {
                     allSymptoms.add(symptom['symptom']);
                   }
                 }
@@ -138,6 +148,7 @@ class _UserPageState extends State<UserPage> {
 
 //-------------------------    jingluoListV2   -------------------------------
           jingluoListV2 = _pulseResult['jingluoListV2'];
+          console([jingluoListV2]);
           jingluoItems.clear();
           for (var jingluo in jingluoListV2) {
             if (jingluo['main'] != null && jingluo['mainNote'] != null) {
@@ -185,7 +196,8 @@ class _UserPageState extends State<UserPage> {
                               Text('氏名： ${patient['name']}'),
                               Text('性別：$gender'),
                               Text('年齢：${userData.age}歳'),
-                              Text('位置：左手、右手'),
+                              Text(
+                                  '位置：${parts.length == 2 ? '$leftHand、$rightHand' : '$leftHand $rightHand'}'),
                               Text('時間：$visitTime'),
                             ],
                           ),
@@ -277,9 +289,10 @@ class _UserPageState extends State<UserPage> {
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold)),
                                         TextSpan(
-                                          text:
-                                              '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>\n', '\n').replaceAll('<br/>', '')}\n',
-                                        ),
+                                            text:
+                                                '${healthAssessments_overview.replaceAll('&nbsp', ' ').replaceAll('<br/>', '\n')}'
+                                            // .replaceAll('<br/>', '')}\n',
+                                            ),
                                         TextSpan(
                                           text: allSymptoms.join('　、'),
                                         ),

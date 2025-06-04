@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:pulse_diagnosis/Model/UserData.dart';
@@ -9,11 +10,11 @@ import 'package:http/http.dart' as http;
 // import 'dart:developer';
 import 'dart:developer' as developer;
 
-Future<void> saveUserData(UserData _userdata) async {
+Future<void> saveUserDataToLocal(UserData _userData) async {
   final prefs = await SharedPreferences.getInstance();
 
   // Convert UserData to JSON string and save
-  final jsonString = jsonEncode(_userdata.toJson());
+  final jsonString = jsonEncode(_userData.toJson());
   await prefs.setString('user_data', jsonString);
 }
 
@@ -22,43 +23,31 @@ Future<void> saveEmail(String email) async {
   await prefs.setString('saved_email_pulse', email);
 }
 
-Future<void> initUserData(String email, String uid, String name,
-    String password, String phone, String gender, String age) async {
+Future<void> initUserDataToFirebase(UserData _userData) async {
   FirebaseFirestore database = FirebaseFirestore.instance;
   try {
-    // await globalData.updatePatientDetail(
-    //     uid, email, name, address, gender, age, phone);
     final auth = FirebaseAuth.instance;
-    final userData = UserData(
-      email: email,
-      uid: uid,
-      name: name,
-      password: password,
-      phone: phone,
-      gender: gender,
-      age: age,
-    );
-
-   await saveUserData(userData);
     await database.collection("Users").doc(auth.currentUser?.uid).set({
-      "uid": auth.currentUser?.uid,
-      "email": email,
-      "name": name,
-      "password": password,
-      "phone": phone,
-      "gender": gender,
-      "age": AggregateQuerySnapshot,
+      "uid": _userData.uid,
+      "email": _userData.email,
+      "name": _userData.name,
+      "password": _userData.password,
+      "phone": _userData.phone,
+      "gender": _userData.gender,
+      "age": _userData.age,
       'registered': false,
     }, SetOptions(merge: true));
     return;
-  } on FirebaseAuthException {
+  } on FirebaseAuthException catch (e) {
+    console([e, 'this is create account database error']);
     return null;
   } catch (e) {
+    console([e, 'this is create account database error']);
     return null;
   }
 }
 
-Future<UserData?> getUserData() async {
+Future<UserData?> getUserDataFromLocal() async {
   final prefs = await SharedPreferences.getInstance();
   final jsonString = prefs.getString('user_data');
 
@@ -75,42 +64,21 @@ Future<UserData?> getUserData() async {
   }
 }
 
-Future<void> updatePulseResult(
-    Map<String, dynamic> pulseData, String visitDate) async {
+Future<void> updatePulseResult(Map<String, dynamic> pulseData) async {
   final prefs = await SharedPreferences.getInstance();
 
-  // Get existing pulse results or initialize empty list
-  final String? existingData = prefs.getString('pulse_results');
-  List<Map<String, dynamic>> pulseResults = [];
-
-  if (existingData != null) {
-    final List<dynamic> decoded = jsonDecode(existingData);
-    pulseResults = decoded.cast<Map<String, dynamic>>();
-  }
-
-  // Add timestamp if not present
-  if (!pulseData.containsKey('timestamp')) {
-    pulseData['timestamp'] = visitDate;
-  }
-
-  // Add new result
-  pulseResults.add(pulseData);
-
-  // Save updated results
-  await prefs.setString('pulse_results', jsonEncode(pulseResults));
+  // Save single pulse result
+  await prefs.setString('pulse_results', jsonEncode(pulseData));
 }
 
-Future<Map<String, dynamic>?> getPulseResult(String timestamp) async {
+Future<Map<String, dynamic>?> getPulseResult() async {
   final prefs = await SharedPreferences.getInstance();
   final String? data = prefs.getString('pulse_results');
 
   if (data == null) return null;
 
-  final List<dynamic> pulseResults = jsonDecode(data);
-  return pulseResults.firstWhere(
-    (result) => result['timestamp'] == timestamp,
-    orElse: () => null,
-  );
+  final Map<String, dynamic> decoded = jsonDecode(data);
+  return decoded;
 }
 
 Future<List<Map<String, dynamic>>> getAllPulseResults() async {
@@ -123,31 +91,19 @@ Future<List<Map<String, dynamic>>> getAllPulseResults() async {
   return decoded.cast<Map<String, dynamic>>();
 }
 
-Future<void> updatePatientResult(Map<String, dynamic> pulseData) async {
+Future<void> updatePatientResult(Map<String, dynamic> patientResult) async {
   final prefs = await SharedPreferences.getInstance();
 
-  // Get existing pulse results or initialize empty list
-  final String? existingData = prefs.getString('patient_results');
-  List<Map<String, dynamic>> pulseResults = [];
-
-  if (existingData != null) {
-    final List<dynamic> decoded = jsonDecode(existingData);
-    pulseResults = decoded.cast<Map<String, dynamic>>();
-  }
-
-  // Add new result
-  pulseResults.add(pulseData);
-
-  // Save updated results
-  await prefs.setString('patient_results', jsonEncode(pulseResults));
+  // Save single patient result
+  await prefs.setString('patient_results', jsonEncode(patientResult));
 }
 
-Future<List<Map<String, dynamic>>> getPatientResult() async {
+Future<Map<String, dynamic>?> getPatientResult() async {
   final prefs = await SharedPreferences.getInstance();
   final String? data = prefs.getString('patient_results');
 
-  if (data == null) return [];
+  if (data == null) return null;
 
-  final List<dynamic> decoded = jsonDecode(data);
-  return decoded.cast<Map<String, dynamic>>();
+  final Map<String, dynamic> decoded = jsonDecode(data);
+  return decoded;
 }

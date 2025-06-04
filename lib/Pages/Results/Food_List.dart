@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 
 class FoodList extends StatefulWidget {
   const FoodList({super.key, required this.title, required this.visitDate});
@@ -20,7 +19,7 @@ class _FoodListState extends State<FoodList> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
+    final _pulseResult = await getPulseResult();
     if (mounted) {
       setState(() {});
     }

@@ -3,8 +3,6 @@ import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
 
-import 'package:pulse_diagnosis/globaldata.dart';
-
 class Physical_Health_Care extends StatefulWidget {
   const Physical_Health_Care(
       {super.key, required this.title, required this.visitDate});
@@ -25,7 +23,7 @@ class _Physical_Health_CareState extends State<Physical_Health_Care> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
+    final _pulseResult = await getPulseResult();
     if (mounted) {
       setState(() {});
     }

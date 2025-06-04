@@ -3,7 +3,7 @@ description: "A new Flutter project."
 
 publish_to: 'none' 
 
-version: 1.0.0+1
+version: 1.0.0+6
 
 environment:
   sdk: ^3.5.4
@@ -35,6 +35,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/translations/
+    - assets/translations/ja-JP.json
+    - assets/translations/en-US.json
+    - assets/translations/tr-TR.json
     - assets/images/
     - assets/images/tabbar/
     

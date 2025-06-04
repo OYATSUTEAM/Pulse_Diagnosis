@@ -3,7 +3,6 @@ import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/category.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 
 class PulseDetail extends StatefulWidget {
   const PulseDetail({super.key, required this.title, required this.visitDate});
@@ -22,7 +21,7 @@ class _PulseDetailState extends State<PulseDetail> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
+    final _pulseResult = await getPulseResult();
     if (mounted) {
       setState(() {});
     }
@@ -51,6 +50,7 @@ class _PulseDetailState extends State<PulseDetail> {
                       shrinkWrap: true,
                       itemCount: pulseResult.length,
                       itemBuilder: (context, index) {
+                        final hand = pulseResult[index]['part'];
                         final cunResult = pulseResult[index]['cunResult'];
                         final guanResult = pulseResult[index]['guanResult'];
                         final chiResult = pulseResult[index]['chiResult'];
@@ -114,8 +114,7 @@ class _PulseDetailState extends State<PulseDetail> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              CategoryWidget(
-                                  title: posType == "0" ? '左手' : '右手'),
+                              CategoryWidget(title: hand == 0 ? '左手' : '右手'),
                               Image.asset('assets/images/chi$index.png'),
                               const SizedBox(height: 15),
 // ==========================================       chi result ===============================================

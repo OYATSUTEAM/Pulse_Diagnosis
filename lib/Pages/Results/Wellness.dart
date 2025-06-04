@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pulse_diagnosis/Services/getPulseData.dart';
 import 'package:pulse_diagnosis/Services/saveData.dart';
 import 'package:pulse_diagnosis/Widgets/title.dart';
-import 'package:pulse_diagnosis/globaldata.dart';
 
 class Wellness extends StatefulWidget {
   const Wellness({super.key, required this.title, required this.visitDate});
@@ -23,7 +22,7 @@ class _WellnessState extends State<Wellness> {
   }
 
   getDate() async {
-    final _pulseResult = await getPulseResult(widget.visitDate);
+    final _pulseResult = await getPulseResult();
     if (mounted) {
       if (_pulseResult != null) {
         setState(() {

@@ -28,7 +28,7 @@
     "click here to open your email": "ここをクリックしてメールを開く。",
     "scan qr code to connect with pc": "QRコードをスキャンしてPCと接続",
     "password confirm": "パスワードの確認",
-    "Would you like to sign out?": "サインアウトしますか？",
+    "Would you like to sign out?": "ログアウトしますか？",
     "phone number": "電話番号",
     "forgot password": "パスワードを忘れました?",
     "Password cannot be empty": "パスワードを空にすることはできません。",
@@ -47,5 +47,7 @@
     "user info has changed": "登録情報が変更されました",
     "age": "年齢",
     "save":"保存",
-    "Please enter a valid age": "年齢を正しく入力してください。"
+    "Please enter a valid age": "年齢を正しく入力してください。",
+    "Email is not verified.":"メールアドレスが確認されていません。",
+    "The email is already in use.": "このメールアドレスは既に使用されています。"
 }

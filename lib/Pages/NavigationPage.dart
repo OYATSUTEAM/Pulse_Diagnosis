@@ -42,21 +42,22 @@ class _NavigationpageState extends State<Navigationpage> {
       age: '');
   @override
   void initState() {
-    setState(() {
-      _selectedIndex = widget.selectedIndex;
-    });
+    setState(() {});
     _getInitialData();
     // getVisitDataByDate();
     super.initState();
   }
 
   _getInitialData() async {
-    UserData? _userData = await getUserData();
+    UserData? _userData = await getUserDataFromLocal();
+
     if (_userData != null) {
       setState(() {
         userData = _userData;
+        _selectedIndex = widget.selectedIndex;
       });
-      getVisitDataByDate();
+      // getVisitDataByDate();
+      await saveUserDataToLocal(await getUserDataFromFirebase());
     }
   }
 
