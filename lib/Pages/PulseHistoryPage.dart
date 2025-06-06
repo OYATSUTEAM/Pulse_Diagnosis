@@ -55,81 +55,64 @@ class _PulseHistoryState extends State<PulseHistory> {
 
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        toolbarHeight: 100,
-        foregroundColor: const Color.fromARGB(255, 0, 168, 154),
-        centerTitle: true,
-        title: Text(
-          'History of previous measurements'.tr(),
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
+      child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            toolbarHeight: 100,
+            foregroundColor: const Color.fromARGB(255, 0, 168, 154),
+            centerTitle: true,
+            title: Text(
+              'History of previous measurements'.tr(),
+              style: TextStyle(fontSize: 24),
+            ),
+          ),
+          body: Padding(
               padding: const EdgeInsets.all(10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ListView.builder(
-                      physics: AlwaysScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: allData.length,
-                      itemBuilder: (context, index) {
-                        String visitDate = allData[index];
-                        return ListTile(
-                          title: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              TextButton(
-                                  onPressed: () async {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return Center(
-                                              child:
-                                                  CircularProgressIndicator());
-                                        });
-                                    final visitData = await getVisitData(
-                                      userData.uid,
-                                      visitDate,
-                                    );
+              child: ListView.builder(
+                  itemCount: allData.length,
+                  itemBuilder: (context, index) {
+                    String visitDate = allData[index];
+                    return ListTile(
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () async {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return Center(
+                                          child: CircularProgressIndicator());
+                                    });
+                                final visitData = await getVisitData(
+                                  userData.uid,
+                                  visitDate,
+                                );
 
-                                    if (visitData != null) {
-                                      await updatePulseResult(
-                                        visitData,
-                                        // visitDate,
-                                      );
-                                    }
-                                    if (mounted) {
-                                      Navigator.pop(context);
-                                      Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  Pulseresultpage(
-                                                      visitDate: visitDate)));
-                                    }
-                                  },
-                                  child: Text(
-                                    visitDate,
-                                    style: TextStyle(
-                                        fontSize: 22,
-                                        color: const Color.fromARGB(
-                                            255, 0, 168, 154)),
-                                  ))
-                            ],
-                          ),
-                        );
-                      })
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    ));
+                                if (visitData != null) {
+                                  await updatePulseResult(
+                                    visitData,
+                                    // visitDate,
+                                  );
+                                }
+                                if (mounted) {
+                                  Navigator.pop(context);
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Pulseresultpage(
+                                          visitDate: visitDate)));
+                                }
+                              },
+                              child: Text(
+                                visitDate,
+                                style: TextStyle(
+                                    fontSize: 22,
+                                    color:
+                                        const Color.fromARGB(255, 0, 168, 154)),
+                              ))
+                        ],
+                      ),
+                    );
+                  }))),
+    );
   }
 }
